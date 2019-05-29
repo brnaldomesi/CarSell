@@ -1,0 +1,261 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.button_mixin() {
+  display: inline-block;
+  position: relative;
+  .ie7-inline-block();
+  padding:8px 12px; 
+  margin-bottom: 0; // For input.btn
+  font-size:15px !important;
+  line-height: @baseLineHeight !important;
+  font-weight: 600;
+  text-align: center;
+  text-transform:uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  color:@white;
+  background:#f23534;
+  border:none;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+  text-shadow:none;
+  height: auto;
+  border-radius:0 !important;
+  box-shadow:none;
+  .transition(all 0.35s) !important;
+  .ie7-restore-left-whitespace(); // Give IE7 some love
+    &:after {
+        font-family:FontAwesome;
+        content: "";
+		text-indent: 0;
+		position:absolute;
+		left:18px;
+        top:8px;
+        font-size:17px;
+        color:@white;
+        float: left;
+    }
+    &.custom_btn {
+        color:@white;
+        background:red;
+    }
+    @media (max-width: 767px) {
+		 padding:5px 7px; 
+         font-size:11px !important;
+         /*&:after {
+            display:none;            
+        }*/
+	}
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color:@white;
+    text-decoration: none;
+    background:#323232;
+    &.custom_btn {
+        background:@white;
+        color:@linkColorHover;
+    }
+    // transition is only when going to hover/focus, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position .1s linear);
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    text-decoration: none;
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background-image: none;
+    outline: 0;
+    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-image: none;
+    .opacity(65);
+    .box-shadow(none);
+  }
+
+}
+
+.btn, .clear-all {
+  .button_mixin();
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  .button_mixin();
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+// Small
+.btn-small {
+  padding: @paddingSmall;
+  font-size: @fontSizeSmall;
+  .border-radius(@borderRadiusSmall);
+}
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+// Mini
+.btn-mini {
+  padding: @paddingMini;
+  font-size: @fontSizeMini;
+  .border-radius(@borderRadiusSmall);
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  .button_mixin();
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+
+  &.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+  &.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: @linkColor;
+  .border-radius(0);
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: @linkColorHover;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
+  color: @grayDark;
+  text-decoration: none;
+}

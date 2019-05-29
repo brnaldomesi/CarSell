@@ -1,0 +1,1 @@
+jQuery(document).ready(function(a){jQuery('[rel="motopressLightbox"]').magnificPopup({type:"image",closeOnContentClick:!0,mainClass:"mfp-img-mobile",image:{verticalFit:!0}});jQuery('[rel="motopressGalleryLightbox"]').magnificPopup({type:"image",mainClass:"mfp-img-mobile",gallery:{enabled:!0,navigateByImgClick:!0,preload:[0,1]}})});

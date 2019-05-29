@@ -1,0 +1,2459 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MotoPress Slider\n"
+"POT-Creation-Date: 2017-06-09 11:02+0300\n"
+"PO-Revision-Date: 2017-06-09 11:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: motopress\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bower_components\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+"X-Poedit-SearchPathExcluded-3: build\n"
+
+#: defaults/style-presets/presets.php:7 settings/layer.php:561
+msgid "Button Blue"
+msgstr ""
+
+#: defaults/style-presets/presets.php:38 settings/layer.php:562
+msgid "Button Green"
+msgstr ""
+
+#: defaults/style-presets/presets.php:69 settings/layer.php:563
+msgid "Button Red"
+msgstr ""
+
+#: defaults/style-presets/presets.php:100 settings/layer.php:542
+msgid "Header Dark"
+msgstr ""
+
+#: defaults/style-presets/presets.php:118 settings/layer.php:543
+msgid "Header White"
+msgstr ""
+
+#: defaults/style-presets/presets.php:136 settings/layer.php:544
+msgid "Sub-Header Dark"
+msgstr ""
+
+#: defaults/style-presets/presets.php:154 settings/layer.php:545
+msgid "Sub-Header White"
+msgstr ""
+
+#: defaults/style-presets/presets.php:172 settings/layer.php:546
+msgid "Text Dark"
+msgstr ""
+
+#: defaults/style-presets/presets.php:191 settings/layer.php:547
+msgid "Text White"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:559
+#: includes/classes/LayerPresetOptions.php:589
+msgid "Inherit"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:590
+msgid "100 (Thin)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:591
+msgid "200 (Extra Light)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:592
+msgid "300 (Light)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:593
+msgid "400 (Normal)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:594
+msgid "500 (Medium)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:595
+msgid "600 (Semi Bold)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:596
+msgid "700 (Bold)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:597
+msgid "800 (Extra Bold)"
+msgstr ""
+
+#: includes/classes/LayerPresetOptions.php:598
+msgid "900 (Heavy)"
+msgstr ""
+
+#: includes/classes/MPSLShortcode.php:784
+msgid "In Stock"
+msgstr ""
+
+#: includes/classes/MPSLShortcode.php:784
+msgid "Out of Stock"
+msgstr ""
+
+#: includes/classes/OptionsFactory.php:300
+#: includes/classes/OptionsFactory.php:316 settings/layer.php:95
+#: settings/layer.php:96
+msgid "Select Image"
+msgstr ""
+
+#: includes/classes/OptionsFactory.php:308
+msgid "remove"
+msgstr ""
+
+#: includes/classes/OptionsFactory.php:328
+msgid "Load"
+msgstr ""
+
+#: includes/classes/OptionsFactory.php:415
+msgid "Custom"
+msgstr ""
+
+#: includes/classes/OptionsFactory.php:416 settings/layer.php:604
+msgid "Default"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:16
+msgid "Slider Settings Updated"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:22 views/slide.php:165
+#: views/slider.php:14 views/slides.php:54
+msgid "Slider Settings"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:27
+msgid "Save"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:55
+msgid "Disable Slider for user groups:"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:62 views/slider_row.php:29
+msgid "Settings"
+msgstr ""
+
+#: includes/classes/PluginOptions.php:86
+msgid "Hide Slider menu for selected groups"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:383 motopress-slider.php:926
+#: motopress-slider.php:983
+msgid "Slide ID is not set."
+msgstr ""
+
+#: includes/classes/SlideOptions.php:397
+msgid "Duplicate of "
+msgstr ""
+
+#: includes/classes/SlideOptions.php:616 includes/classes/SlideOptions.php:723
+msgid "duration (ms): "
+msgstr ""
+
+#: includes/classes/SlideOptions.php:622 includes/classes/SlideOptions.php:729
+msgid "Duration: "
+msgstr ""
+
+#: includes/classes/SlideOptions.php:629 includes/classes/SlideOptions.php:736
+msgid "Easing :"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:632 includes/classes/SlideOptions.php:739
+#: settings/slider.php:434
+msgid "linear"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:633 includes/classes/SlideOptions.php:740
+#: settings/slider.php:435
+msgid "ease"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:634 includes/classes/SlideOptions.php:741
+#: settings/slider.php:436
+msgid "easeIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:635 includes/classes/SlideOptions.php:742
+#: settings/slider.php:438
+msgid "easeInOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:636 includes/classes/SlideOptions.php:743
+#: settings/slider.php:439
+msgid "easeInQuad"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:637 includes/classes/SlideOptions.php:744
+#: settings/slider.php:440
+msgid "easeInCubic"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:638 includes/classes/SlideOptions.php:745
+#: settings/slider.php:441
+msgid "easeInQuart"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:639 includes/classes/SlideOptions.php:746
+#: settings/slider.php:442
+msgid "easeInQuint"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:640 includes/classes/SlideOptions.php:747
+#: settings/slider.php:443
+msgid "easeInSine"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:641 includes/classes/SlideOptions.php:748
+#: settings/slider.php:444
+msgid "easeInExpo"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:642 includes/classes/SlideOptions.php:749
+#: settings/slider.php:445
+msgid "easeInCirc"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:643 includes/classes/SlideOptions.php:750
+#: settings/slider.php:446
+msgid "easeInBack"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:644 includes/classes/SlideOptions.php:751
+#: settings/slider.php:447
+msgid "easeOutQuad"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:645 includes/classes/SlideOptions.php:752
+#: settings/slider.php:448
+msgid "easeOutCubic"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:646 includes/classes/SlideOptions.php:753
+#: settings/slider.php:449
+msgid "easeOutQuart"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:647 includes/classes/SlideOptions.php:754
+#: settings/slider.php:450
+msgid "easeOutQuint"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:648 includes/classes/SlideOptions.php:755
+#: settings/slider.php:451
+msgid "easeOutSine"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:649 includes/classes/SlideOptions.php:756
+#: settings/slider.php:452
+msgid "easeOutExpo"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:650 includes/classes/SlideOptions.php:757
+#: settings/slider.php:453
+msgid "easeOutCirc"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:651 includes/classes/SlideOptions.php:758
+#: settings/slider.php:454
+msgid "easeOutBack"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:652 includes/classes/SlideOptions.php:759
+#: settings/slider.php:455
+msgid "easeInOutQuad"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:653 includes/classes/SlideOptions.php:760
+#: settings/slider.php:456
+msgid "easeInOutCubic"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:654 includes/classes/SlideOptions.php:761
+#: settings/slider.php:457
+msgid "easeInOutQuart"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:655 includes/classes/SlideOptions.php:762
+#: settings/slider.php:458
+msgid "easeInOutQuint"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:656 includes/classes/SlideOptions.php:763
+#: settings/slider.php:459
+msgid "easeInOutSine"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:657 includes/classes/SlideOptions.php:764
+#: settings/slider.php:460
+msgid "easeInOutExpo"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:658 includes/classes/SlideOptions.php:765
+#: settings/slider.php:461
+msgid "easeInOutCirc"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:659 includes/classes/SlideOptions.php:766
+#: settings/slider.php:462
+msgid "easeInOutBack"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:664 includes/classes/SlideOptions.php:771
+msgid "Ease function: "
+msgstr ""
+
+#: includes/classes/SlideOptions.php:671
+msgid "Start Animation :"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:674
+msgid "bounceIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:675
+msgid "bounceInDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:676
+msgid "bounceInLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:677
+msgid "bounceInRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:678
+msgid "bounceInUp"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:679
+msgid "fadeIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:680
+msgid "fadeInDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:681
+msgid "fadeInDownBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:682
+msgid "fadeInLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:683
+msgid "fadeInLeftBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:684
+msgid "fadeInRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:685
+msgid "fadeInRightBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:686
+msgid "fadeInUp"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:687
+msgid "fadeInUpBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:688 includes/classes/SlideOptions.php:795
+msgid "flip"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:689
+msgid "flipInX"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:690
+msgid "flipInY"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:691
+msgid "lightSpeedIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:692
+msgid "rotateIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:693
+msgid "rotateInDownLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:694
+msgid "rotateInDownRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:695
+msgid "rotateInUpLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:696
+msgid "rotateInUpRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:697
+msgid "rollIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:698
+msgid "zoomIn"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:699
+msgid "zoomInDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:700
+msgid "zoomInLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:701
+msgid "zoomInRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:702
+msgid "zoomInUp"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:778
+msgid "End Animation :"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:781
+msgid "auto"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:782
+msgid "bounceOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:783
+msgid "bounceOutDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:784
+msgid "bounceOutLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:785
+msgid "bounceOutRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:786
+msgid "bounceOutUp"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:787
+msgid "fadeOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:788
+msgid "fadeOutDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:789
+msgid "fadeOutDownBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:790
+msgid "fadeOutLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:791
+msgid "fadeOutLeftBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:792
+msgid "fadeOutRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:793
+msgid "fadeOutUp"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:794
+msgid "fadeOutUpBig"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:796
+msgid "flipOutX"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:797
+msgid "flipOutY"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:798
+msgid "lightSpeedOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:799
+msgid "rotateOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:800
+msgid "rotateOutDownLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:801
+msgid "rotateOutDownRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:802
+msgid "rotateOutUpLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:803
+msgid "rotateOutUpRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:804
+msgid "rollOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:805
+msgid "zoomOut"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:806
+msgid "zoomOutDown"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:807
+msgid "zoomOutLeft"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:808
+msgid "zoomOutRight"
+msgstr ""
+
+#: includes/classes/SlideOptions.php:809
+msgid "zoomOutUp"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:32
+msgid "Import file is not readable."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:40
+#, php-format
+msgid "Import %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:67 views/import-export-dialog.php:6
+#, php-format
+msgid ""
+"To import sliders select previously exported %s file and click the Import "
+"button."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:75 views/import-export-dialog.php:9
+msgid "Import File: "
+msgstr ""
+
+#: includes/classes/SliderImporter.php:79
+#, php-format
+msgid "Maximum size: %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:87 views/import-export-dialog.php:13
+msgid "Enable HTTP authentication"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:92 views/import-export-dialog.php:16
+msgid "Login:"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:100 views/import-export-dialog.php:20
+msgid "Password:"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:143
+msgid "Go to slider settings page"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:161
+msgid "Import data is not valid."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:174
+msgid "Uploads imported"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:201
+#, php-format
+msgid "Slider \"%s\" options imported."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:219
+#, php-format
+msgid "Slide \"%s\" of slider \"%s\" imported."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:224
+#, php-format
+msgid "Slide \"%s\" of slider \"%s\" is not imported. Error: %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:231
+#, php-format
+msgid "Slider \"%s\" is not imported. Error: %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:242
+msgid "Presets imported."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:247
+#, php-format
+msgid "Presets not imported. Error: %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:258
+#, php-format
+msgid "Slider preset import error: %s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:319
+#, php-format
+msgid "Failed to import media \"%s\" : "
+msgstr ""
+
+#: includes/classes/SliderImporter.php:351
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\" >%s</a> imported successfully."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:388
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:396
+msgid "Unable to write to file."
+msgstr ""
+
+#: includes/classes/SliderImporter.php:405
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:410
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:418
+msgid "Empty filename"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:422
+msgid "Invalid file type"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:433
+#, php-format
+msgid ""
+"Unable to create directory %s. Is its parent directory writable by the "
+"server?"
+msgstr ""
+
+#: includes/classes/SliderImporter.php:439
+#, php-format
+msgid "Could not write file %s"
+msgstr ""
+
+#: includes/classes/SliderOptions.php:333
+msgid "Empty option "
+msgstr ""
+
+#: includes/classes/SliderOptions.php:570 settings/slider.php:574
+msgid "Desktop"
+msgstr ""
+
+#: includes/classes/SliderOptions.php:583
+msgid "Laptop"
+msgstr ""
+
+#: includes/classes/SliderOptions.php:587 settings/slider.php:573
+msgid "Tablet"
+msgstr ""
+
+#: includes/classes/SliderOptions.php:591
+msgid "Mobile"
+msgstr ""
+
+#: includes/classes/SliderWidget.php:7
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: includes/classes/SliderWidget.php:24
+msgid "Select slider:"
+msgstr ""
+
+#: includes/classes/SliderWidget.php:26 settings/preset.php:20
+msgid "SELECT"
+msgstr ""
+
+#: includes/classes/SlidesList.php:25
+msgid "Record not found"
+msgstr ""
+
+#: includes/notices/update.php:5
+msgid ""
+"<strong>Slider Data Update Required</strong> &#8211; We just need to update "
+"your install to the latest version"
+msgstr ""
+
+#: includes/notices/update.php:6
+msgid "Run the updater"
+msgstr ""
+
+#: includes/notices/update.php:10
+msgid ""
+"It is strongly recommended that you backup your database before proceeding. "
+"Are you sure you wish to run the updater now?"
+msgstr ""
+
+#: includes/notices/updated.php:5
+msgid "Thank you for updating to the latest version!"
+msgstr ""
+
+#: includes/notices/upgrade-to-pro.php:5
+#, php-format
+msgid ""
+"<a href='%s' target='_blank' >Upgrade to Pro</a> version to use all slider "
+"features and get premium support."
+msgstr ""
+
+#: motopress-slider.php:91
+#, php-format
+msgid "Slider with id %s is not exists!"
+msgstr ""
+
+#: motopress-slider.php:99
+#, php-format
+msgid "Slide with id %s is not exists!"
+msgstr ""
+
+#: motopress-slider.php:283
+#, php-format
+msgid "Import sliders and images from a %s export file."
+msgstr ""
+
+#: motopress-slider.php:362
+msgid "Slider"
+msgstr ""
+
+#: motopress-slider.php:572
+msgid "test"
+msgstr ""
+
+#: motopress-slider.php:573
+#, php-format
+msgid "%s require non empty value."
+msgstr ""
+
+#: motopress-slider.php:574
+msgid "In the AJAX response undisclosed result field."
+msgstr ""
+
+#: motopress-slider.php:575
+#, php-format
+msgid "%s must content digitals only."
+msgstr ""
+
+#: motopress-slider.php:576
+#, php-format
+msgid "%s could not be less then %d"
+msgstr ""
+
+#: motopress-slider.php:577
+#, php-format
+msgid "%s could not be greater then %d"
+msgstr ""
+
+#: motopress-slider.php:578
+msgid ""
+"Alias not valid. Alias could contents latin symbols, numbers, underscore and "
+"hyphen only."
+msgstr ""
+
+#: motopress-slider.php:579 motopress-slider.php:783 motopress-slider.php:818
+msgid "This alias already exists. Alias must be unique."
+msgstr ""
+
+#: motopress-slider.php:580
+#, php-format
+msgid "\"%s\" invalid date format. Use datepicker."
+msgstr ""
+
+#: motopress-slider.php:581
+#, php-format
+msgid "\"%s\" invalid value for day: %day."
+msgstr ""
+
+#: motopress-slider.php:582
+msgid "\"%s\" invalid value for month: %month."
+msgstr ""
+
+#: motopress-slider.php:583
+msgid ""
+"\"%s\" Invalid value for year: %year - must be between %minYear and %maxYear."
+msgstr ""
+
+#: motopress-slider.php:584
+msgid "\"%s\" invalid value for hour: %hour."
+msgstr ""
+
+#: motopress-slider.php:585
+msgid "\"%s\" invalid value for minute: %minute."
+msgstr ""
+
+#: motopress-slider.php:586 views/slider_row.php:36 views/slides.php:39
+msgid "Delete"
+msgstr ""
+
+#: motopress-slider.php:587 views/slider.php:65
+msgid "Cancel"
+msgstr ""
+
+#: motopress-slider.php:588
+msgid "Choose"
+msgstr ""
+
+#: motopress-slider.php:589 settings/slide.php:371
+msgid "None"
+msgstr ""
+
+#: motopress-slider.php:591
+msgid "Slider updated."
+msgstr ""
+
+#: motopress-slider.php:592
+msgid "Slider update error:"
+msgstr ""
+
+#: motopress-slider.php:593
+msgid "Slider is created"
+msgstr ""
+
+#: motopress-slider.php:594
+msgid "Slider is deleted."
+msgstr ""
+
+#: motopress-slider.php:595
+#, php-format
+msgid "Slider %d deleted."
+msgstr ""
+
+#: motopress-slider.php:596
+msgid "Slider duplicated."
+msgstr ""
+
+#: motopress-slider.php:597 motopress-slider.php:605
+#, php-format
+msgid "Do you really want to delete '%d' ?"
+msgstr ""
+
+#: motopress-slider.php:599
+msgid "Slide created."
+msgstr ""
+
+#: motopress-slider.php:600
+msgid "Slide is not created."
+msgstr ""
+
+#: motopress-slider.php:601
+msgid "Slide updated."
+msgstr ""
+
+#: motopress-slider.php:602
+msgid "Slide update error: "
+msgstr ""
+
+#: motopress-slider.php:603
+msgid "Slide deleted."
+msgstr ""
+
+#: motopress-slider.php:604
+msgid "Slide duplicated."
+msgstr ""
+
+#: motopress-slider.php:607
+msgid "Slides sorted"
+msgstr ""
+
+#: motopress-slider.php:608
+msgid "Slides error when sorting"
+msgstr ""
+
+#: motopress-slider.php:610
+msgid "Do you really want to delete all the layers?"
+msgstr ""
+
+#: motopress-slider.php:611
+#, php-format
+msgid "%s Import and Export"
+msgstr ""
+
+#: motopress-slider.php:612
+msgid "Create New Slider"
+msgstr ""
+
+#: motopress-slider.php:613 views/slider.php:76
+msgid "Preview Slider"
+msgstr ""
+
+#: motopress-slider.php:614
+msgid "No sliders selected to export."
+msgstr ""
+
+#: motopress-slider.php:615
+msgid "Style Editor"
+msgstr ""
+
+#: motopress-slider.php:616
+msgid "Presets"
+msgstr ""
+
+#: motopress-slider.php:618
+msgid "Transition Editor"
+msgstr ""
+
+#: motopress-slider.php:620
+#, php-format
+msgid "Do you really want to delete preset \"%s\"?"
+msgstr ""
+
+#: motopress-slider.php:621
+msgid "Rename preset"
+msgstr ""
+
+#: motopress-slider.php:622
+msgid "Please enter name for new preset"
+msgstr ""
+
+#: motopress-slider.php:623
+msgid "No preset selected"
+msgstr ""
+
+#: motopress-slider.php:624
+msgid "Element Style"
+msgstr ""
+
+#: motopress-slider.php:625
+msgid "New preset"
+msgstr ""
+
+#: motopress-slider.php:633
+msgid "The post title"
+msgstr ""
+
+#: motopress-slider.php:634
+msgid "The post content"
+msgstr ""
+
+#: motopress-slider.php:635
+msgid "The post excerpt"
+msgstr ""
+
+#: motopress-slider.php:636
+msgid "The post categories"
+msgstr ""
+
+#: motopress-slider.php:637
+msgid "The post tags"
+msgstr ""
+
+#: motopress-slider.php:638
+msgid "The post link"
+msgstr ""
+
+#: motopress-slider.php:639
+msgid "The author name"
+msgstr ""
+
+#: motopress-slider.php:640
+msgid "The unique ID of the post"
+msgstr ""
+
+#: motopress-slider.php:641
+msgid "Post image"
+msgstr ""
+
+#: motopress-slider.php:642
+msgid "Post image source"
+msgstr ""
+
+#: motopress-slider.php:643
+msgid "The year of the post"
+msgstr ""
+
+#: motopress-slider.php:644
+msgid "Numeric Month"
+msgstr ""
+
+#: motopress-slider.php:645
+msgid "Month name"
+msgstr ""
+
+#: motopress-slider.php:646
+msgid "Day of the month"
+msgstr ""
+
+#: motopress-slider.php:647
+msgid "Weekday name"
+msgstr ""
+
+#: motopress-slider.php:648
+msgid "Hour:Minutes"
+msgstr ""
+
+#: motopress-slider.php:649
+msgid "The publish date"
+msgstr ""
+
+#: motopress-slider.php:650
+msgid "The last modified date"
+msgstr ""
+
+#: motopress-slider.php:651
+msgid "Number of comments"
+msgstr ""
+
+#: motopress-slider.php:654
+msgid "Add To Cart"
+msgstr ""
+
+#: motopress-slider.php:655
+msgid "Price"
+msgstr ""
+
+#: motopress-slider.php:656
+msgid "Currency"
+msgstr ""
+
+#: motopress-slider.php:657
+msgid "Currency + Price"
+msgstr ""
+
+#: motopress-slider.php:658
+msgid "Regular Price"
+msgstr ""
+
+#: motopress-slider.php:659
+msgid "Sale Price"
+msgstr ""
+
+#: motopress-slider.php:660
+msgid "In Stock Status"
+msgstr ""
+
+#: motopress-slider.php:661
+msgid "In Stock Quantity"
+msgstr ""
+
+#: motopress-slider.php:662
+msgid "Weight"
+msgstr ""
+
+#: motopress-slider.php:663
+msgid "Product Categories"
+msgstr ""
+
+#: motopress-slider.php:664
+msgid "Product Tags"
+msgstr ""
+
+#: motopress-slider.php:665
+msgid "Total Sales"
+msgstr ""
+
+#: motopress-slider.php:666
+msgid "Average Rating"
+msgstr ""
+
+#: motopress-slider.php:667
+msgid "Rating Count"
+msgstr ""
+
+#: motopress-slider.php:780 motopress-slider.php:812
+msgid "Slider is not updated. Error: "
+msgstr ""
+
+#: motopress-slider.php:786
+msgid "Id is not set."
+msgstr ""
+
+#: motopress-slider.php:815
+msgid "Slider parameters are not valid."
+msgstr ""
+
+#: motopress-slider.php:834
+msgid "Slider is not deleted. Error: "
+msgstr ""
+
+#: motopress-slider.php:837
+msgid "Slider is not deleted. ID is not set."
+msgstr ""
+
+#: motopress-slider.php:860
+msgid "Slider is not duplicated. Error: "
+msgstr ""
+
+#: motopress-slider.php:863
+msgid "Slider is not duplicated. Slider ID is not set."
+msgstr ""
+
+#: motopress-slider.php:919
+msgid "Slider can't be previewed. Error: "
+msgstr ""
+
+#: motopress-slider.php:921
+msgid "Slide is not updated. Error: "
+msgstr ""
+
+#: motopress-slider.php:940
+msgid "Slide is not deleted. Error: "
+msgstr ""
+
+#: motopress-slider.php:957
+msgid "Slide is not created. Error: "
+msgstr ""
+
+#: motopress-slider.php:962
+msgid "Slider ID is not set."
+msgstr ""
+
+#: motopress-slider.php:976
+msgid "Slide is not duplicated. Error: "
+msgstr ""
+
+#: motopress-slider.php:998
+msgid "Slides order update error: "
+msgstr ""
+
+#: motopress-slider.php:1001
+msgid "Order is not set."
+msgstr ""
+
+#: motopress-slider.php:1016
+msgid "YouTube video source not setted."
+msgstr ""
+
+#: motopress-slider.php:1030
+msgid "Vimeo video source not setted."
+msgstr ""
+
+#: motopress-slider.php:1157 views/woocommerce-not-found.php:7
+msgid "Please install and activate WooCommerce plugin."
+msgstr ""
+
+#: settings/layer.php:9 settings/slider.php:639 settings/slider.php:650
+#: views/slider_row.php:32
+msgid "Content"
+msgstr ""
+
+#: settings/layer.php:28
+msgid "Text/HTML"
+msgstr ""
+
+#: settings/layer.php:29
+msgid "lorem ipsum"
+msgstr ""
+
+#: settings/layer.php:39
+msgid "Button Text"
+msgstr ""
+
+#: settings/layer.php:40
+msgid "Button"
+msgstr ""
+
+#: settings/layer.php:49 settings/layer.php:110
+msgid "Link:"
+msgstr ""
+
+#: settings/layer.php:59 settings/layer.php:130
+msgid "To Post"
+msgstr ""
+
+#: settings/layer.php:62 settings/layer.php:133
+msgid "#link to post"
+msgstr ""
+
+#: settings/layer.php:78 settings/layer.php:120 settings/slide.php:399
+msgid "Open in new window"
+msgstr ""
+
+#: settings/layer.php:151
+msgid "Youtube"
+msgstr ""
+
+#: settings/layer.php:152
+msgid "Vimeo"
+msgstr ""
+
+#: settings/layer.php:153 settings/slide.php:145
+msgid "Media Library"
+msgstr ""
+
+#: settings/layer.php:174
+msgid "Source MP4: "
+msgstr ""
+
+#: settings/layer.php:184
+msgid "Source WEBM: "
+msgstr ""
+
+#: settings/layer.php:194
+msgid "Source OGG: "
+msgstr ""
+
+#: settings/layer.php:204
+msgid "Link to YouTube video:"
+msgstr ""
+
+#: settings/layer.php:214
+msgid "Link to Vimeo video:"
+msgstr ""
+
+#: settings/layer.php:224
+msgid "Preview Image URL:"
+msgstr ""
+
+#: settings/layer.php:233
+msgid "Autoplay"
+msgstr ""
+
+#: settings/layer.php:256 settings/slide.php:327
+msgid "Loop"
+msgstr ""
+
+#: settings/layer.php:266 settings/layer.php:276
+msgid "Hide Controls"
+msgstr ""
+
+#: settings/layer.php:286 settings/slide.php:337
+msgid "Mute"
+msgstr ""
+
+#: settings/layer.php:296
+msgid "Disable/Hide on Mobile"
+msgstr ""
+
+#: settings/layer.php:308
+msgid "Position & Size"
+msgstr ""
+
+#: settings/layer.php:338
+msgid "X:"
+msgstr ""
+
+#: settings/layer.php:345
+msgid "Y:"
+msgstr ""
+
+#: settings/layer.php:353
+msgid "Resize layer automatically when resizing browser"
+msgstr ""
+
+#: settings/layer.php:359
+msgid "Don't change layer position when resizing browser"
+msgstr ""
+
+#: settings/layer.php:365
+msgid "Hide layer after this width (px)"
+msgstr ""
+
+#: settings/layer.php:373 settings/layer.php:386
+msgid "W:"
+msgstr ""
+
+#: settings/layer.php:424
+msgid "Animation"
+msgstr ""
+
+#: settings/layer.php:440 settings/layer.php:454 settings/layer.php:491
+#: views/slides.php:37
+msgid "Edit"
+msgstr ""
+
+#: settings/layer.php:466
+msgid "Display at (ms): "
+msgstr ""
+
+#: settings/layer.php:474
+msgid "Hide at (ms): "
+msgstr ""
+
+#: settings/layer.php:483
+msgid "Style"
+msgstr ""
+
+#: settings/layer.php:490
+msgid "Style: "
+msgstr ""
+
+#: settings/layer.php:492
+msgid "Clear"
+msgstr ""
+
+#: settings/layer.php:520
+msgid "CSS Classes: "
+msgstr ""
+
+#: settings/layer.php:526
+msgid "Link Custom Classes: "
+msgstr ""
+
+#: settings/layer.php:538 settings/layer.php:557
+msgid "Theme Styles (deprecated)"
+msgstr ""
+
+#: settings/layer.php:541 settings/layer.php:560
+msgid "none"
+msgstr ""
+
+#: settings/layer.php:575
+msgid "Font size"
+msgstr ""
+
+#: settings/layer.php:588
+msgid "Line height"
+msgstr ""
+
+#: settings/layer.php:601
+msgid "Text align"
+msgstr ""
+
+#: settings/layer.php:605
+msgid "Left"
+msgstr ""
+
+#: settings/layer.php:606
+msgid "Center"
+msgstr ""
+
+#: settings/layer.php:607
+msgid "Right"
+msgstr ""
+
+#: settings/layer.php:608
+msgid "Justify"
+msgstr ""
+
+#: settings/layer.php:619
+msgid "Whitespace"
+msgstr ""
+
+#: settings/layer.php:622
+msgid "Normal"
+msgstr ""
+
+#: settings/layer.php:623
+msgid "No-wrap"
+msgstr ""
+
+#: settings/preset.php:27
+msgid "Font and typography"
+msgstr ""
+
+#: settings/preset.php:34
+msgid "Enable mouse over styles"
+msgstr ""
+
+#: settings/preset.php:40
+msgid "Background color:"
+msgstr ""
+
+#: settings/preset.php:49
+msgid "Text color:"
+msgstr ""
+
+#: settings/preset.php:58
+msgid "Font size:"
+msgstr ""
+
+#: settings/preset.php:69
+msgid "Font:"
+msgstr ""
+
+#: settings/preset.php:97
+msgid "Weight:"
+msgstr ""
+
+#: settings/preset.php:123
+msgid "Font style:"
+msgstr ""
+
+#: settings/preset.php:146
+msgid "Letter spacing:"
+msgstr ""
+
+#: settings/preset.php:156
+msgid "Line height:"
+msgstr ""
+
+#: settings/preset.php:167
+msgid "Text align:"
+msgstr ""
+
+#: settings/preset.php:184
+msgid "Text Shadow"
+msgstr ""
+
+#: settings/preset.php:195
+msgid "Color:"
+msgstr ""
+
+#: settings/preset.php:200
+msgid "Horizontal Length:"
+msgstr ""
+
+#: settings/preset.php:206
+msgid "Vertical Length:"
+msgstr ""
+
+#: settings/preset.php:212
+msgid "Radius:"
+msgstr ""
+
+#: settings/preset.php:226
+msgid "Border"
+msgstr ""
+
+#: settings/preset.php:233
+msgid "Border Style:"
+msgstr ""
+
+#: settings/preset.php:266 settings/preset.php:338
+msgid "Top:"
+msgstr ""
+
+#: settings/preset.php:277 settings/preset.php:349
+msgid "Right:"
+msgstr ""
+
+#: settings/preset.php:288 settings/preset.php:360
+msgid "Bottom:"
+msgstr ""
+
+#: settings/preset.php:299 settings/preset.php:371
+msgid "Left:"
+msgstr ""
+
+#: settings/preset.php:310
+msgid "Border Color:"
+msgstr ""
+
+#: settings/preset.php:319
+msgid "Border Radius:"
+msgstr ""
+
+#: settings/preset.php:331
+msgid "Padding"
+msgstr ""
+
+#: settings/preset.php:383
+msgid "Advanced Editor"
+msgstr ""
+
+#: settings/preset.php:391
+msgid "Custom styles"
+msgstr ""
+
+#: settings/slide.php:8 settings/slider.php:126
+msgid "General"
+msgstr ""
+
+#: settings/slide.php:16
+msgid "Slide Title"
+msgstr ""
+
+#: settings/slide.php:17
+msgid "The title of the slide that will be shown in the slides list."
+msgstr ""
+
+#: settings/slide.php:22 views/slides.php:11
+msgid "Status"
+msgstr ""
+
+#: settings/slide.php:27
+msgid "Published"
+msgstr ""
+
+#: settings/slide.php:28
+msgid "Draft"
+msgstr ""
+
+#: settings/slide.php:71 settings/slide.php:86
+msgid "Color"
+msgstr ""
+
+#: settings/slide.php:83
+msgid "Background Color Type:"
+msgstr ""
+
+#: settings/slide.php:87
+msgid "Gradient"
+msgstr ""
+
+#: settings/slide.php:96
+msgid "Background Color:"
+msgstr ""
+
+#: settings/slide.php:105
+msgid "Gradient color 1:"
+msgstr ""
+
+#: settings/slide.php:114
+msgid "Gradient color 2:"
+msgstr ""
+
+#: settings/slide.php:123
+msgid "Gradient angle:"
+msgstr ""
+
+#: settings/slide.php:133
+msgid "Image"
+msgstr ""
+
+#: settings/slide.php:140
+msgid "Background Image:"
+msgstr ""
+
+#: settings/slide.php:146
+msgid "External URL"
+msgstr ""
+
+#: settings/slide.php:159
+msgid "Browse..."
+msgstr ""
+
+#: settings/slide.php:160
+msgid "Insert image"
+msgstr ""
+
+#: settings/slide.php:188
+msgid "Size:"
+msgstr ""
+
+#: settings/slide.php:193
+msgid "cover"
+msgstr ""
+
+#: settings/slide.php:194
+msgid "contain"
+msgstr ""
+
+#: settings/slide.php:195
+msgid "(%, %)"
+msgstr ""
+
+#: settings/slide.php:196
+msgid "normal"
+msgstr ""
+
+#: settings/slide.php:205
+msgid "Fit X:"
+msgstr ""
+
+#: settings/slide.php:216
+msgid "Fit Y:"
+msgstr ""
+
+#: settings/slide.php:227
+msgid "Repeat:"
+msgstr ""
+
+#: settings/slide.php:232
+msgid "no-repeat"
+msgstr ""
+
+#: settings/slide.php:233
+msgid "repeat"
+msgstr ""
+
+#: settings/slide.php:234
+msgid "repeat-x"
+msgstr ""
+
+#: settings/slide.php:235
+msgid "repeat-y"
+msgstr ""
+
+#: settings/slide.php:244
+msgid "Position:"
+msgstr ""
+
+#: settings/slide.php:249
+msgid "center top"
+msgstr ""
+
+#: settings/slide.php:250
+msgid "center bottom"
+msgstr ""
+
+#: settings/slide.php:251
+msgid "center center"
+msgstr ""
+
+#: settings/slide.php:252
+msgid "left top"
+msgstr ""
+
+#: settings/slide.php:253
+msgid "left center"
+msgstr ""
+
+#: settings/slide.php:254
+msgid "left bottom"
+msgstr ""
+
+#: settings/slide.php:255
+msgid "right top"
+msgstr ""
+
+#: settings/slide.php:256
+msgid "right center"
+msgstr ""
+
+#: settings/slide.php:257
+msgid "right bottom"
+msgstr ""
+
+#: settings/slide.php:258
+msgid "(x%, y%)"
+msgstr ""
+
+#: settings/slide.php:267
+msgid "Position X:"
+msgstr ""
+
+#: settings/slide.php:278
+msgid "Position Y:"
+msgstr ""
+
+#: settings/slide.php:290
+msgid "Video"
+msgstr ""
+
+#: settings/slide.php:299
+msgid "Video in MP4 format:"
+msgstr ""
+
+#: settings/slide.php:308
+msgid "Video in WEBM format:"
+msgstr ""
+
+#: settings/slide.php:317
+msgid "Video in OGG format:"
+msgstr ""
+
+#: settings/slide.php:346
+msgid "Fill mode:"
+msgstr ""
+
+#: settings/slide.php:348
+msgid "Fill"
+msgstr ""
+
+#: settings/slide.php:349
+msgid "Fit"
+msgstr ""
+
+#: settings/slide.php:360
+msgid "Cover Video"
+msgstr ""
+
+#: settings/slide.php:369
+msgid "Cover Type"
+msgstr ""
+
+#: settings/slide.php:372
+msgid "2 x 2 Black"
+msgstr ""
+
+#: settings/slide.php:373
+msgid "2 x 2 White"
+msgstr ""
+
+#: settings/slide.php:374
+msgid "3 x 3 Black"
+msgstr ""
+
+#: settings/slide.php:375
+msgid "3 x 3 White"
+msgstr ""
+
+#: settings/slide.php:386
+msgid "Link"
+msgstr ""
+
+#: settings/slide.php:393
+msgid "Link this slide to:"
+msgstr ""
+
+#: settings/slide.php:404
+msgid "Link id:"
+msgstr ""
+
+#: settings/slide.php:409
+msgid "Link class:"
+msgstr ""
+
+#: settings/slide.php:414
+msgid "Link rel:"
+msgstr ""
+
+#: settings/slide.php:419
+msgid "Link title:"
+msgstr ""
+
+#: settings/slide.php:425
+msgid "Visibility"
+msgstr ""
+
+#: settings/slide.php:433
+msgid "Only logged-in users can view this slide"
+msgstr ""
+
+#: settings/slide.php:438
+msgid "Visible from"
+msgstr ""
+
+#: settings/slide.php:443
+msgid "Visible until"
+msgstr ""
+
+#: settings/slide.php:449
+msgid "Misc"
+msgstr ""
+
+#: settings/slide.php:456
+msgid "HTML Class:"
+msgstr ""
+
+#: settings/slide.php:461
+msgid "HTML ID:"
+msgstr ""
+
+#: settings/slide.php:470
+msgid "Auto Image"
+msgstr ""
+
+#: settings/slide.php:471
+msgid "Featured Image"
+msgstr ""
+
+#: settings/slide.php:472
+msgid "First Image in Post"
+msgstr ""
+
+#: settings/slider-presets.php:6
+msgid "Custom Slider"
+msgstr ""
+
+#: settings/slider-presets.php:9
+msgid "create unlimited slides with images, text, buttons and videos"
+msgstr ""
+
+#: settings/slider-presets.php:13
+msgid "Posts Slider"
+msgstr ""
+
+#: settings/slider-presets.php:16
+msgid "create from posts of your website"
+msgstr ""
+
+#: settings/slider-presets.php:23
+msgid "Custom Slider #1"
+msgstr ""
+
+#: settings/slider-presets.php:32
+msgid "Posts Slider #1"
+msgstr ""
+
+#: settings/slider-presets.php:54
+msgid "WooCommerce Slider"
+msgstr ""
+
+#: settings/slider-presets.php:58
+msgid "create from WooCommerce products"
+msgstr ""
+
+#: settings/slider-presets.php:61
+msgid "WooCommerce Slider #1"
+msgstr ""
+
+#: settings/slider.php:142
+msgid "Slider title *"
+msgstr ""
+
+#: settings/slider.php:143
+msgid "Required. The title of the slider. Example: Slider1"
+msgstr ""
+
+#: settings/slider.php:144
+msgid "New Slider"
+msgstr ""
+
+#: settings/slider.php:150
+msgid "Slider alias *"
+msgstr ""
+
+#: settings/slider.php:152
+msgid ""
+"Required. The alias that will be used in shortcode for embedding the slider. "
+"Alias must be unique. Example: slider1"
+msgstr ""
+
+#: settings/slider.php:159
+msgid "Slider Shortcode"
+msgstr ""
+
+#: settings/slider.php:169
+msgid "Slider size on Desktop (default)"
+msgstr ""
+
+#: settings/slider.php:170
+msgid "Width:"
+msgstr ""
+
+#: settings/slider.php:171
+msgid "Initial width of the layers"
+msgstr ""
+
+#: settings/slider.php:180
+msgid "Height:"
+msgstr ""
+
+#: settings/slider.php:181
+msgid "Initial height of the layers"
+msgstr ""
+
+#: settings/slider.php:248
+msgid "Size"
+msgstr ""
+
+#: settings/slider.php:254
+msgid "Full Width"
+msgstr ""
+
+#: settings/slider.php:255
+msgid "Make this slider full-width / wide-screen"
+msgstr ""
+
+#: settings/slider.php:260
+msgid "Full Height"
+msgstr ""
+
+#: settings/slider.php:261
+msgid "Make this slider full-height"
+msgstr ""
+
+#: settings/slider.php:267
+msgid "Full height increment:"
+msgstr ""
+
+#: settings/slider.php:268
+msgid "Slider height will be increased or decreased to this value"
+msgstr ""
+
+#: settings/slider.php:278
+msgid "Increment units:"
+msgstr ""
+
+#: settings/slider.php:281
+msgid "Pixels (px)"
+msgstr ""
+
+#: settings/slider.php:282
+msgid "Percents (%)"
+msgstr ""
+
+#: settings/slider.php:292
+msgid "Offset by container:"
+msgstr ""
+
+#: settings/slider.php:293
+msgid ""
+"The height will be decreased with the height of these elements. Enter CSS "
+"Selector."
+msgstr ""
+
+#: settings/slider.php:303
+msgid "Full Size Grid"
+msgstr ""
+
+#: settings/slider.php:304
+msgid ""
+"Even if you select this option you still need to set Grid width and height "
+"to define slider size. If you check Full Width and/or Full Height options, "
+"the slider will be stretched to screen edges."
+msgstr ""
+
+#: settings/slider.php:305
+msgid "Make grid stretch to parent container"
+msgstr ""
+
+#: settings/slider.php:311
+msgid "Slider size on Laptop"
+msgstr ""
+
+#: settings/slider.php:312
+msgid ""
+"Configure layers size, position and styles manually for Laptop screen size. "
+"Initial Laptop dimensions:"
+msgstr ""
+
+#: settings/slider.php:318 settings/slider.php:346 settings/slider.php:374
+msgid "Width"
+msgstr ""
+
+#: settings/slider.php:328 settings/slider.php:356 settings/slider.php:384
+msgid "Height"
+msgstr ""
+
+#: settings/slider.php:339
+msgid "Slider size on Tablet"
+msgstr ""
+
+#: settings/slider.php:340
+msgid ""
+"Configure layers size, position and styles manually for Tablet screen size. "
+"Initial Tablet dimensions:"
+msgstr ""
+
+#: settings/slider.php:367
+msgid "Slider size on Mobile"
+msgstr ""
+
+#: settings/slider.php:368
+msgid ""
+"Configure layers size, position and styles manually for Mobile screen size. "
+"Initial Mobile dimensions:"
+msgstr ""
+
+#: settings/slider.php:395 settings/slider.php:401
+msgid "Slideshow"
+msgstr ""
+
+#: settings/slider.php:402
+msgid "Enable Slideshow"
+msgstr ""
+
+#: settings/slider.php:408
+msgid "Slideshow Delay:"
+msgstr ""
+
+#: settings/slider.php:409
+msgid "The time one slide stays on the screen in milliseconds"
+msgstr ""
+
+#: settings/slider.php:414
+msgid "Slideshow Animation:"
+msgstr ""
+
+#: settings/slider.php:417
+msgid "Slide"
+msgstr ""
+
+#: settings/slider.php:418
+msgid "Fade"
+msgstr ""
+
+#: settings/slider.php:419
+msgid "Slide Up"
+msgstr ""
+
+#: settings/slider.php:425
+msgid "Animation Duration:"
+msgstr ""
+
+#: settings/slider.php:426
+msgid "Animation duration in milliseconds"
+msgstr ""
+
+#: settings/slider.php:431
+msgid "Animation Easing:"
+msgstr ""
+
+#: settings/slider.php:437
+msgid "easeOut"
+msgstr ""
+
+#: settings/slider.php:464
+msgid ""
+"<a href=\"https://jqueryui.com/easing/\" target=\"_blank\">Easing examples</"
+"a>"
+msgstr ""
+
+#: settings/slider.php:476
+msgid "Controls"
+msgstr ""
+
+#: settings/slider.php:482
+msgid "Show arrows"
+msgstr ""
+
+#: settings/slider.php:487
+msgid "Show bullets"
+msgstr ""
+
+#: settings/slider.php:492
+msgid "Show slideshow timer"
+msgstr ""
+
+#: settings/slider.php:497
+msgid "Show slideshow play/pause button"
+msgstr ""
+
+#: settings/slider.php:502
+msgid "Hide controls when mouse leaves slider"
+msgstr ""
+
+#: settings/slider.php:507
+msgid "Pause on Hover"
+msgstr ""
+
+#: settings/slider.php:508
+msgid "Pause slideshow when hover the slider"
+msgstr ""
+
+#: settings/slider.php:513
+msgid "Reverse order of the slides"
+msgstr ""
+
+#: settings/slider.php:514
+msgid "Animate slides in the reverse order"
+msgstr ""
+
+#: settings/slider.php:519
+msgid "Show counter"
+msgstr ""
+
+#: settings/slider.php:520
+msgid "Displays the number of slides"
+msgstr ""
+
+#: settings/slider.php:525
+msgid "Enable swipe"
+msgstr ""
+
+#: settings/slider.php:526
+msgid "Turn on swipe on desktop"
+msgstr ""
+
+#: settings/slider.php:531
+msgid "Show edit button"
+msgstr ""
+
+#: settings/slider.php:532
+msgid "Display an icon for quick reference to slider settings"
+msgstr ""
+
+#: settings/slider.php:539
+msgid "Appearance"
+msgstr ""
+
+#: settings/slider.php:545
+msgid "Start with slide:"
+msgstr ""
+
+#: settings/slider.php:546
+msgid "Slide index in the list of slides"
+msgstr ""
+
+#: settings/slider.php:552
+msgid "Visible"
+msgstr ""
+
+#: settings/slider.php:553
+msgid "from"
+msgstr ""
+
+#: settings/slider.php:561
+msgid "till"
+msgstr ""
+
+#: settings/slider.php:569
+msgid "presets:"
+msgstr ""
+
+#: settings/slider.php:572
+msgid "Phone"
+msgstr ""
+
+#: settings/slider.php:593
+msgid "Initialization delay:"
+msgstr ""
+
+#: settings/slider.php:594
+msgid "Time in milliseconds before slider starts loading"
+msgstr ""
+
+#: settings/slider.php:601
+msgid ""
+"Display slider when it becomes visible on page (initialize slider on scroll)"
+msgstr ""
+
+#: settings/slider.php:607
+msgid "Custom CSS class"
+msgstr ""
+
+#: settings/slider.php:613
+msgid "Slider custom styles"
+msgstr ""
+
+#: settings/slider.php:640
+msgid "Exclude posts:"
+msgstr ""
+
+#: settings/slider.php:641 settings/slider.php:643
+msgid "post id's separated by comma"
+msgstr ""
+
+#: settings/slider.php:642
+msgid "Include posts:"
+msgstr ""
+
+#: settings/slider.php:644
+msgid "Number of posts to display: "
+msgstr ""
+
+#: settings/slider.php:645
+msgid "Link slides to post's page: "
+msgstr ""
+
+#: settings/slider.php:651
+msgid "Exclude products:"
+msgstr ""
+
+#: settings/slider.php:652 settings/slider.php:654
+msgid "product id's separated by comma"
+msgstr ""
+
+#: settings/slider.php:653
+msgid "Include products:"
+msgstr ""
+
+#: settings/slider.php:655
+msgid "Number of products to display: "
+msgstr ""
+
+#: settings/slider.php:656
+msgid "Link slides to product's page: "
+msgstr ""
+
+#: settings/slider.php:669
+msgid "Select Post type:"
+msgstr ""
+
+#: settings/slider.php:688
+msgid "Categories:"
+msgstr ""
+
+#: settings/slider.php:705
+msgid "Tags:"
+msgstr ""
+
+#: settings/slider.php:722
+msgid "Post Format:"
+msgstr ""
+
+#: settings/slider.php:764
+msgid "Excerpt length:"
+msgstr ""
+
+#: settings/slider.php:765
+msgid "character(s)"
+msgstr ""
+
+#: settings/slider.php:775
+msgid "Number of first results to skip (offset):"
+msgstr ""
+
+#: settings/slider.php:794
+msgid "Open in new window:"
+msgstr ""
+
+#: settings/slider.php:803
+msgid "Order By:"
+msgstr ""
+
+#: settings/slider.php:822
+msgid "Order direction:"
+msgstr ""
+
+#: settings/slider.php:840
+msgid "Only display in-stock products. "
+msgstr ""
+
+#: settings/slider.php:849
+msgid "Only display featured products. "
+msgstr ""
+
+#: settings/slider.php:858
+msgid "Only display on sale products. "
+msgstr ""
+
+#: settings/slider.php:871
+msgid "New Posts Slider"
+msgstr ""
+
+#: settings/slider.php:873
+msgid "New WooCommerce Slider"
+msgstr ""
+
+#: views/import-export-dialog.php:4
+msgid "Import"
+msgstr ""
+
+#: views/import-export-dialog.php:32 views/import-export-dialog.php:62
+msgid "Export"
+msgstr ""
+
+#: views/import-export-dialog.php:40 views/sliders.php:11 views/slides.php:9
+msgid "ID"
+msgstr ""
+
+#: views/import-export-dialog.php:41 views/sliders.php:12
+msgid "Name"
+msgstr ""
+
+#: views/import-export-dialog.php:42
+msgid "Alias"
+msgstr ""
+
+#: views/import-export-dialog.php:61
+msgid ""
+"Export and download selected sliders. You can import them later on your new "
+"website."
+msgstr ""
+
+#: views/layer.php:212
+msgid "Slide duration (ms):"
+msgstr ""
+
+#: views/layer.php:328
+msgid "* Custom layer options for this particular screen size"
+msgstr ""
+
+#: views/main.php:5
+msgid "Main Content"
+msgstr ""
+
+#: views/preset.php:28
+msgid "Normal state"
+msgstr ""
+
+#: views/preset.php:31
+msgid "Hover state"
+msgstr ""
+
+#: views/preset.php:104
+msgid "Apply style"
+msgstr ""
+
+#: views/preset.php:105 views/slider_row.php:35 views/slides.php:38
+msgid "Duplicate"
+msgstr ""
+
+#: views/preset.php:106
+msgid "Create new preset"
+msgstr ""
+
+#: views/preset.php:110
+#, php-format
+msgid ""
+"<a href='%s' target='_blank'>Upgrade to Pro</a> to create and apply styles"
+msgstr ""
+
+#: views/preview-dialog.php:16
+msgid "The displayed preview may differ from the actual result."
+msgstr ""
+
+#: views/preview-posts.php:3
+msgid "Update / Preview Posts"
+msgstr ""
+
+#: views/preview-posts.php:7
+msgid "Search Results"
+msgstr ""
+
+#: views/slide.php:7
+msgid "Slide Settings"
+msgstr ""
+
+#: views/slide.php:64 views/slide.php:100
+msgid "Add Text"
+msgstr ""
+
+#: views/slide.php:65 views/slide.php:101
+msgid "Add Image"
+msgstr ""
+
+#: views/slide.php:66 views/slide.php:102
+msgid "Add Button"
+msgstr ""
+
+#: views/slide.php:67 views/slide.php:103
+msgid "Add Video"
+msgstr ""
+
+#: views/slide.php:71 views/slide.php:108
+msgid "This feature is only available in Pro Version"
+msgstr ""
+
+#: views/slide.php:110
+msgid "Duplicate Layer"
+msgstr ""
+
+#: views/slide.php:111
+msgid "Delete Layer"
+msgstr ""
+
+#: views/slide.php:112
+msgid "Delete All Layers"
+msgstr ""
+
+#: views/slide.php:115
+msgid "Layers"
+msgstr ""
+
+#: views/slide.php:121
+msgid "Layers Sorting (drag to set an order)"
+msgstr ""
+
+#: views/slide.php:154
+msgid "Save Slide"
+msgstr ""
+
+#: views/slide.php:154
+msgid "Save Template"
+msgstr ""
+
+#: views/slide.php:157
+msgid "Preview Slide"
+msgstr ""
+
+#: views/slide.php:160
+msgid "&larr; Previous Slide"
+msgstr ""
+
+#: views/slide.php:161
+msgid "Next Slide &rarr;"
+msgstr ""
+
+#: views/slide.php:162 views/slides.php:53
+msgid "New Slide"
+msgstr ""
+
+#: views/slide.php:168 views/slide.php:170 views/slider.php:77
+#: views/slides.php:55 views/woocommerce-not-found.php:8
+msgid "Close"
+msgstr ""
+
+#: views/slider-presets.php:21
+msgid "Choose Slider Type:"
+msgstr ""
+
+#: views/slider-presets.php:53
+msgid "Import Sample:"
+msgstr ""
+
+#: views/slider-presets.php:81 views/slider.php:64 views/sliders.php:34
+msgid "Create Slider"
+msgstr ""
+
+#: views/slider.php:12
+msgid "New Slider Settings"
+msgstr ""
+
+#: views/slider.php:67
+msgid "Save Settings"
+msgstr ""
+
+#: views/slider.php:71
+msgid "Edit Template"
+msgstr ""
+
+#: views/slider.php:73
+msgid "Edit Slides"
+msgstr ""
+
+#: views/slider_row.php:34
+msgid "Preview"
+msgstr ""
+
+#: views/sliders.php:6
+msgid "Sliders: "
+msgstr ""
+
+#: views/sliders.php:13
+msgid "Shortcode"
+msgstr ""
+
+#: views/sliders.php:14
+msgid "Visible from/till"
+msgstr ""
+
+#: views/sliders.php:15
+msgid "Actions"
+msgstr ""
+
+#: views/sliders.php:35
+msgid "Import & Export"
+msgstr ""
+
+#: views/slides.php:2
+msgid "Slides List: "
+msgstr ""
+
+#: views/slides.php:10
+msgid "Title"
+msgstr ""
+
+#: views/slides.php:12
+msgid "Visible for"
+msgstr ""
+
+#: views/slides.php:13
+msgid "Date From"
+msgstr ""
+
+#: views/slides.php:14
+msgid "Date Until"
+msgstr ""
+
+#: views/slides.php:15
+msgid "Action"
+msgstr ""
+
+#: views/slides.php:31
+msgid "not set"
+msgstr ""

@@ -1,0 +1,1 @@
+jQuery(function(a){var b=a("input[name=mpsl_http_auth]"),c=a("input[name=mpsl_http_auth_login], input[name=mpsl_http_auth_password]"),d=a(".need-mpsl_http_auth");b.on("change",function(a){b.is(":checked")?(c.removeAttr("disabled").attr("required","required"),d.show()):(c.removeAttr("required").attr("disabled","disabled"),d.hide())})});

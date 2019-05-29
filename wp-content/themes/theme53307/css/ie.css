@@ -1,0 +1,8 @@
+body #motopress-main.main-holder #content form select, body #motopress-main.main-holder #container form select { max-width: none; }
+
+.woocommerce img, .woocommerce-page img { max-width: none !important; }
+
+#sidebar .featured-thumbnail img {
+    width: 100%;
+    max-width: none!important;
+}
