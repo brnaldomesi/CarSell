@@ -1,0 +1,4339 @@
+# Copyright (C) 2019 WooCommerce
+# This file is distributed under the same license as the WooCommerce Admin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Admin 0.12.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-admin\n"
+"POT-Creation-Date: 2019-05-15 00:17:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: docs/examples/extensions/add-report/woocommerce-admin-add-report-example.php:42
+msgid "Example"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:58
+msgid "Unique ID for the resource."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:89
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:202
+msgid "Sorry, there is no resouce with that ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:170
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:184
+#: includes/api/class-wc-admin-rest-reports-controller.php:61
+msgid "Sorry, you cannot list resources."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:233
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:109
+msgid "Sorry, you cannot edit this resource."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:315
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:246
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:253
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:298
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:323
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:278
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:257
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:266
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:355
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:284
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:339
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:350
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:371
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:254
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:338
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:281
+msgid "Order sort attribute ascending or descending."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:322
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:253
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:260
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:305
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:330
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:285
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:264
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:273
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:362
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:291
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:346
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:357
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:378
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:261
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:345
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:288
+msgid "Sort collection by object attribute."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:335
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:431
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:217
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:224
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:269
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:306
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:249
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:228
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:237
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:326
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:255
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:310
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:321
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:330
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:225
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:309
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:252
+msgid "Current page of the collection."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:343
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:439
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:225
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:232
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:277
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:314
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:257
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:236
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:245
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:334
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:263
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:318
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:329
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:338
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:233
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:317
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:260
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:352
+msgid "Type of note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:362
+msgid "Status of note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:386
+msgid "ID of the note record."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:392
+msgid "Name of the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:398
+msgid "The type of the note (e.g. error, warning, etc.)."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:404
+msgid "Locale used for the note title and content."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:410
+msgid "Title of the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:416
+msgid "Content of the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:422
+msgid "Icon (gridicon) for the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:428
+msgid "Content data for the note. JSON string. Available for re-localization."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:434
+msgid "The status of the note (e.g. unactioned, actioned)."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:439
+msgid "Source of the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:445
+msgid "Date the note was created."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:451
+msgid "Date the note was created (GMT)."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:457
+msgid "Date after which the user should be reminded of the note, if any."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:463
+msgid "Date after which the user should be reminded of the note, if any (GMT)."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:469
+msgid "Whether or a user can request to be reminded about the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-admin-notes-controller.php:475
+msgid "An array of actions, if any, for the note."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-coupons-controller.php:35
+msgid "Limit results to coupons with codes matching a given string."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-data-controller.php:39
+msgid "An endpoint used for searching download logs for a specific IP address."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-data-download-ips-controller.php:73
+msgid "Invalid request. Please pass the match parameter."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-data-download-ips-controller.php:137
+msgid "A partial IP address can be passed and matching results will be returned."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-data-download-ips-controller.php:158
+msgid "IP address."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:115
+msgid "Top Coupons - Number of Orders"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:118
+#: languages/woocommerce-admin.php:228
+msgid "Coupon Code"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:121
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:251
+#: includes/features/analytics/class-wc-admin-analytics.php:92
+#: includes/page-controller/connect-existing-pages.php:288
+#: includes/page-controller/connect-existing-pages.php:350
+#: languages/woocommerce-admin.php:172
+msgid "Orders"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:124
+#: languages/woocommerce-admin.php:231
+msgid "Amount Discounted"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:181
+msgid "Top Categories - Items Sold"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:184
+#: languages/woocommerce-admin.php:148
+msgid "Category"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:187
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:317
+#: languages/woocommerce-admin.php:48
+msgid "Items Sold"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:190
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:320
+#: languages/woocommerce-admin.php:59
+msgid "Net Revenue"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:245
+msgid "Top Customers - Total Spend"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:248
+msgid "Customer Name"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:254
+#: languages/woocommerce-admin.php:305
+msgid "Total Spend"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:311
+msgid "Top Products - Items Sold"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:314
+#: languages/woocommerce-admin.php:486
+msgid "Product"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:448
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:234
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:241
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:286
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:266
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:245
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:254
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:343
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:492
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:272
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:327
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:338
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:242
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:326
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:269
+msgid "Limit response to resources published after a given ISO8601 compliant date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:454
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:240
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:247
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:292
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:272
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:251
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:260
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:349
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:498
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:278
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:333
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:344
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:248
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:332
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:275
+msgid "Limit response to resources published before a given ISO8601 compliant date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:460
+msgid "URL query to persist across links."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:480
+msgid "Leaderboard ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:486
+msgid "Displayed title for the leaderboard."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:492
+msgid "Table headers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:499
+msgid "Table column header."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:509
+msgid "Table rows."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:516
+msgid "Table cell display."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-leaderboards-controller.php:522
+msgid "Table cell value."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:61
+msgid "Create an account"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:62
+msgid "Speed up & secure your store"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:72
+msgid "Add your products"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:73
+msgid "Bring your store to life"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:79
+msgid "Customize Appearance"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:80
+msgid "Ensure your store is on-brand"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:91
+msgid "Configure shipping"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:92
+msgid "Set up prices and destinations"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:98
+msgid "Configure taxes"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:99
+msgid "Set up sales tax rates"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:105
+msgid "Configure payments"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:106
+msgid "Choose payment providers"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:213
+msgid "Level ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:219
+msgid "Array of tasks under the level."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:226
+msgid "Task ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:232
+msgid "Task label."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:238
+msgid "Task description."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:244
+msgid "URL for illustration used."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-onboarding-levels-controller.php:250
+msgid "Task status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-orders-controller.php:35
+msgid "Limit result set to orders matching part of an order number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-product-variations-controller.php:34
+#: includes/api/class-wc-admin-rest-products-controller.php:66
+msgid "Search by similar product name or sku."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-product-variations-controller.php:84
+msgid "Product parent name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-product-variations-controller.php:89
+msgid "Product type."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-product-variations-controller.php:96
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:279
+msgid "Product parent ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-products-controller.php:60
+msgid "Limit result set to products that are low or out of stock."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:73
+msgid "Invalid response from data store."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:165
+msgid "Category ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:171
+msgid "Amount of items sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:177
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:140
+msgid "Gross revenue."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:183
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:165
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:192
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:205
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:191
+msgid "Amount of orders."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:189
+msgid "Amount of products."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:199
+msgid "Category name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:267
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:317
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:274
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:374
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:363
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:374
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:358
+msgid "Time interval to use for buckets in the returned data."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:281
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:324
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:398
+msgid "Limit result set to items that have the specified order status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:291
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:334
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:409
+msgid "Limit result set to items that don't have the specified order status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:301
+msgid ""
+"Limit result set to all items that have the specified term assigned in the "
+"categories taxonomy."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-categories-controller.php:310
+msgid "Add additional piece of info about each category to the report."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:79
+msgid ""
+"Batch endpoint for getting specific performance indicators from `stats` "
+"endpoints."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:83
+msgid "Stats about revenue."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:87
+msgid "Stats about orders."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:91
+msgid "Products detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:95
+msgid "Stats about products."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:99
+msgid "Product categories detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:103
+msgid "Stats about product categories."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:107
+msgid "Coupons detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:111
+msgid "Stats about coupons."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:115
+msgid "Taxes detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:119
+msgid "Stats about taxes."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:123
+msgid "Product downloads detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:127
+msgid "Product download files detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:131
+msgid "Stats about product downloads."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:135
+msgid "Customers detailed reports."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:254
+msgid "An alphanumeric identifier for the resource."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:260
+msgid "A human-readable description of the resource."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-controller.php:266
+msgid "API path."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:153
+msgid "Coupon ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:159
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:142
+msgid "Net discount amount."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:175
+msgid "Coupon code."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:181
+msgid "Coupon creation date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:187
+msgid "Coupon creation date in GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:193
+msgid "Coupon expiration date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:199
+msgid "Coupon expiration date in GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:206
+msgid "Coupon discount type."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:272
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:331
+msgid "Limit result set to coupons assigned specific coupon IDs."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-controller.php:281
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:368
+msgid "Add additional piece of info about each coupon to the report."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:150
+msgid "Amount of coupons."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:156
+msgid "Amount of discounted orders."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:166
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:218
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:179
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:213
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:206
+msgid "Reports data grouped by segment condition."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:174
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:226
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:187
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:221
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:214
+msgid "Segment identificator."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:180
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:245
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:204
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:232
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:302
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:200
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:265
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:227
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:297
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:220
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:285
+msgid "Interval subtotals."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:199
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:162
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:158
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:256
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:219
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:251
+#: includes/api/class-wc-admin-rest-reports-stock-stats-controller.php:116
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:239
+msgid "Totals data."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:206
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:165
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:263
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:226
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:258
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:246
+msgid "Reports data grouped by intervals."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:214
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:173
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:271
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:234
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:266
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:254
+msgid "Type of interval."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:221
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:180
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:278
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:241
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:273
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:261
+msgid "The date the report start, in the site's timezone."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:227
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:186
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:284
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:247
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:279
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:267
+msgid "The date the report start, as GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:233
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:192
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:290
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:253
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:285
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:273
+msgid "The date the report end, in the site's timezone."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:239
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:198
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:296
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:259
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:291
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:279
+msgid "The date the report end, as GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-coupons-stats-controller.php:340
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:478
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:404
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:388
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:381
+msgid "Segment the response by additional constraint."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:185
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:185
+msgid "Customer ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:191
+msgid "User ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:197
+msgid "Name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:203
+msgid "Username."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:209
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:169
+msgid "Country."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:215
+msgid "City."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:221
+msgid "Postal code."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:227
+msgid "Date registered."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:233
+msgid "Date registered GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:239
+msgid "Date last active."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:245
+msgid "Date last active GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:251
+msgid "Order count."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:257
+msgid "Total spend."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:263
+msgid "Avg order value."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:282
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:430
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:183
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:277
+msgid ""
+"Limit response to objects registered before (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:288
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:436
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:189
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:283
+msgid ""
+"Limit response to objects registered after (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:294
+msgid ""
+"Limit response to resources with orders published after a given ISO8601 "
+"compliant date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:300
+msgid ""
+"Limit response to resources with orders published before a given ISO8601 "
+"compliant date."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:348
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:195
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:288
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:388
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:315
+msgid ""
+"Indicates whether all the conditions should be true for the resulting set, "
+"or if any one of them is sufficient. Match affects the following "
+"parameters: status_is, status_is_not, product_includes, product_excludes, "
+"coupon_includes, coupon_excludes, customer, categories"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:358
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:205
+msgid ""
+"Limit response to objects with a customer field containing the search term. "
+"Searches the field provided by `searchby`."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:373
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:220
+msgid "Limit response to objects with specfic names."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:378
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:225
+msgid "Limit response to objects excluding specfic names."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:383
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:230
+msgid "Limit response to objects with specfic usernames."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:388
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:235
+msgid "Limit response to objects excluding specfic usernames."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:393
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:240
+msgid "Limit response to objects including emails."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:398
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:245
+msgid "Limit response to objects excluding emails."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:403
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:250
+msgid "Limit response to objects with specfic countries."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:408
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:255
+msgid "Limit response to objects excluding specfic countries."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:413
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:260
+msgid ""
+"Limit response to objects last active before (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:419
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:266
+msgid ""
+"Limit response to objects last active after (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:425
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:442
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:272
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:289
+msgid ""
+"Limit response to objects last active between two given ISO8601 compliant "
+"datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:447
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:294
+msgid ""
+"Limit response to objects with an order count greater than or equal to "
+"given integer."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:453
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:300
+msgid ""
+"Limit response to objects with an order count less than or equal to given "
+"integer."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:459
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:306
+msgid "Limit response to objects with an order count between two given integers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:464
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:311
+msgid ""
+"Limit response to objects with a total order spend greater than or equal to "
+"given number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:469
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:316
+msgid ""
+"Limit response to objects with a total order spend less than or equal to "
+"given number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:474
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:321
+msgid ""
+"Limit response to objects with a total order spend between two given "
+"numbers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:479
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:326
+msgid ""
+"Limit response to objects with an average order spend greater than or equal "
+"to given number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:484
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:331
+msgid ""
+"Limit response to objects with an average order spend less than or equal to "
+"given number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:489
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:336
+msgid ""
+"Limit response to objects with an average order spend between two given "
+"numbers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:494
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:341
+msgid ""
+"Limit response to objects with last order before (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:500
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:347
+msgid ""
+"Limit response to objects with last order after (or at) a given ISO8601 "
+"compliant datetime."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-controller.php:506
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:353
+msgid "Limit result to items with specified customer ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:129
+msgid "Number of customers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:135
+msgid "Average number of orders."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:141
+msgid "Average total spend per customer."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-customers-stats-controller.php:148
+msgid "Average AOV per customer."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:160
+msgid "ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:166
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:202
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:158
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:161
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:167
+msgid "Product ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:169
+msgid "The date of the download, in the site's timezone."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:175
+msgid "The date of the download, as GMT."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:184
+msgid "Download ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:190
+msgid "File name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:196
+msgid "File URL."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:208
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:161
+msgid "Order ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:214
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:167
+msgid "Order Number."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:220
+msgid "User ID for the downloader."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:226
+msgid "User name of the downloader."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:232
+msgid "IP address for the downloader."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:295
+msgid ""
+"Indicates whether all the conditions should be true for the resulting set, "
+"or if any one of them is sufficient. Match affects the following "
+"parameters: products, orders, username, ip_address."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:305
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:298
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:284
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:419
+msgid "Limit result set to items that have the specified product(s) assigned."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:315
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:308
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:294
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:429
+msgid "Limit result set to items that don't have the specified product(s) assigned."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:325
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:317
+msgid "Limit result set to items that have the specified order ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:334
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:326
+msgid "Limit result set to items that don't have the specified order ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:343
+msgid "Limit response to objects that have the specified user ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:352
+msgid "Limit response to objects that don't have the specified user ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:361
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:353
+msgid "Limit response to objects that have a specified ip address."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-controller.php:370
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:362
+msgid "Limit response to objects that don't have a specified ip address."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:144
+msgid "Number of downloads."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:335
+msgid "Limit response to objects that have the specified customer ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-downloads-stats-controller.php:344
+msgid "Limit response to objects that don't have the specified customer ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:186
+msgid "Number of days to import."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:193
+msgid "Skip importing existing order data."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:214
+msgid "Regeneration status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:220
+msgid "Regenerate data message."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-import-controller.php:242
+msgid "All pending and in-progress import actions have been cancelled."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:173
+msgid "Date the order was created."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:179
+msgid "Order status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:191
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:164
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:156
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:173
+msgid "Number of items sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:197
+msgid "Net total revenue."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:203
+msgid "Returning or new customer."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:213
+msgid "List of product IDs and names."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:219
+msgid "Category IDs."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:304
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:438
+msgid "Limit result set to items that have the specified coupon(s) assigned."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:314
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:447
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:456
+msgid "Limit result set to items that don't have the specified coupon(s) assigned."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:344
+msgid "Limit result set to returning or new customers."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-controller.php:355
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:465
+msgid "Limit result set to specific types of refunds."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:151
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:163
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:148
+msgid "Net revenue."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:158
+msgid "Amount of orders"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:165
+msgid "Average order value."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:173
+msgid "Average items per order"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:179
+msgid "Number of items sold"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:185
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:156
+msgid "Amount discounted by coupons."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:191
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:162
+msgid "Unique coupons count."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:197
+msgid "Number of orders done by returning customers"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:203
+msgid "Number of orders done by new customers"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-orders-stats-controller.php:209
+msgid "Number of distinct products sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:125
+msgid "Sorry, fetching performance indicators failed."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:264
+msgid "A list of stats to query must be provided."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:415
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:273
+msgid "Unique identifier for the resource."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:422
+msgid "The specific chart this stat referrers to."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:428
+msgid "Human readable label for the stat."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:434
+msgid "Format of the stat."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:441
+msgid ""
+"Value of the stat. Returns null if the stat does not exist or cannot be "
+"loaded."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:472
+msgid "There was an issue loading the report endpoints"
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-performance-indicators-controller.php:482
+#. translators: Allowed values is a list of stat endpoints.
+msgid "Limit response to specific report stats. Allowed values: %s."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:170
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:179
+msgid "Total net revenue of all items sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:176
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:185
+msgid "Number of orders product appeared in."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:183
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:285
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:192
+msgid "Product name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:189
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:198
+msgid "Product price."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:195
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:204
+msgid "Product image."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:201
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:210
+msgid "Product link."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:207
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:216
+msgid "Product attributes."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:213
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:222
+msgid "Product inventory status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:219
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:228
+msgid "Product inventory quantity."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:225
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:234
+msgid "Product inventory threshold for low stock."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:231
+msgid "Product variations IDs."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:237
+msgid "Product SKU."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:306
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:377
+msgid "Limit result to items from the specified categories."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:325
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:386
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:301
+msgid "Limit result to items with specified product ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-controller.php:335
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:319
+msgid "Add additional piece of info about each product to the report."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:170
+msgid "Number of orders."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:193
+msgid "Human readable segment label, either product or variation name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-products-stats-controller.php:395
+#: includes/api/class-wc-admin-rest-reports-variations-controller.php:310
+msgid "Limit result to items with specified variation ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:169
+msgid "Total of shipping."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:177
+msgid "Total of taxes."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:184
+msgid "Total of refunds."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:198
+msgid "Items sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-revenue-stats-controller.php:204
+msgid "Products sold."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:291
+msgid "Unique identifier."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:297
+msgid "Stock status."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:304
+msgid "Stock quantity."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:310
+msgid "Manage stock."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:347
+msgid "Ensure result set excludes specific IDs."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:356
+msgid "Limit result set to specific ids."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:365
+msgid "Offset the result set by a specific number of items."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:393
+msgid "Limit result set to those of particular parent IDs."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:402
+msgid "Limit result set to all items except those of a particular parent ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-controller.php:411
+msgid "Limit result set to items assigned a stock report type."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-stats-controller.php:86
+msgid "Number of products."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-stats-controller.php:92
+msgid "Number of low stock products."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-stock-stats-controller.php:103
+#. translators: Stock status. Example: "Number of low stock products
+msgid "Number of %s products."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:151
+msgid "Tax rate ID."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:157
+msgid "Tax rate name."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:163
+msgid "Tax rate."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:175
+msgid "State."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:181
+msgid "Priority."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:187
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:167
+msgid "Total tax."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:193
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:175
+msgid "Order tax."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:199
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:183
+msgid "Shipping tax."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-controller.php:277
+msgid "Limit result set to items assigned one or more tax rates."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:197
+msgid "Amount of tax codes."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-reports-taxes-stats-controller.php:372
+msgid ""
+"Limit result set to all items that have the specified term assigned in the "
+"taxes taxonomy."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-taxes-controller.php:35
+msgid "Search by similar tax code."
+msgstr ""
+
+#: includes/api/class-wc-admin-rest-taxes-controller.php:40
+msgid "Limit result set to items that have the specified rate ID(s) assigned."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:478
+#. translators: %1$s: updated title, %2$s: blog info name
+msgid "%1$s &lsaquo; %2$s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Admin"
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:561
+msgid "Settings for WooCommerce admin reporting."
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:577
+msgid "Excluded report order statuses"
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:578
+msgid "Statuses that should not be included when calculating report totals."
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:586
+msgid "Actionable order statuses"
+msgstr ""
+
+#: includes/class-wc-admin-loader.php:587
+msgid "Statuses that require extra action on behalf of the store admin."
+msgstr ""
+
+#: includes/class-wc-admin-reports-coupons-stats-segmenting.php:274
+#: includes/class-wc-admin-reports-orders-stats-segmenting.php:369
+#: includes/class-wc-admin-reports-products-stats-segmenting.php:161
+msgid ""
+"product_includes parameter need to specify exactly one product when "
+"segmenting by variation."
+msgstr ""
+
+#: includes/class-wc-admin-reports-interval.php:597
+#: includes/class-wc-admin-reports-interval.php:629
+#. translators: 1: parameter name
+msgid "%1$s is not a numerically indexed array."
+msgstr ""
+
+#: includes/class-wc-admin-reports-interval.php:609
+#. translators: %s: parameter name
+msgid "%s must contain 2 numbers."
+msgstr ""
+
+#: includes/class-wc-admin-reports-interval.php:641
+#. translators: %s: parameter name
+msgid "%s must contain 2 valid dates."
+msgstr ""
+
+#: includes/class-wc-admin-reports-query.php:22
+#. translators: %s: Method name
+msgid "Method '%s' not implemented. Must be overridden in subclass."
+msgstr ""
+
+#: includes/class-wc-admin-reports-sync.php:130
+msgid ""
+"Report table data is being rebuilt.  Please allow some time for data to "
+"fully populate."
+msgstr ""
+
+#: includes/class-wc-admin-reports-sync.php:238
+msgid "Report table data is being deleted."
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-notes-data-store.php:113
+msgid "Invalid data store for admin note."
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-reports-categories-data-store.php:298
+#: includes/data-stores/class-wc-admin-reports-orders-stats-data-store.php:259
+#: includes/data-stores/class-wc-admin-reports-orders-stats-data-store.php:323
+#: includes/data-stores/class-wc-admin-reports-products-stats-data-store.php:172
+#: includes/data-stores/class-wc-admin-reports-products-stats-data-store.php:200
+#: includes/data-stores/class-wc-admin-reports-taxes-stats-data-store.php:220
+msgid "Sorry, fetching revenue data failed."
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-reports-downloads-stats-data-store.php:121
+#: includes/data-stores/class-wc-admin-reports-downloads-stats-data-store.php:149
+msgid "Sorry, fetching downloads data failed."
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-reports-products-data-store.php:212
+#. translators: %s is product name
+msgid "%s (Deleted)"
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-reports-products-data-store.php:212
+msgid "(Deleted)"
+msgstr ""
+
+#: includes/data-stores/class-wc-admin-reports-taxes-stats-data-store.php:254
+msgid "Sorry, fetching tax data failed."
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:79
+#: languages/woocommerce-admin.php:41
+msgid "Analytics"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:86
+#: languages/woocommerce-admin.php:541
+msgid "Revenue"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:98
+#: includes/page-controller/connect-existing-pages.php:31
+#: includes/page-controller/connect-existing-pages.php:457
+#: languages/woocommerce-admin.php:158
+msgid "Products"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:104
+#: languages/woocommerce-admin.php:144
+msgid "Categories"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:110
+#: includes/page-controller/connect-existing-pages.php:318
+#: languages/woocommerce-admin.php:225
+msgid "Coupons"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:116
+#: includes/page-controller/connect-existing-pages.php:382
+#: languages/woocommerce-admin.php:547
+msgid "Taxes"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:122
+#: languages/woocommerce-admin.php:480
+msgid "Downloads"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:128
+#: includes/page-controller/connect-existing-pages.php:372
+#: languages/woocommerce-admin.php:555
+msgid "Stock"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:134
+#: includes/page-controller/connect-existing-pages.php:362
+#: languages/woocommerce-admin.php:424
+msgid "Customers"
+msgstr ""
+
+#: includes/features/analytics/class-wc-admin-analytics.php:140
+#: includes/page-controller/connect-existing-pages.php:17
+#: languages/woocommerce-admin.php:951
+msgid "Settings"
+msgstr ""
+
+#: includes/features/analytics-dashboard/class-wc-admin-analytics-dashboard.php:83
+#: languages/woocommerce-admin.php:1039
+msgid "Dashboard"
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:284
+msgid "The admin note name prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:297
+msgid "The admin note type prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:305
+#. translators: %s: admin note type.
+msgid "The admin note type prop (%s) is not one of the supported types."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:321
+msgid "The admin note locale prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:334
+msgid "The admin note title prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:355
+msgid "The admin note content prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:368
+msgid "The admin note icon prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:385
+msgid "The admin note content_data prop must be an instance of stdClass."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:398
+msgid "The admin note status prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:406
+#. translators: %s: admin note status property.
+msgid "The admin note status prop (%s) is not one of the supported statuses."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:422
+msgid "The admin note source prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:435
+msgid "The admin note date prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:481
+msgid "The admin note action name prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:485
+msgid "The admin note action label prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-note.php:489
+msgid "The admin note action query prop cannot be empty."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-giving-feedback-notes.php:54
+msgid "Giving feedback"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-giving-feedback-notes.php:55
+msgid ""
+"Are you enjoying the new WooCommerce experience? We'd love to get your "
+"feedback."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-giving-feedback-notes.php:63
+msgid "Share feedback"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-historical-data.php:40
+msgid "WooCommerce Admin: Historical Analytics Data"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-historical-data.php:41
+msgid ""
+"To view your historical analytics data, you must process your existing "
+"orders and customers."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-historical-data.php:50
+msgid "Get Started"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-mobile-app.php:49
+msgid ""
+"Install the WooCommerce mobile app to manage orders, receive sales "
+"notifications, and view key metrics — wherever you are."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-mobile-app.php:52
+msgid "Install Woo mobile app"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-mobile-app.php:59
+#: includes/notes/class-wc-admin-notes-order-milestones.php:234
+#: includes/notes/class-wc-admin-notes-welcome-message.php:44
+#: languages/woocommerce-admin.php:1145
+msgid "Learn more"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-new-sales-record.php:72
+#. translators: 1 and 4: Date (e.g. October 16th), 2 and 3: Amount (e.g.
+#. $160.00)
+msgid ""
+"Woohoo, %1$s was your record day for sales! Net revenue was %2$s beating "
+"the previous record of %3$s set on %4$s."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-new-sales-record.php:91
+msgid "New sales record!"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-new-sales-record.php:98
+msgid "View report"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:177
+msgid "First order"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:189
+#. translators: Number of orders processed.
+msgid "Congratulations on processing %s orders!"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:206
+msgid ""
+"Congratulations on getting your first order from a customer! Learn how to "
+"manage your orders."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:208
+msgid ""
+"You've hit the 10 orders milestone! Look at you go. Browse some WooCommerce "
+"success stories for inspiration."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:217
+msgid ""
+"Another order milestone! Take a look at your Orders Report to review your "
+"orders to date."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:240
+msgid "Browse"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-order-milestones.php:253
+msgid "Review your orders"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-settings-notes.php:39
+msgid "Looking for the Store Notice setting?"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-settings-notes.php:40
+msgid "It can now be found in the Customizer."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-settings-notes.php:48
+msgid "Open Customizer"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-welcome-message.php:35
+msgid "New feature(s)"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-welcome-message.php:36
+msgid ""
+"Welcome to the new WooCommerce experience! In this new release you'll be "
+"able to have a glimpse of how your store is doing in the Dashboard, manage "
+"important aspects of your business (such as managing orders, stock, "
+"reviews) from anywhere in the interface, dive into your store data with a "
+"completely new Analytics section and more!"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:182
+msgid "Connect to WooCommerce.com"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:183
+msgid "Connect to get important product notifications and updates."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:191
+msgid "Connect"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:311
+#. translators: name of the extension subscription expiring soon
+msgid "%s subscription expiring soon"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:317
+#. translators: number of days until the subscription expires
+msgid ""
+"Your subscription expires in %d days. Enable autorenew to avoid losing "
+"updates and access to support."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:341
+msgid "Enable Autorenew"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:373
+#. translators: name of the extension subscription that expired
+msgid "%s subscription expired"
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:379
+#. translators: date the subscription expired, e.g. Jun 7th 2018
+msgid ""
+"Your subscription expired on %s. Get a new subscription to continue "
+"receiving updates and access to support."
+msgstr ""
+
+#: includes/notes/class-wc-admin-notes-woo-subscriptions-notes.php:405
+msgid "Renew Subscription"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:18
+#: includes/page-controller/connect-existing-pages.php:32
+msgid "General"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:50
+msgid "Inventory"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:60
+msgid "Downloadable products"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:71
+#: languages/woocommerce-admin.php:762
+msgid "Shipping"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:72
+#: includes/page-controller/connect-existing-pages.php:91
+msgid "Shipping zones"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:92
+msgid "Edit zone"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:110
+msgid "Shipping options"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:120
+msgid "Shipping classes"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:130
+msgid "Payments"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:147
+msgid "Direct bank transfer"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:157
+msgid "Check payments"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:167
+msgid "Cash on delivery"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:177
+msgid "PayPal"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:187
+msgid "Accounts & Privacy"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:197
+msgid "Emails"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:218
+msgid "Edit email"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:230
+msgid "Advanced"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:231
+msgid "Page setup"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:249
+msgid "REST API"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:259
+msgid "Webhooks"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:269
+msgid "Legacy API"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:279
+msgid "WooCommerce.com"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:299
+#: includes/page-controller/connect-existing-pages.php:329
+#: includes/page-controller/connect-existing-pages.php:468
+msgid "Add New"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:309
+msgid "Edit Order"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:339
+msgid "Edit Coupon"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:349
+msgid "Reports"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:392
+#: languages/woocommerce-admin.php:676
+msgid "Status"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:393
+msgid "System status"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:405
+#: includes/page-controller/connect-existing-pages.php:415
+msgid "Tools"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:425
+msgid "Scheduled Actions"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:435
+msgid "Extensions"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:436
+msgid "Browse Extensions"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:448
+msgid "WooCommerce.com Subscriptions"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:478
+msgid "Edit Product"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:488
+msgid "Import Products"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:498
+msgid "Export Products"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:508
+msgid "Product categories"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:518
+msgid "Edit category"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:528
+msgid "Product tags"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:538
+msgid "Edit tag"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:548
+msgid "Attributes"
+msgstr ""
+
+#: includes/page-controller/connect-existing-pages.php:558
+msgid "Edit attribute"
+msgstr ""
+
+#: languages/woocommerce-admin.php:5
+msgid "No data recorded for the selected time period."
+msgstr ""
+
+#: languages/woocommerce-admin.php:8
+msgid "No data for the current search"
+msgstr ""
+
+#: languages/woocommerce-admin.php:11
+msgid "No data for the selected date range"
+msgstr ""
+
+#: languages/woocommerce-admin.php:14
+msgid "There was an error getting your stats. Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:21
+msgid "Reload"
+msgstr ""
+
+#: languages/woocommerce-admin.php:24
+msgid "No results could be found for this date range."
+msgstr ""
+
+#: languages/woocommerce-admin.php:27
+msgid "View Orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:32
+msgid "Previous Period:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:36
+msgid "Previous Year:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:65
+msgid "Orders Count"
+msgstr ""
+
+#: languages/woocommerce-admin.php:75
+msgid "Show"
+msgstr ""
+
+#: languages/woocommerce-admin.php:78
+msgid "All Categories"
+msgstr ""
+
+#: languages/woocommerce-admin.php:81
+msgid "Type to search for a category"
+msgstr ""
+
+#: languages/woocommerce-admin.php:84
+msgid "Single Category"
+msgstr ""
+
+#: languages/woocommerce-admin.php:90
+msgid "Comparison"
+msgstr ""
+
+#: languages/woocommerce-admin.php:94
+msgid "Check at least two categories below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:97
+msgid "Search for categories to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:100
+msgid "Compare Categories"
+msgstr ""
+
+#: languages/woocommerce-admin.php:107
+msgid "Compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:111
+msgid "%d products"
+msgstr ""
+
+#: languages/woocommerce-admin.php:114
+msgid "%d categories"
+msgstr ""
+
+#: languages/woocommerce-admin.php:117
+msgid "category"
+msgid_plural "categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:123
+msgid "item sold"
+msgid_plural "items sold"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:130
+msgid "net revenue"
+msgstr ""
+
+#: languages/woocommerce-admin.php:137
+msgid "order"
+msgid_plural "orders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:140
+msgid "Search by category name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:151
+msgid "Items sold"
+msgstr ""
+
+#: languages/woocommerce-admin.php:175
+msgid "Discounted Orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:178
+msgid "Amount"
+msgstr ""
+
+#: languages/woocommerce-admin.php:181
+msgid "All Coupons"
+msgstr ""
+
+#: languages/woocommerce-admin.php:184
+msgid "Type to search for a coupon"
+msgstr ""
+
+#: languages/woocommerce-admin.php:187
+msgid "Single Coupon"
+msgstr ""
+
+#: languages/woocommerce-admin.php:190
+msgid "Compare Coupon Codes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:193
+msgid "Check at least two coupon codes below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:196
+msgid "%d coupons"
+msgstr ""
+
+#: languages/woocommerce-admin.php:202
+msgid "N/A"
+msgstr ""
+
+#: languages/woocommerce-admin.php:206
+msgid "coupon"
+msgid_plural "coupons"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:209
+msgid "amount discounted"
+msgstr ""
+
+#: languages/woocommerce-admin.php:212
+msgid "Percentage"
+msgstr ""
+
+#: languages/woocommerce-admin.php:215
+msgid "Fixed cart"
+msgstr ""
+
+#: languages/woocommerce-admin.php:218
+msgid "Fixed product"
+msgstr ""
+
+#: languages/woocommerce-admin.php:234
+msgid "Created"
+msgstr ""
+
+#: languages/woocommerce-admin.php:237
+msgid "Expires"
+msgstr ""
+
+#: languages/woocommerce-admin.php:240
+msgid "Type"
+msgstr ""
+
+#: languages/woocommerce-admin.php:245
+msgid "Username"
+msgstr ""
+
+#: languages/woocommerce-admin.php:249
+msgid "Search customer username"
+msgstr ""
+
+#: languages/woocommerce-admin.php:253
+msgid "Remove customer username filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:257
+msgid "Select a customer username filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:262
+#. translators: A sentence describing a customer username filter. See screen
+#. shot for context: https:cloudup.com/ccxhyH2mEDg
+msgid "{{title}}Username{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:266
+msgid "Select customer username"
+msgstr ""
+
+#: languages/woocommerce-admin.php:270
+msgid "Email"
+msgstr ""
+
+#: languages/woocommerce-admin.php:273
+msgid "Search customer email"
+msgstr ""
+
+#: languages/woocommerce-admin.php:276
+msgid "Remove customer email filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:279
+msgid "Select a customer email filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:283
+#. translators: A sentence describing a customer email filter. See screen shot
+#. for context: https:cloudup.com/cCsm3GeXJbE
+msgid "{{title}}Email{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:286
+msgid "Select customer email"
+msgstr ""
+
+#: languages/woocommerce-admin.php:289
+msgid "No. of Orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:292
+msgid "Remove order  filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:295
+msgid "Select an order count filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:298
+msgid "{{title}}No. of Orders{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:301
+msgid "All Customers"
+msgstr ""
+
+#: languages/woocommerce-admin.php:308
+msgid "Remove total spend filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:311
+msgid "Select a total spend filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:314
+msgid "{{title}}Total Spend{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:318
+msgid "AOV"
+msgstr ""
+
+#: languages/woocommerce-admin.php:321
+msgid "Remove average older value filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:324
+msgid "Select an average order value filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:327
+msgid "{{title}}AOV{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:330
+msgid "Registered"
+msgstr ""
+
+#: languages/woocommerce-admin.php:333
+msgid "Remove registered filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:336
+msgid "Select a registered filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:340
+#. translators: A sentence describing a Product filter. See screen shot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgid "{{title}}Registered{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:343
+msgid "Last active"
+msgstr ""
+
+#: languages/woocommerce-admin.php:346
+msgid "Remove last active filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:349
+msgid "Select a last active filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:353
+#. translators: A sentence describing a Product filter. See screen shot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgid "{{title}}Last active{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:356
+msgid "Select registered date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:359
+msgid "Type to search for a customer"
+msgstr ""
+
+#: languages/woocommerce-admin.php:362
+msgid "Single Customer"
+msgstr ""
+
+#: languages/woocommerce-admin.php:367
+msgid "Advanced Filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:371
+msgid "Name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:374
+msgid "Remove customer name filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:377
+msgid "Select a customer name filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:381
+#. translators: A sentence describing a Product filter. See screen shot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgid "{{title}}Name{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:384
+msgid "Select customer name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:388
+msgid "Country"
+msgstr ""
+
+#: languages/woocommerce-admin.php:392
+msgid "Search"
+msgstr ""
+
+#: languages/woocommerce-admin.php:395
+msgid "Remove country filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:398
+msgid "Select a country filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:402
+#. translators: A sentence describing a Product filter. See screen shot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgid "{{title}}Country{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:405
+msgid "Select country"
+msgstr ""
+
+#: languages/woocommerce-admin.php:408
+msgid "customer"
+msgid_plural "customers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:411
+msgid "average order"
+msgid_plural "average orders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:414
+msgid "average lifetime spend"
+msgstr ""
+
+#: languages/woocommerce-admin.php:417
+msgid "average order value"
+msgstr ""
+
+#: languages/woocommerce-admin.php:420
+msgid "Search by customer name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:427
+msgid "Last Active"
+msgstr ""
+
+#: languages/woocommerce-admin.php:430
+msgid "Sign Up"
+msgstr ""
+
+#: languages/woocommerce-admin.php:434
+msgid "Average Order Value"
+msgstr ""
+
+#: languages/woocommerce-admin.php:437
+msgid "City"
+msgstr ""
+
+#: languages/woocommerce-admin.php:440
+msgid "Postal Code"
+msgstr ""
+
+#: languages/woocommerce-admin.php:443
+msgid "Search order number"
+msgstr ""
+
+#: languages/woocommerce-admin.php:446
+msgid "Remove order number filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:449
+msgid "Select a order number filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:453
+#. translators: A sentence describing a order number filter. See screen shot
+#. for context: https:cloudup.com/ccxhyH2mEDg
+msgid "{{title}}Order number{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:456
+msgid "Select order number"
+msgstr ""
+
+#: languages/woocommerce-admin.php:459
+msgid "IP Address"
+msgstr ""
+
+#: languages/woocommerce-admin.php:462
+msgid "Search IP address"
+msgstr ""
+
+#: languages/woocommerce-admin.php:465
+msgid "Remove IP address filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:468
+msgid "Select an IP address filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:472
+#. translators: A sentence describing a order number filter. See screen shot
+#. for context: https:cloudup.com/ccxhyH2mEDg
+msgid "{{title}}IP Address{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:475
+msgid "Select IP address"
+msgstr ""
+
+#: languages/woocommerce-admin.php:483
+msgid "All Downloads"
+msgstr ""
+
+#: languages/woocommerce-admin.php:489
+msgid "Remove product filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:493
+msgid "Select a product filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:498
+#. translators: A sentence describing a Product filter. See screen shot for
+#. context: https:cloudup.com/cSsUY9VeCVJ
+msgid "{{title}}Product{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:501
+msgid "Select product"
+msgstr ""
+
+#: languages/woocommerce-admin.php:504
+msgid "Order number"
+msgstr ""
+
+#: languages/woocommerce-admin.php:508
+msgid "day"
+msgid_plural "days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:511
+msgid "download"
+msgid_plural "downloads"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:516
+msgid "Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:520
+msgid "Product Title"
+msgstr ""
+
+#: languages/woocommerce-admin.php:523
+msgid "File Name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:527
+msgid "Order #"
+msgstr ""
+
+#: languages/woocommerce-admin.php:531
+msgid "Order Number"
+msgstr ""
+
+#: languages/woocommerce-admin.php:534
+msgid "User Name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:537
+msgid "IP"
+msgstr ""
+
+#: languages/woocommerce-admin.php:558
+msgid "Coupon Codes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:561
+msgid "Search coupons"
+msgstr ""
+
+#: languages/woocommerce-admin.php:564
+msgid "Remove coupon filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:567
+msgid "Select a coupon filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:571
+#. translators: A sentence describing a Coupon filter. See screen shot for
+#. context: https:cloudup.com/cSsUY9VeCVJ
+msgid "{{title}}Coupon Code{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:574
+msgid "Select coupon codes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:577
+msgid "Customer Type"
+msgstr ""
+
+#: languages/woocommerce-admin.php:580
+msgid "Remove customer filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:583
+msgid "Select a customer filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:587
+#. translators: A sentence describing a Customer filter. See screen shot for
+#. context: https:cloudup.com/cSsUY9VeCVJ
+msgid "{{title}}Customer is{{/title}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:590
+msgid "Select a customer type"
+msgstr ""
+
+#: languages/woocommerce-admin.php:593
+msgid "New"
+msgstr ""
+
+#: languages/woocommerce-admin.php:596
+msgid "Returning"
+msgstr ""
+
+#: languages/woocommerce-admin.php:601
+msgid "Refunds"
+msgstr ""
+
+#: languages/woocommerce-admin.php:604
+msgid "Remove refunds filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:607
+msgid "Select a refund filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:610
+msgid "{{title}}Refunds{{/title}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:613
+msgid "Select a refund type"
+msgstr ""
+
+#: languages/woocommerce-admin.php:617
+msgid "All"
+msgstr ""
+
+#: languages/woocommerce-admin.php:620
+msgid "Partially refunded"
+msgstr ""
+
+#: languages/woocommerce-admin.php:623
+msgid "Fully refunded"
+msgstr ""
+
+#: languages/woocommerce-admin.php:626
+msgid "None"
+msgstr ""
+
+#: languages/woocommerce-admin.php:629
+msgid "Average Items Per Order"
+msgstr ""
+
+#: languages/woocommerce-admin.php:632
+msgid "All Orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:635
+msgid "Order Status"
+msgstr ""
+
+#: languages/woocommerce-admin.php:638
+msgid "Remove order status filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:641
+msgid "Select an order status filter match"
+msgstr ""
+
+#: languages/woocommerce-admin.php:645
+#. translators: A sentence describing an Order Status filter. See screen shot
+#. for context: https:cloudup.com/cSsUY9VeCVJ
+msgid "{{title}}Order Status{{/title}} {{rule /}} {{filter /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:648
+msgid "Select an order status"
+msgstr ""
+
+#: languages/woocommerce-admin.php:651
+msgid "Search products"
+msgstr ""
+
+#: languages/woocommerce-admin.php:654
+msgid "Remove products filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:657
+msgid "Select products"
+msgstr ""
+
+#: languages/woocommerce-admin.php:660
+msgid "%s× %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:663
+msgid "new customer"
+msgid_plural "new customers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:666
+msgid "returning customer"
+msgid_plural "returning customers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:670
+msgid "product"
+msgid_plural "products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:679
+msgid "Customer"
+msgstr ""
+
+#: languages/woocommerce-admin.php:682
+msgid "Product(s)"
+msgstr ""
+
+#: languages/woocommerce-admin.php:685
+msgid "Coupon(s)"
+msgstr ""
+
+#: languages/woocommerce-admin.php:690
+msgid "N. Revenue"
+msgstr ""
+
+#: languages/woocommerce-admin.php:694
+msgid "Check at least two variations below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:697
+msgid "Search for variations to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:700
+msgid "Compare Variations"
+msgstr ""
+
+#: languages/woocommerce-admin.php:704
+msgid "All Products"
+msgstr ""
+
+#: languages/woocommerce-admin.php:707
+msgid "Type to search for a product"
+msgstr ""
+
+#: languages/woocommerce-admin.php:710
+msgid "Single Product"
+msgstr ""
+
+#: languages/woocommerce-admin.php:714
+msgid "Check at least two products below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:717
+msgid "Search for products to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:720
+msgid "Compare Products"
+msgstr ""
+
+#: languages/woocommerce-admin.php:723
+msgid "All Variations"
+msgstr ""
+
+#: languages/woocommerce-admin.php:726
+msgid "%d variations"
+msgstr ""
+
+#: languages/woocommerce-admin.php:729
+msgid "variation sold"
+msgid_plural "variations sold"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:733
+msgid "orders"
+msgid_plural "orders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:736
+msgid "Search by variation name or SKU"
+msgstr ""
+
+#: languages/woocommerce-admin.php:740
+msgid "Variations"
+msgstr ""
+
+#: languages/woocommerce-admin.php:743
+msgid "Product / Variation Title"
+msgstr ""
+
+#: languages/woocommerce-admin.php:748
+msgid "SKU"
+msgstr ""
+
+#: languages/woocommerce-admin.php:751
+msgid "product sold"
+msgid_plural "products sold"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:754
+msgid "Search by product name or SKU"
+msgstr ""
+
+#: languages/woocommerce-admin.php:758
+msgid "Gross Revenue"
+msgstr ""
+
+#: languages/woocommerce-admin.php:765
+msgid "gross revenue"
+msgstr ""
+
+#: languages/woocommerce-admin.php:768
+msgid "refunds"
+msgstr ""
+
+#: languages/woocommerce-admin.php:771
+msgid "coupons"
+msgstr ""
+
+#: languages/woocommerce-admin.php:774
+msgid "taxes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:777
+msgid "shipping"
+msgstr ""
+
+#: languages/woocommerce-admin.php:780
+msgid "Out of Stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:783
+msgid "Low Stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:786
+msgid "In Stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:789
+msgid "On Backorder"
+msgstr ""
+
+#: languages/woocommerce-admin.php:792
+msgid "out of stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:795
+msgid "low stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:798
+msgid "on backorder"
+msgstr ""
+
+#: languages/woocommerce-admin.php:802
+msgid "in stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:805
+msgid "Product / Variation"
+msgstr ""
+
+#: languages/woocommerce-admin.php:809
+msgid "Total Tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:813
+msgid "Order Tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:817
+msgid "Shipping Tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:820
+msgid "All Taxes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:823
+msgid "Check at least two tax codes below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:826
+msgid "Search for tax codes to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:829
+msgid "Compare Tax Codes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:832
+msgid "%d taxes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:835
+msgid "tax code"
+msgid_plural "tax codes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:838
+msgid "total tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:841
+msgid "order tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:844
+msgid "shipping tax"
+msgstr ""
+
+#: languages/woocommerce-admin.php:847
+msgid "Tax Code"
+msgstr ""
+
+#: languages/woocommerce-admin.php:850
+msgid "Rate"
+msgstr ""
+
+#: languages/woocommerce-admin.php:854
+msgid "TAX"
+msgstr ""
+
+#: languages/woocommerce-admin.php:857
+msgid "Exclude the %s status from reports"
+msgstr ""
+
+#: languages/woocommerce-admin.php:860
+msgid "Excluded Statuses:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:863
+msgid ""
+"Orders with these statuses are excluded from the totals in your reports. "
+"The {{strong}}Refunded{{/strong}} status can not be excluded.  "
+"{{moreLink}}Learn more{{/moreLink}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:866
+msgid "Actionable Statuses:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:869
+msgid "Custom Statuses"
+msgstr ""
+
+#: languages/woocommerce-admin.php:872
+msgid ""
+"Orders with these statuses require action on behalf of the store "
+"admin.These orders will show up in the Orders tab under the activity panel."
+msgstr ""
+
+#: languages/woocommerce-admin.php:875
+msgid "Stop Import"
+msgstr ""
+
+#: languages/woocommerce-admin.php:878
+msgid "Imported data will not be lost if the import is stopped."
+msgstr ""
+
+#: languages/woocommerce-admin.php:881
+msgid "Navigating away from this page will not affect the import."
+msgstr ""
+
+#: languages/woocommerce-admin.php:884
+msgid "Re-import Data"
+msgstr ""
+
+#: languages/woocommerce-admin.php:887
+msgid "Start"
+msgstr ""
+
+#: languages/woocommerce-admin.php:890
+msgid "Delete Previously Imported Data"
+msgstr ""
+
+#: languages/woocommerce-admin.php:893
+msgid "There was a problem stopping your current import."
+msgstr ""
+
+#: languages/woocommerce-admin.php:896
+msgid "Import Historical Data:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:899
+msgid ""
+"This tool populates historical analytics data by processing customers and "
+"orders created prior to activating WooCommerce Admin."
+msgstr ""
+
+#: languages/woocommerce-admin.php:902
+msgid "Registered Customers"
+msgstr ""
+
+#: languages/woocommerce-admin.php:908
+msgid "MM/DD/YYYY"
+msgstr ""
+
+#: languages/woocommerce-admin.php:911
+msgid "There was a problem deleting your previous data."
+msgstr ""
+
+#: languages/woocommerce-admin.php:914
+msgid "There was a problem rebuilding your report data."
+msgstr ""
+
+#: languages/woocommerce-admin.php:917
+msgid "Beginning on"
+msgstr ""
+
+#: languages/woocommerce-admin.php:920
+msgid "Import Historical Data"
+msgstr ""
+
+#: languages/woocommerce-admin.php:923
+msgid "Imported %(label)s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:926
+msgid "%(progress)s of %(total)s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:929
+msgid "Skip previously imported customers and orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:932
+msgid "Ready To Import"
+msgstr ""
+
+#: languages/woocommerce-admin.php:935
+msgid "Importing Customers"
+msgstr ""
+
+#: languages/woocommerce-admin.php:938
+msgid "Importing Orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:941
+msgid "Finalizing"
+msgstr ""
+
+#: languages/woocommerce-admin.php:944
+msgid "Historical data from %s onward imported"
+msgstr ""
+
+#: languages/woocommerce-admin.php:947
+msgid "Status:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:954
+msgid "Analytics Settings"
+msgstr ""
+
+#: languages/woocommerce-admin.php:957
+msgid "Reset Defaults"
+msgstr ""
+
+#: languages/woocommerce-admin.php:960
+msgid "Save Changes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:963
+msgid "Are you sure you want to reset all settings to default values?"
+msgstr ""
+
+#: languages/woocommerce-admin.php:966
+msgid "Your settings have been successfully saved."
+msgstr ""
+
+#: languages/woocommerce-admin.php:969
+msgid "There was an error saving your settings.  Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:972
+msgid "Add more sections"
+msgstr ""
+
+#: languages/woocommerce-admin.php:975
+msgid "Dashboard Sections"
+msgstr ""
+
+#: languages/woocommerce-admin.php:978
+msgid "Add %s section"
+msgstr ""
+
+#: languages/woocommerce-admin.php:981
+msgid "Customizable Dashboard"
+msgstr ""
+
+#: languages/woocommerce-admin.php:985
+#. translators: %s is the chart type
+msgid "%s Report"
+msgstr ""
+
+#: languages/woocommerce-admin.php:989
+msgid "By hour"
+msgstr ""
+
+#: languages/woocommerce-admin.php:993
+msgid "By day"
+msgstr ""
+
+#: languages/woocommerce-admin.php:997
+msgid "By week"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1001
+msgid "By month"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1005
+msgid "By quarter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1009
+msgid "By year"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1013
+msgid "Charts"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1017
+msgid "Line chart"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1021
+msgid "Bar chart"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1024
+msgid "Choose which charts to display"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1029
+msgid "Section Title"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1032
+msgid "Performance"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1036
+msgid "Leaderboards"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1042
+msgid "Choose which leaderboards to display and other settings"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1045
+msgid "Rows Per Table"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1048
+msgid "Start setting up your WooCommerce store"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1051
+msgid ""
+"Simplify and enhance the setup of your store with features and benefits "
+"offered by Jetpack & WooCommerce Services."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1054
+msgid "Move up"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1057
+msgid "Move Down"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1060
+msgid "Remove block"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1063
+msgid "Remove section"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1066
+msgid "Store Performance"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1069
+msgid "Choose which analytics to display and the section name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1072
+msgid "Display Stats:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1075
+msgid "Show %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1078
+msgid "Welcome to the WooCommerce Dashboard"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1081
+msgid ""
+"Here we'll guide you through the remaining tasks to get your store ready "
+"for launch"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1085
+msgid "Inbox"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1089
+msgid "Reviews"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1093
+msgid "unread activity"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1096
+msgid "View Activity Panel, you have unread activity"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1099
+msgid "View Activity Panel"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1102
+msgid "Store Activity"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1105
+msgid "Close Activity Panel"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1108
+msgid "Your inbox is empty"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1111
+msgid ""
+"As things begin to happen in your store your inbox will start to fill up. "
+"You'll see things like achievements, new feature announcements, extension "
+"recommendations and more!"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1114
+msgid "There was an error getting your inbox. Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1117
+msgid ""
+"Order {{orderLink}}#%(orderNumber)s{{/orderLink}} %(customerString)s "
+"{{destinationFlag/}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1120
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:1123
+msgid "Begin fulfillment"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1126
+msgid "Manage all orders"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1129
+msgid ""
+"You currently don't have any actionable statuses. To display orders here, "
+"select orders that require further review in settings."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1132
+msgid "There was an error getting your orders. Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1135
+msgid "No orders to ship"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1138
+msgid "Good job, you've fulfilled all of your new orders!"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1141
+msgid "You have no orders to fulfill"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1148
+msgid ""
+"You're still waiting for your customers to make their first orders. While "
+"you wait why not learn how to manage orders?"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1151
+msgid "placed by {{customerLink}}%(customerName)s{{/customerLink}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1154
+msgid "Approve"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1157
+msgid "Select an action"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1160
+msgid "Reply"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1163
+msgid "Spam"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1166
+msgid "Trash"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1169
+msgid "You have no reviews to moderate"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1172
+msgid "We noticed that it's been a while since your products had any reviews."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1175
+msgid "View all Reviews"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1178
+msgid ""
+"Awesome, you've moderated all of your product reviews. How about responding "
+"to some of those negative reviews?"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1181
+msgid "Your customers haven't started reviewing your products."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1184
+msgid ""
+"Take some time to learn about best practices for collecting and using your "
+"reviews."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1187
+msgid "There was an error getting your reviews. Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1190
+msgid "No reviews to moderate"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1193
+msgid ""
+"{{productLink}}%s{{/productLink}} reviewed by "
+"{{authorLink}}%s{{/authorLink}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1196
+msgid "Verified customer"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1199
+msgid "Unapprove"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1202
+msgid "%d in stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1205
+msgid "Save"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1208
+msgid "Cancel"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1211
+msgid "Update stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1214
+msgid "Your stock is in good shape."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1217
+msgid "You currently have no products running low on stock."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1220
+msgid "There was an error getting your low stock products. Please try again."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1223
+msgid "No products with low stock"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1226
+msgid "Notices"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1229
+msgid "%1$s &lsaquo; %2$s &#8212; WooCommerce"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1232
+msgid "Tomorrow"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1235
+msgid "Next Week"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1238
+msgid "Next Month"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1241
+msgid "Remind Me Later"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1244
+msgid "Previous Alert"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1247
+msgid "{{current /}} of {{total /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1250
+msgid "Next Alert"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1253
+msgid "Later Today"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1256
+msgid "Choose a date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1259
+msgid "Date input describing a selected date in format %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1262
+msgid "select a date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1265
+msgid "Start Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1268
+msgid "Date input describing a selected date range's start date in format %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1271
+msgid "to"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1274
+msgid "End Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1277
+msgid "Date input describing a selected date range's end date in format %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1280
+msgid "Interact with the calendar and select start and end dates."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1283
+msgid "Clear Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1286
+msgid "Clear Dates"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1289
+msgid "Move backward to switch to the previous month."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1292
+msgid "Move forward to switch to the next month."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1295
+msgid "Enter key"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1298
+msgid "Right and left arrow keys"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1301
+msgid "up and down arrow keys"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1304
+msgid "page up and page down keys"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1307
+msgid "Home and end keys"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1310
+msgid "Escape key"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1313
+msgid "Question mark"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1316
+msgid "Select the date in focus."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1319
+msgid "Move backward (left) and forward (right) by one day."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1322
+msgid "Move backward (up) and forward (down) by one week."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1325
+msgid "Switch months."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1328
+msgid "Go to the first or last day of a week."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1331
+msgid "Return to the date input field."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1334
+msgid ""
+"Press the down arrow key to interact with the calendar and\n"
+"  select a date."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1338
+msgid "Select %s as a start date."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1341
+msgid "Select %s as an end date."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1344
+msgid "%s is not selectable."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1347
+msgid "Selected. %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1350
+msgid "Calendar"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1353
+msgid "Close"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1356
+msgid "You may select up to %d items."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1360
+msgid "Your requested data is loading"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1363
+msgid "Total %d"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1367
+msgid "MMM D, YYYY"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1370
+msgid "Choose to apply any or all filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1373
+msgid "Add a Filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1376
+msgid "Filter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1379
+msgid "Clear all filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1382
+msgid "Any"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1386
+#. translators: Sentence fragment, "range start" refers to the first of two
+#. numeric values the field must be between. Screenshot for context:
+#. https:cloudup.com/cmv5CLyMPNQ
+msgid "%(field)s range start"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1390
+#. translators: Sentence fragment, "range end" refers to the second of two
+#. numeric values the field must be between. Screenshot for context:
+#. https:cloudup.com/cmv5CLyMPNQ
+msgid "%(field)s range end"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1395
+msgid "Clear all"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1399
+msgid "compare to"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1403
+msgid "Custom"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1406
+msgid "Reset"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1409
+msgid "Update"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1412
+msgid "Select date range and comparison"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1415
+msgid "select a date range"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1418
+msgid "Presets"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1421
+msgid "vs."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1424
+msgid "Date Range"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1427
+msgid "select a preset period"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1430
+msgid "filter report to show:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1433
+msgid "Filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1436
+msgid "Page %d of %d"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1439
+msgid "Previous Page"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1442
+msgid "Next Page"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1445
+msgid "Go to page"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1448
+msgid "Rows per page"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1451
+msgid "%1$s out of %2$s stars."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1454
+msgid "Clear all selected items"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1457
+msgid "Results"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1460
+msgid "No items found."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1463
+msgid "No results for %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1466
+msgid "Search for items"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1469
+msgid "%d item selected"
+msgid_plural "%d items selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:1472
+msgid "Search results updated."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1475
+msgid "%d result found, use up and down arrow keys to navigate."
+msgid_plural "%d results found, use up and down arrow keys to navigate."
+msgstr[0] ""
+msgstr[1] ""
+
+#: languages/woocommerce-admin.php:1478
+msgid "No results."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1481
+msgid "All categories with titles that include {{query /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1484
+msgid "All coupons with codes that include {{query /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1487
+msgid "All customers with names that include {{query /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1490
+msgid "All products with titles that include {{query /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1493
+msgid "All taxes with codes that include {{query /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1496
+msgid "%1$s (%2$s of %3$s)"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1499
+msgid "Move backward for selected items"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1502
+msgid "Performance Indicators"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1505
+msgid ""
+"List of data points available for filtering. Use arrow keys to cycle "
+"through the list. Click a data point for a detailed report."
+msgstr ""
+
+#: languages/woocommerce-admin.php:1508
+msgid "Up %d%% from %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1511
+msgid "Down %d%% from %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1514
+msgid "No change from %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1517
+msgid "%d%%"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1520
+msgid "Select All"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1523
+msgid "Check at least two items below to compare"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1526
+msgid "Search by item name"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1529
+msgid "Download"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1532
+msgid "Choose which values to display"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1535
+msgid "Columns:"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1538
+msgid "(scroll to see more)"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1541
+msgid "Sort by %s in ascending order"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1544
+msgid "Sort by %s in descending order"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1547
+msgid "Remove %s"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1550
+msgid "+%d more"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1553
+msgid "MMM D"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1556
+msgid "Today"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1559
+msgid "Yesterday"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1562
+msgid "Week to Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1565
+msgid "Last Week"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1568
+msgid "Month to Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1571
+msgid "Last Month"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1574
+msgid "Week of %B %-d, %Y"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1577
+msgid "Quarter to Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1580
+msgid "MMMM D, YYYY"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1583
+msgid "Last Quarter"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1586
+msgid "D MMMM YYYY LT"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1589
+msgid "dddd, D MMMM YYYY LT"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1592
+msgid "HH:mm"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1595
+msgid "Invalid date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1598
+msgid "Select a date in the past"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1601
+msgid "Start date must be before end date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1604
+msgid "Year to Date"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1607
+msgid "Last Year"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1610
+msgid "Previous Period"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1613
+msgid "Previous Year"
+msgstr ""
+
+#: woocommerce-admin.php:82
+#. translators: URL of WooCommerce plugin
+msgid ""
+"The WooCommerce Admin feature plugin requires <a "
+"href=\"%s\">WooCommerce</a> 3.6 or greater to be installed and active."
+msgstr ""
+
+#: woocommerce-admin.php:88
+#. translators: 1: URL of WordPress.org, 2: URL of WooCommerce plugin
+msgid ""
+"The WooCommerce Admin feature plugin requires both <a "
+"href=\"%1$s\">WordPress</a> 5.0 or greater and <a "
+"href=\"%2$s\">WooCommerce</a> 3.6 or greater to be installed and active."
+msgstr ""
+
+#: woocommerce-admin.php:100
+msgid ""
+"You have installed a development version of WooCommerce Admin which "
+"requires files to be built. From the plugin directory, run <code>npm "
+"install</code> to install dependencies, <code>npm run build</code> to build "
+"the files."
+msgstr ""
+
+#: woocommerce-admin.php:103
+#. translators: 1: URL of GitHub Repository build page
+msgid ""
+"Or you can download a pre-built version of the plugin by visiting <a "
+"href=\"%1$s\">the releases page in the repository</a>."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/woocommerce/woocommerce-admin"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A new JavaScript-driven interface for managing your store. The plugin "
+"includes new and improved reports, and a dashboard to monitor all the "
+"important key metrics of your site."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com/"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1616
+msgctxt ""
+"A sentence describing filters for Customers. See screen shot for context: "
+"https://cloudup.com/cCsm3GeXJbE"
+msgid "Customers Match {{select /}} Filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1620
+#. translators: Sentence fragment, logical, "Includes" refers to customer names
+#. including a given name(s). Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "customer names"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1624
+#. translators: Sentence fragment, logical, "Excludes" refers to customer names
+#. excluding a given name(s). Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "customer names"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1628
+#. translators: Sentence fragment, logical, "Includes" refers to countries
+#. including a given country or countries. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "countries"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1632
+#. translators: Sentence fragment, logical, "Excludes" refers to countries
+#. excluding a given country or countries. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "countries"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1637
+#. translators: Sentence fragment, logical, "Includes" refers to customer
+#. usernames including a given username(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "customer usernames"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1642
+#. translators: Sentence fragment, logical, "Excludes" refers to customer
+#. usernames excluding a given username(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "customer usernames"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1646
+#. translators: Sentence fragment, logical, "Includes" refers to customer
+#. emails including a given email(s). Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "customer emails"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1650
+#. translators: Sentence fragment, logical, "Excludes" refers to customer
+#. emails excluding a given email(s). Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "customer emails"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1654
+#. translators: Sentence fragment, logical, "Less Than" refers to number of
+#. orders a customer has placed, less than a given amount. Screenshot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgctxt "number of orders"
+msgid "Less Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1658
+#. translators: Sentence fragment, logical, "More Than" refers to number of
+#. orders a customer has placed, more than a given amount. Screenshot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgctxt "number of orders"
+msgid "More Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1662
+#. translators: Sentence fragment, logical, "Between" refers to number of
+#. orders a customer has placed, between two given integers. Screenshot for
+#. context: https:cloudup.com/cCsm3GeXJbE
+msgctxt "number of orders"
+msgid "Between"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1666
+#. translators: Sentence fragment, logical, "Less Than" refers to total
+#. spending by a customer, less than a given amount. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "total spend by customer"
+msgid "Less Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1670
+#. translators: Sentence fragment, logical, "Less Than" refers to total
+#. spending by a customer, more than a given amount. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "total spend by customer"
+msgid "More Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1674
+#. translators: Sentence fragment, logical, "Between" refers to total spending
+#. by a customer, between two given amounts. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "total spend by customer"
+msgid "Between"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1678
+#. translators: Sentence fragment, logical, "Less Than" refers to average order
+#. value of a customer, more than a given amount. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "average order value of customer"
+msgid "Less Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1681
+msgctxt "average order value of customer"
+msgid "More Than"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1685
+#. translators: Sentence fragment, logical, "Between" refers to average order
+#. value of a customer, between two given amounts. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "average order value of customer"
+msgid "Between"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1689
+#. translators: Sentence fragment, logical, "Before" refers to customers
+#. registered before a given date. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "date"
+msgid "Before"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1693
+#. translators: Sentence fragment, logical, "after" refers to customers
+#. registered after a given date. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "date"
+msgid "After"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1697
+#. translators: Sentence fragment, logical, "Between" refers to average order
+#. value of a customer, between two given amounts. Screenshot for context:
+#. https:cloudup.com/cCsm3GeXJbE
+msgctxt "date"
+msgid "Between"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1700
+msgctxt ""
+"A sentence describing filters for Downloads. See screen shot for context: "
+"https://cloudup.com/ccxhyH2mEDg"
+msgid "Downloads Match {{select /}} Filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1705
+#. translators: Sentence fragment, logical, "Includes" refers to orders
+#. including a given product(s). Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "products"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1710
+#. translators: Sentence fragment, logical, "Excludes" refers to orders
+#. excluding a given product(s). Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "products"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1714
+#. translators: Sentence fragment, logical, "Includes" refers to order numbers
+#. including a given order(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "order numbers"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1718
+#. translators: Sentence fragment, logical, "Excludes" refers to order numbers
+#. excluding a given order(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "order numbers"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1722
+#. translators: Sentence fragment, logical, "Includes" refers to IP addresses
+#. including a given address(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "IP addresses"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1726
+#. translators: Sentence fragment, logical, "Excludes" refers to IP addresses
+#. excluding a given address(s). Screenshot for context:
+#. https:cloudup.com/ccxhyH2mEDg
+msgctxt "IP addresses"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1729
+msgctxt ""
+"A sentence describing filters for Orders. See screen shot for context: "
+"https://cloudup.com/cSsUY9VeCVJ"
+msgid "Orders Match {{select /}} Filters"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1733
+#. translators: Sentence fragment, logical, "Is" refers to searching for orders
+#. matching a chosen order status. Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "order status"
+msgid "Is"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1737
+#. translators: Sentence fragment, logical, "Is Not" refers to searching for
+#. orders that don\'t match a chosen order status. Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "order status"
+msgid "Is Not"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1741
+#. translators: Sentence fragment, logical, "Includes" refers to orders
+#. including a given coupon code(s). Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "coupon code"
+msgid "Includes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1745
+#. translators: Sentence fragment, logical, "Excludes" refers to orders
+#. excluding a given coupon code(s). Screenshot for context:
+#. https:cloudup.com/cSsUY9VeCVJ
+msgctxt "coupon code"
+msgid "Excludes"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1748
+msgctxt "customer type"
+msgid "New"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1751
+msgctxt "customer type"
+msgid "Returning"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1755
+msgctxt "Indication of a low quantity"
+msgid "Low"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1758
+msgctxt "categories"
+msgid "+%d more"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1761
+msgctxt "Date range inputs arranged on a single line"
+msgid "{{after /}}{{span}} and {{/span}}{{before /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1764
+msgctxt "Numerical range inputs arranged on a single line"
+msgid "{{rangeStart /}}{{span}} and {{/span}}{{rangeEnd /}}"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1768
+#. translators: Sentence fragment, "maximum amount" refers to a numeric value
+#. the field must be less than. Screenshot for context:
+#. https:cloudup.com/cmv5CLyMPNQ
+msgctxt "maximum value input"
+msgid "%(field)s maximum amount"
+msgstr ""
+
+#: languages/woocommerce-admin.php:1772
+#. translators: Sentence fragment, "minimum amount" refers to a numeric value
+#. the field must be more than. Screenshot for context:
+#. https:cloudup.com/cmv5CLyMPNQ
+msgctxt "minimum value input"
+msgid "%(field)s minimum amount"
+msgstr ""
