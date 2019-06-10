@@ -1,13 +1,9 @@
 # Ignore everything in the root except the "wp-content" directory.
 /*
 !.gitignore
-!wp-content/
-
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/uploads/
 
 *.log
 *.cache
@@ -21,6 +17,5 @@ wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
-wp-content/uploads/
 wp-content/wp-cache-config.php
 .vscode/*
