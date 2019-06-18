@@ -410,6 +410,7 @@ class WC_Admin_Reports_Orders_Stats_Data_Store extends WC_Admin_Reports_Data_Sto
 			'order_id'           => $order->get_id(),
 			'parent_id'          => $order->get_parent_id(),
 			'date_created'       => $order->get_date_created()->date( 'Y-m-d H:i:s' ),
+			'date_created_gmt'   => gmdate( 'Y-m-d H:i:s', $order->get_date_created()->getTimestamp() ),
 			'num_items_sold'     => self::get_num_items_sold( $order ),
 			'gross_total'        => $order->get_total(),
 			'tax_total'          => $order->get_total_tax(),
@@ -423,6 +424,7 @@ class WC_Admin_Reports_Orders_Stats_Data_Store extends WC_Admin_Reports_Data_Sto
 			'%d',
 			'%d',
 			'%s',
+			'%s',
 			'%d',
 			'%f',
 			'%f',
@@ -432,6 +434,16 @@ class WC_Admin_Reports_Orders_Stats_Data_Store extends WC_Admin_Reports_Data_Sto
 			'%d',
 			'%d',
 		);
+
+		if ( 'shop_order_refund' === $order->get_type() ) {
+			$parent_order        = wc_get_order( $order->get_parent_id() );
+			$data['customer_id'] = WC_Admin_Reports_Customers_Data_Store::get_or_create_customer_from_order( $parent_order );
+			$data['parent_id']   = $parent_order->get_id();
+			$format[]            = '%d';
+		} else {
+			$data['returning_customer'] = self::is_returning_customer( $order );
+			$data['customer_id']        = WC_Admin_Reports_Customers_Data_Store::get_or_create_customer_from_order( $order );
+		}
 
 		// Update or add the information to the DB.
 		$result = $wpdb->replace( $table_name, $data, $format );

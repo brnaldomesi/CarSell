@@ -3,7 +3,7 @@
  * Plugin Name: YITH WooCommerce Compare
  * Plugin URI: https://yithemes.com/themes/plugins/yith-woocommerce-compare/
  * Description: The <code><strong>YITH WooCommerce Compare</strong></code> plugin allow you to compare in a simple and efficient way products on sale in your shop and analyze their main features in a single table. <a href="https://yithemes.com/" target="_blank">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>.
- * Version: 2.3.10
+ * Version: 2.3.12
  * Author: YITH
  * Author URI: https://yithemes.com/
  * Text Domain: yith-woocommerce-compare
@@ -13,7 +13,7 @@
  *
  * @author YITH
  * @package YITH WooCommerce Compare
- * @version 2.3.10
+ * @version 2.3.12
  */
 /*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'yith_plugin_registration_hook' ) ) {
 register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 if ( ! defined( 'YITH_WOOCOMPARE_VERSION' ) ){
-	define( 'YITH_WOOCOMPARE_VERSION', '2.3.10' );
+	define( 'YITH_WOOCOMPARE_VERSION', '2.3.12' );
 }
 if ( ! defined( 'YITH_WOOCOMPARE_FREE_INIT' ) ) {
 	define( 'YITH_WOOCOMPARE_FREE_INIT', plugin_basename( __FILE__ ) );

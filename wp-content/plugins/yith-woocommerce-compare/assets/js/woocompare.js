@@ -21,7 +21,6 @@ jQuery(document).ready(function($) {
         $.ajax({
             type: 'post',
             url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionadd ),
-            async: false,
             data: data,
             dataType: 'json',
             success: function(response){
@@ -148,7 +147,6 @@ jQuery(document).ready(function($) {
         $.ajax({
             type: 'post',
             url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionremove ),
-            async: false,
             data: data,
             dataType:'html',
             success: function(response){

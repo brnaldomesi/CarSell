@@ -32,8 +32,6 @@ WooCommerce Admin also allows store owners to customize a new dashboard screen w
 
 == Getting Started ==
 
-Once again: This plugin is under active development and, as such, we advise you to first install WooCommerce Admin in a staging/test environment. While this code is being run in production on sites, we recommend you first verify it works for you in a test environment, the same as any plugin for WooCommerce.
-
 = Minimum Requirements =
 
 * WordPress 5.0
@@ -73,7 +71,58 @@ Release and roadmap notes are available on the [WooCommerce Developers Blog](htt
 
 == Changelog ==
 
-= 0.12.0 2019-05-14
+= 0.13.2 2019-06-13 = 
+
+- Fix: Bump plugin version for database update.
+
+= 0.13.1 2019-06-12 = 
+
+- Fix: Exit deactivate early if WooCommerce not active. #2410
+
+= 0.13.0 2019-06-12
+
+- Fix: Notes: update sales record link #2397
+- Enhancement: Settings: Add default date settings #2292 (Components, Dashboard, Packages)
+- Dev: Add tracks to import jobs #2193
+- Dev: Notes: Add filters to disable milestone and sales record notes. #2227
+- Enhancement: Trigger an action server side when admin note actions are clicked #2325
+- Dev: Fix Activity Panel layout on mobile #2405 (Activity Panel)
+- Dev: Add uninstall file to release ZIP #2402 (Build)
+- Bug: Fix wrong average numbers in chart legends #2352 (Analytics, Components, Packages)
+- Dev: Add date_created_gmt property to orders endpoint #2086 (Activity Panel)
+- Enhancement: Add progress bars to Historical Data Import screen #2312
+- Bug: Fix some data not to being imported when 'skip_existing' option is enabled #2385
+- Fix: Double space at 191 row #2369  👏 @shoheitanaka
+- Enhancement: Only show unactioned notes in the Inbox panel. #2327 (Inbox)
+- Bug: Don't create Notices tab in Activity Panel if notices HTML element was removed by a plugin #2378
+- Tweak: Allow paragraph tags in admin notes. #2344 (Inbox)
+- Tweak: Allow note action URLs to be empty. #2324 (Inbox)
+- Bug: Prevent inactive tabs from making requests #2377
+- Task: Remove second beta warning from readme #2362
+- Fix: Misspelling at update config.jp #2368  👏 @shoheitanaka
+- Dev: Transpile newspack-components package #2348 (Build)
+- Dev: Low stock handling inconsistencies with WooCommerce 3.6+ #2191
+- Dev: Remove d3-array dependency #2286 (Build)
+- Dev: Dashboard Extentions: Add a section #2280 (Build, Components, Extensibility, Packages)
+- Fix: Move StoreAlerts below screen meta links on embed pages. #2291
+- Fix: Extensions: fix registering a page #2301 (Extensibility)
+- Dev: Fix `box-shadow-8dp` error. #2290 (Components, Packages)
+- Fix: Dashboard Extension Example: Make namespace unique #2302 (Extensibility)
+- Dev: Persisted Queries: Avoid adding to non time related screens #2225 (Build)
+- Dev: Remove customizable dashboard heading #2321 (Dashboard)
+- Bug: Add missing space in Orders Activity Panel card #2306 (Activity Panel)
+- Task: Remove beta warning from readme. #2340
+- Dev: Dashboard: Extend charts data #2258 (Dashboard, Extensibility)
+- Bug: Handle `WC_Admin_Notices`. #2245 (Activity Panel, On Merge to WC Core)
+- Bug: Exclude auto-draft and trashed orders from imports. #2265
+- Fix: wc-api: Remove reference to import update functions #2277 (Dashboard)
+- Enhancement: Add support for “primary” admin notice actions. #2269
+- Enhancement: Allow links in admin notice content. #2272
+- Fix: Remove errant import update operation from `wp-api` spec. #2271
+- Dev: Hook up import/totals endpoint to Historical Data Import screen #2208
+- Fix: Refactor main file into singleton class structure #2226
+
+= 0.12.0 2019-05-14 =
 
 - Fix: dashboard issues #2194
 - Fix: Dashboard: re-arrange section dropdown order #2216
@@ -106,9 +155,7 @@ Release and roadmap notes are available on the [WooCommerce Developers Blog](htt
 - Dev: Scroll to top of the table when navigating table pages #2051
 - Dev: Add empty state for the Reviews panels #2124
 
-== Changelog ==
-
-= 0.11.0 2019-04-17
+= 0.11.0 2019-04-17 =
 
 - Dev: Extend report submenu items #2033
 - Dev: Extension Examples #2018
@@ -143,7 +190,7 @@ Release and roadmap notes are available on the [WooCommerce Developers Blog](htt
 - Enhancement: Scroll to top only when URL changes #1989
 - Enhancement: Allow negative values in charts #1979
 
-= 0.10.0 2019-04-02
+= 0.10.0 2019-04-02 =
 
 - Dev: Properly namespaced methods in wc-admin.php. props @ronakganatra9 #1804
 - Dev: Changed text-domain to `woocommerce-admin` #1795

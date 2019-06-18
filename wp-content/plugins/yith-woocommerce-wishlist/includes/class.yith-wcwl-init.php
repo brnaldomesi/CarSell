@@ -49,7 +49,7 @@ if ( ! class_exists( 'YITH_WCWL_Init' ) ) {
 		 * @var string
 		 * @since 1.0.0
 		 */
-		public $version = '2.2.10';
+		public $version = '2.2.11';
 
 		/**
 		 * Plugin database version

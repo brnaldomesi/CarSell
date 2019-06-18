@@ -399,10 +399,13 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		    }
 
 		    if( is_user_logged_in() ) {
+
+		        $user_id = ( $this->details['user_id'] ) ? $this->details['user_id'] : get_current_user_id();
+
 			    $sql = "SELECT COUNT(*) as `cnt` FROM `{$wpdb->yith_wcwl_items}` WHERE `prod_id` = %d AND `user_id` = %d";
 			    $sql_args = array(
 				    $product_id,
-				    $this->details['user_id']
+				    $user_id
 			    );
 
 			    if( $wishlist_id != false ){
@@ -1037,6 +1040,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             if( ! empty( $wishlists ) ){
                 $default_user_wishlist = $wishlists[0]['ID'];
                 $this->last_operation_token = $wishlists[0]['wishlist_token'];
+
+                do_action('yith_wcwl_default_user_wishlist', $user_id, $wishlists);
             }
             else{
                 $token = $this->generate_wishlist_token();
@@ -1061,7 +1066,6 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
             );
 
             $wpdb->query( $wpdb->prepare( $sql, $sql_args ) );
-
             return $default_user_wishlist;
         }
 
