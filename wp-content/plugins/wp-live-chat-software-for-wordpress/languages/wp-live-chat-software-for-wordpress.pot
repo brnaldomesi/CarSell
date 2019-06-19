@@ -1,0 +1,108 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-live-chat-software-for-wordpress\n"
+"POT-Creation-Date: 2018-10-17 07:47+0200\n"
+"PO-Revision-Date: 2018-10-17 01:07+0200\n"
+"Last-Translator: \n"
+"Language-Team: LiveChat, Inc <apps@livechatinc.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../plugin_files/LiveChatAdmin.class.php:195
+#: ../plugin_files/LiveChatAdmin.class.php:196
+#: ../plugin_files/LiveChatAdmin.class.php:232
+msgid "Settings"
+msgstr ""
+
+#: ../plugin_files/helpers/ConnectNoticeHelper.class.php:12
+msgid "Please connect your LiveChat account to start chatting with your customers."
+msgstr ""
+
+#: ../plugin_files/helpers/ConnectNoticeHelper.class.php:13
+msgid "Connect"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:11
+msgid "Do you like LiveChat? Leave us a review and join our LiveChat Knowledge Journey!"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:12
+msgid "We do our best to create the best live chat software available out there. Leave us a review, help us grow LiveChat and join our exclusive Knowledge Journey community. Learn how to:"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:14
+msgid "Bring people to your website"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:15
+msgid "Be the hero of your customers' needs"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:16
+msgid "Sell like a boss with LiveChat"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:17
+msgid "Succeed in customer success"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:20
+msgid "Leave a review and join LiveChat Knowledge Journey!"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:21
+msgid "Maybe later"
+msgstr ""
+
+#: ../plugin_files/helpers/ReviewNoticeHelper.class.php:22
+msgid "I don’t use this app anymore"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:17
+msgid "LiveChat is now installed on your website!"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:50
+msgid "Currently you are using your"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:52
+msgid "LiveChat account."
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:56
+msgid "Open web application"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:65
+msgid "Hide chat on mobile"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:89
+msgid "Hide chat for Guest visitors"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:101
+msgid "Something went wrong?"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:102
+msgid "Disconect your account."
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:110
+msgid "Check out our apps for"
+msgstr ""
+
+#: ../plugin_files/helpers/SettingsHelper.class.php:111
+msgid "desktop or mobile!"
+msgstr ""
