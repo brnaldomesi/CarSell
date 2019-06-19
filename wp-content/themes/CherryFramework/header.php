@@ -109,6 +109,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <?php include_once("analyticstracking.php") ?>
 	<div id="motopress-main" class="main-holder">
 		<!--Begin #motopress-main-->
 		<header class="motopress-wrapper header">
