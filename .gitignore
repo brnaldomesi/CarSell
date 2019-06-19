@@ -1,5 +1,5 @@
 # Ignore everything in the root except the "wp-content" directory.
-/*
+/wp-content/*
 !.gitignore
 !wp-content/plugins/
 !wp-content/themes/
