@@ -1,0 +1,7 @@
+<?php exit; ?>
+[2019-06-20 16:43:16] ERROR: Form 2213 > Mailchimp API error: 400 Bad Request. Invalid Resource. asdf@gm***.com looks fake or invalid, please enter a real email address.
+Request: PUT https://us20.api.mailchimp.com/3.0/lists/b1d900ac5a/members/4db3a537e0651474362938ffdfb03609 - {"email_address":"asdf@gm***.com","interests":{},"merge_fields":{},"status":"pending","email_type":"html","ip_signup":"188.43.136.32","tags":[]}
+Response: 400 Bad Request - {"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"Invalid Resource","status":400,"detail":"asdf@gm***.com looks fake or invalid, please enter a real email address.","instance":"1f62c2b1-46d9-4e38-85ed-1925b5b343c4"}
+[2019-06-20 16:43:44] ERROR: Form 2213 > Mailchimp API error: 400 Bad Request. Invalid Resource. asdf@gm***.com looks fake or invalid, please enter a real email address.
+Request: PUT https://us20.api.mailchimp.com/3.0/lists/b1d900ac5a/members/4db3a537e0651474362938ffdfb03609 - {"email_address":"asdf@gm***.com","interests":{},"merge_fields":{},"status":"pending","email_type":"html","ip_signup":"188.43.136.32","tags":[]}
+Response: 400 Bad Request - {"type":"http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/","title":"Invalid Resource","status":400,"detail":"asdf@gm***.com looks fake or invalid, please enter a real email address.","instance":"c92c43f7-160c-4868-adcf-0bcd254ad4b5"}

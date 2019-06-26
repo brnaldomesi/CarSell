@@ -1371,7 +1371,8 @@ button.woocommerce-filters-date__tab {
   position: relative;
   vertical-align: middle;
   display: inline-block;
-  overflow: hidden; }
+  overflow: hidden;
+  white-space: nowrap; }
   .woocommerce-rating .gridicon {
     fill: #d7dade; }
   .woocommerce-rating .woocommerce-rating__star-outline {

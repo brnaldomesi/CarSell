@@ -1,6 +1,6 @@
 (function($) {
     $(function(){
-    	//Dropdown cart in header
+		//Dropdown cart in header
 		$('.cart-holder > h3').click(function(){
 			if($(this).hasClass('cart-opened')) {
 				$(this).removeClass('cart-opened').next().slideUp(300);

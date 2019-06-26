@@ -123,6 +123,10 @@ class WC_Admin_Reports_Sync {
 	 * @return string
 	 */
 	public static function regenerate_report_data( $days, $skip_existing ) {
+		if ( self::is_importing() ) {
+			return new WP_Error( 'wc_admin_import_in_progress', __( 'An import is already in progress.  Please allow the previous import to complete before beginning a new one.', 'woocommerce-admin' ) );
+		}
+
 		self::reset_import_stats( $days, $skip_existing );
 		self::customer_lookup_import_batch_init( $days, $skip_existing );
 		self::queue_dependent_action( self::ORDERS_IMPORT_BATCH_INIT, array( $days, $skip_existing ), self::CUSTOMERS_IMPORT_BATCH_ACTION );
@@ -428,6 +432,26 @@ class WC_Admin_Reports_Sync {
 	 * @return void
 	 */
 	public static function orders_lookup_import_order( $order_id ) {
+
+		$order = wc_get_order( $order_id );
+
+		// If the order isn't found for some reason, skip the sync.
+		if ( ! $order ) {
+			return;
+		}
+
+		$type = $order->get_type();
+
+		// If the order isn't the right type, skip sync.
+		if ( 'shop_order' !== $type && 'shop_order_refund' !== $type ) {
+			return;
+		}
+
+		// If the order has no id or date created, skip sync.
+		if ( ! $order->get_id() || ! $order->get_date_created() ) {
+			return;
+		}
+
 		$result = array_sum(
 			array(
 				WC_Admin_Reports_Orders_Stats_Data_Store::sync_order( $order_id ),

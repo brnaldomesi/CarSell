@@ -245,6 +245,7 @@ class WC_Admin_Loader {
 			'wc-components',
 			self::get_url( 'components/index.js' ),
 			array(
+				'wp-api-fetch',
 				'wp-components',
 				'wp-data',
 				'wp-element',
@@ -266,7 +267,7 @@ class WC_Admin_Loader {
 		wp_register_style(
 			'wc-components',
 			self::get_url( 'components/style.css' ),
-			array( 'wp-edit-blocks' ),
+			array( 'wp-components' ),
 			self::get_file_version( 'components/style.css' )
 		);
 		wp_style_add_data( 'wc-components', 'rtl', 'replace' );
@@ -274,7 +275,7 @@ class WC_Admin_Loader {
 		wp_register_style(
 			'wc-components-ie',
 			self::get_url( 'components/ie.css' ),
-			array( 'wp-edit-blocks' ),
+			array( 'wp-components' ),
 			self::get_file_version( 'components/ie.css' )
 		);
 		wp_style_add_data( 'wc-components-ie', 'rtl', 'replace' );
@@ -530,7 +531,12 @@ class WC_Admin_Loader {
 
 		if ( ! empty( $preload_data_endpoints ) ) {
 			foreach ( $preload_data_endpoints as $key => $endpoint ) {
-				$settings['dataEndpoints'][ $key ] = $preload_data[ $endpoint ]['body'];
+				// Handle error case: rest_do_request() doesn't guarantee success.
+				if ( empty( $preload_data[ $endpoint ] ) ) {
+					$settings['dataEndpoints'][ $key ] = array();
+				} else {
+					$settings['dataEndpoints'][ $key ] = $preload_data[ $endpoint ]['body'];
+				}
 			}
 		}
 		$settings = self::get_custom_settings( $settings );
