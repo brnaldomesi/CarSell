@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.uc_starter_button *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.uc_starter_button .uc_starter_button_inner{ max-width:100%; margin:0 auto; position:relative; overflow:hidden; height:70px;
+-webkit-box-shadow: 0px 0px 13px -3px rgba(161,158,161,1);
+-moz-box-shadow: 0px 0px 13px -3px rgba(161,158,161,1);
+box-shadow: 0px 0px 13px -3px rgba(161,158,161,1);}
+.uc_starter_button .uc_starter_button_inner:hover{ max-width:100%; margin:0 auto; position:relative; overflow:hidden; height:70px;
+-webkit-box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);
+-moz-box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);
+box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);}
+
+
+.uc_starter_button .uc_starter_button_inner .uc_content{font-family: 'Montserrat', sans-serif;text-align:center;font-size:18px;font-weight:400;width:100%;height:100%;position:relative;}
+.uc_starter_button .uc_starter_button_inner .uc_content span{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+
+.uc_starter_button .uc_starter_button_inner .uc_content a{ font-family: 'Montserrat', sans-serif; font-size:18px; font-weight:400; text-decoration:none; position:relative; width:100%;display: none; height:100%;}
+.uc_starter_button .uc_starter_button_inner .uc_content span .fa{font-size:24px;top: 50%;transform: translatey(-50%);}
+.uc_starter_button .uc_starter_button_inner .uc_content a .fa { display: block; height: 100%;padding: 10% 0 0;}
+.uc_starter_button .uc_starter_button_inner .uc_content:hover a{ display:block;}
+.uc_starter_button .uc_starter_button_inner .uc_content:hover span{ display:none;}

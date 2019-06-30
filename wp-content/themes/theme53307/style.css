@@ -12,3 +12,6 @@
 /* ----------------------------------------
 	Please, You may put custom CSS here
 ---------------------------------------- */
+.variable-item-span.variable-item-span-button {
+	margin:0;
+}

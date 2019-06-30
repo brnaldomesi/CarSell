@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.uc_starter_countdown *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.uc_starter_countdown .uc_starter_countdown_inner{}
+.uc_starter_countdown .uc_starter_countdown_inner .timer{ width:100%; text-align:center}
+.uc_starter_countdown .uc_starter_countdown_inner .timer div{ width:200px;  max-height:180px; margin:2% 1%; padding:42px 0px; text-align:center;border-radius:3px;display:inline-block; background:#fff; color:#fff;  font-size:50px; color:#000;font-family: 'Montserrat', sans-serif; line-height:45px;
+-webkit-box-shadow: 0px 0px 5px -1px rgba(209,205,209,1);
+-moz-box-shadow: 0px 0px 5px -1px rgba(209,205,209,1);
+box-shadow: 0px 0px 5px -1px rgba(209,205,209,1);}
+.uc_starter_countdown .uc_starter_countdown_inner .timer div span{ display:block;font-family: 'Montserrat', sans-serif;font-size:16px; padding:0 7%;margin:20px 0 0; line-height:32px; color:#0075f9; position:relative; text-transform:uppercase;}
+.uc_starter_countdown .uc_starter_countdown_inner .timer div span em{ width:40px; height:2px; background:#000; position:absolute; top:-8px; left:50%; transform:translateX(-50%);}
+.uc_starter_countdown .uc_starter_countdown_inner .timer div:hover{
+	-webkit-box-shadow: 0px 0px 18px 7px rgba(209,205,209,1);
+-moz-box-shadow: 0px 0px 18px 7px rgba(209,205,209,1);
+box-shadow: 0px 0px 18px 7px rgba(209,205,209,1);	}

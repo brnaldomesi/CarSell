@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.uc_starter_opening_hours *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.uc_starter_opening_hours .uc_starter_opening_hours_inner{ padding:10px; border-radius:6px; overflow:hidden;}
+.uc_starter_opening_hours .uc_starter_opening_hours_inner h2{ text-align:center; padding:35px 0; border-radius:6px; font-size:24px; line-height:normal;font-family: 'Montserrat', sans-serif;}
+.uc_starter_opening_hours .uc_starter_opening_hours_inner p{ text-align:center; padding:18px 0 8px; line-height:18px;font-family: 'Montserrat', sans-serif; font-size:14px; text-transform:uppercase;}
+
+.uc_starter_opening_hours .uc_starter_opening_hours_inner:hover{
+-webkit-box-shadow: 0px 0px 5px 0px rgba(161,158,161,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(161,158,161,1);
+box-shadow: 0px 0px 5px 0px rgba(161,158,161,1);}

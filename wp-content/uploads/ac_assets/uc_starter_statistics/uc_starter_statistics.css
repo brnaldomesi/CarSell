@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.uc_starter_statistics *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.uc_starter_statistics .uc_starter_statistics_inner{ max-width:100%; margin:0 auto; padding:10px; text-align:center;border-radius:3px;}
+
+
+.uc_starter_statistics .uc_starter_statistics_inner .uc_member_pic{height:110px;border-radius:3px; margin:0px; position:relative;}
+.uc_starter_statistics .uc_starter_statistics_inner .uc_member_pic .fa{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:40px; color:#fff;}
+..uc_starter_statistics .uc_starter_statistics_inner h3{font-family: 'Roboto', sans-serif; font-size:18px; margin:28px 0 0px;line-height: 25px;font-weight:normal;}
+.uc_starter_statistics .uc_starter_statistics_inner h2{font-family: 'Montserrat', sans-serif;font-size:30px;line-height: 25px; font-weight:normal; text-transform:uppercase; margin:20px 0 6px;}
+.uc_starter_statistics .uc_starter_statistics_inner p{font-family: 'Montserrat', sans-serif;font-size:16px; padding:0 7%;margin:0px; line-height:32px;}
+
+
+
+
+

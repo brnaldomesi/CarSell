@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.uc_starter_cocial_icon *{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.uc_starter_cocial_icon {padding-bottom: 45px;}
+
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner{ border-radius:3px; max-width:100%; margin:0 auto;padding: 0 0 5px;}
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner:hover{
+-webkit-box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);
+-moz-box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);
+box-shadow: 0px 1px 34px -4px rgba(161,158,161,1);}
+
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner .uc_icon_box{ width:100%; height:160px; position:relative;border-radius:3px;}
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner .uc_icon_box a{text-decoration:none;}
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner .uc_icon_box a .fa{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:60px;}
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner .uc_icon_box .uc_arrow{width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent;position: absolute; transform:translateX(-50%); left:50%; bottom:0px;}
+
+.uc_starter_cocial_icon .uc_starter_cocial_icon_inner:hover p{display:block; bottom:-48px; z-index:0}
