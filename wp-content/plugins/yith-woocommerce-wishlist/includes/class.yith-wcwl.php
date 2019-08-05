@@ -566,29 +566,42 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		    else{
 			    $wishlist = yith_getcookie( 'yith_wcwl_products' );
 			    $hidden_products = yith_wcwl_get_hidden_products();
+			    $items = is_array( $wishlist ) ? wp_list_pluck( $wishlist, 'prod_id' ) : false;
 
-			    $query = "SELECT ID FROM {$wpdb->posts} AS p
-                          WHERE post_type = %s AND post_status = %s";
-			    $query .= ! empty( $hidden_products ) ? ( " AND p.ID NOT IN ( " . implode( ', ', array_filter( $hidden_products, 'esc_sql' ) ). " )" ) : "";
+			    if( empty( $items ) ){
+			    	return array();
+			    }
 
-			    $query_args = array(
-				    'product',
-				    'publish'
-			    );
+			    $valid_products = wc_get_products( array(
+				    'status' => 'publish',
+				    'include' => $items,
+				    'limit' => -1,
+				    'return' => 'ids'
+			    ) );
 
-			    $existing_products = $wpdb->get_col( $wpdb->prepare( $query, $query_args ) );
+			    if( empty( $valid_products ) ){
+			    	return array();
+			    }
 
 			    foreach( $wishlist as $key => $cookie ){
-				    if( ! in_array( $cookie['prod_id'], $existing_products ) ){
+			    	if( in_array( $cookie['prod_id'], $hidden_products )  ){
+			    		unset( $wishlist[ $key ] );
+			    		continue;
+				    }
+
+			    	if( ! in_array( $cookie['prod_id'], $valid_products ) ){
 					    unset( $wishlist[ $key ] );
+					    continue;
 				    }
 
 				    if( ! empty( $product_id ) && $cookie['prod_id'] != $product_id ){
 					    unset( $wishlist[ $key ] );
+					    continue;
 				    }
 
 				    if( ( ! empty( $wishlist_id ) && $wishlist_id != 'all' ) && $cookie['wishlist_id'] != $wishlist_id ){
 					    unset( $wishlist[ $key ] );
+					    continue;
 				    }
 			    }
 

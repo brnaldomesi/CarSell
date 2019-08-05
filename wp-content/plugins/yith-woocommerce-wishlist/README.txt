@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, shop wishlist
 Requires at least: 4.0
 Tested up to: 5.2
-Stable tag: 2.2.11
+Stable tag: 2.2.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -108,6 +108,12 @@ you should ask theme developers to update custom templates and replace the old t
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.2.12 - Released: Jul, 18 - 2019 =
+
+* Update: internal plugin framework
+* Tweak: improved performance on wishlist page, when user is a guest and store has huge catalog (thanks to Dave)
+* Dev: add filter yith_wcwl_wishlist_correctly_created on add_wishlist function
 
 = 2.2.11 - Released: Jun, 13 - 2019 =
 
@@ -532,6 +538,8 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.2.10 - Released: Apr, 23 - 2019 =
+= 2.2.12 - Released: Jul, 18 - 2019 =
 
 * Update: internal plugin framework
+* Tweak: improved performance on wishlist page, when user is a guest and store has huge catalog (thanks to Dave)
+* Dev: add filter yith_wcwl_wishlist_correctly_created on add_wishlist function
