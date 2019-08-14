@@ -1,0 +1,52 @@
+.wp-block-caxton-super-text > * {
+	margin: 0;
+}
+
+.caxton-slider {
+	h2 {
+		font-size: 2em;
+		color: inherit;
+	}
+	p, a {
+		font-size: 1em;
+		color: inherit;
+	}
+}
+
+body:not(.wp-admin) {
+	.caxton-shape-divider-onxt,
+	.caxton-shape-divider-oprv {
+		height: 0;
+		> div {
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.wp-block-caxton-divider,
+.caxton-shape-divider {
+	position: relative;
+	z-index: 999;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.caxton-shape-divider {
+	&.caxton-shape-divider-onxt > div {
+		bottom: 0;
+	}
+	&.caxton-shape-divider-oprv > div {
+		top: 0;
+	}
+	> div {
+		overflow: hidden;
+		margin: -1px 0;
+	}
+	svg {
+		position: relative;
+		fill: currentColor;
+		display: block;
+	}
+}

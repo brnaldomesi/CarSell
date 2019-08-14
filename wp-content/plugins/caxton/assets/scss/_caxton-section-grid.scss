@@ -1,0 +1,187 @@
+.block-editor {
+	.caxton-layout-picker {
+		border: 1px solid #aaa;
+		padding: 16px;
+		grid-column: 1/-1;
+		.caxton-layout-preview {
+			display: grid;
+			grid-template-columns: repeat(12, 12px);
+			grid-gap: 5px;
+			padding: 4px;
+			grid-auto-rows: 25px;
+			border: 3px solid #eee;
+			background: #eee;
+			cursor: pointer;
+			opacity: .88;
+			&:hover {
+				border-color: #aaa;
+				opacity: 1;
+			}
+			.caxton-layout-preview-section {
+				background: #999;
+			}
+			&.caxton-layout-selected {
+				background: #ccc;
+				.caxton-layout-preview-section {
+					background: #777;
+				}
+			}
+		}
+		.caxton-layout-preview-wrap {
+			float: left;
+			position: relative;
+			margin: 0 25px 25px 0;
+
+			&:hover .caxton-layout-preview-legends {
+				opacity: .7;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		.caxton-layout-preview-legends {
+			position: absolute;
+			top: calc( 100% - 1px );
+			right: 0;
+			z-index: 1;
+			opacity: 0;
+			.dashicons {
+				float: left;
+			}
+		}
+		&.caxton-responsive-layout-picker {
+			border: none;
+			padding: 0;
+			column-count: 2;
+			column-gap: 5px;
+			.caxton-layout-preview {
+				grid-template-columns: repeat(12, 1fr);
+				grid-gap: 2px;
+				padding: 2px;
+				grid-auto-rows: 11px;
+			}
+			.caxton-layout-preview-wrap {
+				display: inline-block;
+				-webkit-column-break-inside: avoid;
+				page-break-inside: avoid;
+				break-inside: avoid;
+				margin: 0;
+				padding: 2.5px 0;
+				width: 100%;
+			}
+		}
+	}
+
+	.caxton-columns {
+		grid-template-columns: 100%;
+		> .editor-inner-blocks > .editor-block-list__layout {
+			display: grid;
+			grid: inherit;
+			> .editor-block-list__block {
+				margin: 0;
+				padding: 0;
+			}
+		}
+		.caxton-section-block {
+			grid-template-columns: 100%;
+			.editor-block-list__layout {
+				margin: 0;
+			}
+		}
+
+			@for $i from 1 to 6 {
+			&.caxton-#{$i}-columns > .editor-inner-blocks > .editor-block-list__layout {
+				grid-template-columns: repeat($i, 1fr);
+			}
+		}
+	}
+}
+
+.caxton-grid-block {
+	> .editor-inner-blocks {
+		grid: inherit;
+		grid-gap: inherit;
+		grid-column: 1 / -1;
+		> .editor-block-list__layout {
+			grid: inherit;
+			grid-gap: inherit;
+			grid-column: 1/-1;
+			display: grid;
+			margin: 0;
+		}
+		.editor-block-list__block {
+			margin: 0;
+			max-width: none;
+		}
+	}
+	.editor-inner-blocks + .editor-inserter {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		svg {
+			fill: #e74c3c;
+		}
+		button {
+			border-radius: 50%;
+		}
+	}
+	.editor-block-list__block:not(:last-child) .editor-inner-blocks + .editor-inserter {
+		display: none;
+	}
+
+}
+
+[data-caxton-section] {
+	justify-content: stretch;
+	align-items: stretch;
+	transition: all .7s;
+	background: rgba(0,0,0,0.025);
+	box-shadow: inset 0 0 7px 2px rgba(0,0,0,0.05);
+	&.is-selected-parent,
+	&.is-selected {
+		background: rgba(0,0,0,0);
+		box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.07);
+	}
+	> .editor-block-list__block-edit {
+		height: calc( 100% - 64px );
+		[data-block] {
+			height: 100%;
+			box-sizing: border-box;
+			> div {
+				height: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}
+}
+
+.edit-post-visual-editor .editor-block-list__block[data-type='caxton/section'] > .editor-block-list__block-edit {
+	margin: 0;
+	height: 100%;
+}
+
+[data-type='caxton/grid'] > .editor-block-list__block-edit > .editor-block-list__breadcrumb, xx[data-type='caxton/section'] > .editor-block-list__block-edit > .editor-block-list__breadcrumb {
+	display: none !important;
+}
+
+.editor-block-list__block[data-type='caxton/grid']:hover > .editor-block-list__block-edit:after {
+	content: "Caxton Layout";
+	display: block;
+	width: 106px;
+	right: -16px;
+	position: absolute;
+	bottom: -16px;
+	background: #007cba;
+	color: #fff;
+	text-align: center;
+	font: 11px/1.8 sans-serif;
+	padding: 2px 0 0;
+	text-transform: uppercase;
+	z-index: 999;
+	opacity: 1;
+}
+
+.editor-block-list__layout .editor-block-list__block[data-type='caxton/grid']:hover > .editor-block-list__block-edit:before {
+	outline: 1px solid #007cba;
+	outline-offset: 2px;
+}

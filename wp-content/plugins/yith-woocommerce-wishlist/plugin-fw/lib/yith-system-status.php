@@ -103,6 +103,7 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 				'mbstring_enabled'  => __( 'MultiByte String', 'yith-plugin-fw' ),
 				'imagick_version'   => __( 'ImageMagick Version', 'yith-plugin-fw' ),
 				'gd_enabled'        => __( 'GD Library', 'yith-plugin-fw' ),
+				'iconv_enabled'     => __( 'Iconv Module', 'yith-plugin-fw' ),
 				'opcache_enabled'   => __( 'OPCache Save Comments', 'yith-plugin-fw' ),
 				'url_fopen_enabled' => __( 'URL FOpen', 'yith-plugin-fw' ),
 			);
@@ -160,7 +161,6 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 
 			if ( '' == get_option( 'yith_system_info' ) || ( isset( $_GET['page'] ) && $_GET['page'] == $this->_page ) ) {
 
-				$this->add_requirements( __( 'YITH License Activation', 'yith-plugin-fw' ), array( 'min_tls_version' => '1.2' ) );
 				$this->add_requirements( __( 'YITH Plugins', 'yith-plugin-fw' ), array( 'min_wp_version' => '4.9', 'min_wc_version' => '3.4', 'min_php_version' => '5.6.20' ) );
 				$this->add_requirements( __( 'WooCommerce', 'yith-plugin-fw' ), array( 'wp_memory_limit' => '64M' ) );
 
@@ -180,6 +180,7 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 								case 'mbstring_enabled' :
 								case 'simplexml_enabled':
 								case 'gd_enabled':
+								case 'iconv_enabled':
 								case 'url_fopen_enabled':
 								case 'opcache_enabled'  :
 
@@ -296,13 +297,21 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 		 */
 		public function get_system_info() {
 
-			//Get TLS version
-			$ch = curl_init( 'https://www.howsmyssl.com/a/check' );
-			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-			$data = curl_exec( $ch );
-			curl_close( $ch );
-			$json = json_decode( $data );
-			$tls  = str_replace( 'TLS ', '', $json->tls_version );
+			$tls = '';
+
+			if ( function_exists( 'curl_init' ) ) {
+				//Get TLS version
+				$ch = curl_init();
+				curl_setopt( $ch, CURLOPT_URL, 'https://www.howsmyssl.com/a/check' );
+				curl_setopt( $ch, CURLOPT_POST, 1 );
+				curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );
+				curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+				$data = curl_exec( $ch );
+				curl_close( $ch );
+				$json = json_decode( $data );
+				$tls  = $json != null ? str_replace( 'TLS ', '', $json->tls_version ) : '';
+			}
 
 			//Get PHP version
 			preg_match( "#^\d+(\.\d+)*#", PHP_VERSION, $match );
@@ -331,6 +340,7 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 				'mbstring_enabled'  => extension_loaded( 'mbstring' ),
 				'simplexml_enabled' => extension_loaded( 'simplexml' ),
 				'gd_enabled'        => extension_loaded( 'gd' ) && function_exists( 'gd_info' ),
+				'iconv_enabled'     => extension_loaded( 'iconv' ),
 				'opcache_enabled'   => ini_get( 'opcache.save_comments' ),
 				'url_fopen_enabled' => ini_get( 'allow_url_fopen' ),
 			) );

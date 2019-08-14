@@ -405,16 +405,6 @@ jQuery( function ( $ ) {
             }
         );
 
-        $.each( $checkgroup, function () {
-            var children = $( this ).find( 'fieldset' );
-            if ( children.length > 3 && children.length < 6 ) {
-                $( this ).addClass( 'two-cols' )
-            }
-            if ( children.length > 6 ) {
-                $( this ).addClass( 'three-cols' )
-            }
-        } );
-
         $( document.body ).trigger( 'yith-framework-enhanced-select-init' );
     };
 
@@ -545,7 +535,7 @@ jQuery( function ( $ ) {
             _section = _toggle.closest( '.yith-toggle-row' ),
             _content = _section.find( '.yith-toggle-content' );
 
-        if ( _toggle.hasClass( 'yith-plugin-fw-onoff' ) || _toggle.hasClass( 'icon-drag' ) ) {
+        if ( _toggle.hasClass( 'yith-plugin-fw-onoff' ) || _toggle.hasClass( 'yith-icon-drag' ) ) {
             return false;
         }
 
@@ -560,17 +550,30 @@ jQuery( function ( $ ) {
     /**Add new box toggle**/
     $( document ).on( 'click', '.yith-add-box-button', function ( event ) {
         event.preventDefault();
-        var target_id = $( this ).data( 'box_id' ),
-            id        = $( this ).closest( '.yith-toggle_wrapper' ).attr( 'id' );
-        template      = wp.template( 'yith-toggle-element-add-box-content-' + id );
+        var $this = $( this ),
+            target_id = $this.data( 'box_id' ),
+            closed_label   = $this.data('closed_label'),
+            label          = $this.data('opened_label'),
+            id        = $this.closest( '.yith-toggle_wrapper' ).attr( 'id' );
+            template      = wp.template( 'yith-toggle-element-add-box-content-' + id );
+
         if ( '' !== target_id ) {
             $( '#' + target_id ).html( template( { index: 'box_id' } ) ).slideToggle();
+            if (closed_label !== '') {
+                if ($this.html() === closed_label) {
+                    $this.html(label).removeClass('closed');
+                } else {
+                    $this.html(closed_label).addClass('closed');
+                }
+            }
+
             yith_fields_init();
-            $( document ).trigger( 'yith-add-box-button-toggle', [ $( this ) ] );
+            $( document ).trigger( 'yith-add-box-button-toggle', [ $this ] );
         }
     } );
 
     $( document ).on( 'click', '.yith-add-box-buttons .yith-save-button', function ( event ) {
+
         event.preventDefault();
         var add_box        = $( this ).parents( '.yith-add-box' ),
             id             = $( this ).closest( '.yith-toggle_wrapper' ).attr( 'id' ),
@@ -579,7 +582,9 @@ jQuery( function ( $ ) {
             fields         = add_box.find( ':input' ),
             counter        = toggle_element.find( '.yith-toggle-row' ).length,
             hidden_obj     = $( '<input type="hidden">' );
+
         hidden_obj.val( counter );
+
         $( document ).trigger( 'yith-toggle-change-counter', [ hidden_obj, add_box ] );
 
         counter       = hidden_obj.val();
@@ -620,14 +625,27 @@ jQuery( function ( $ ) {
         var form_is_valid = $( '<input type="hidden">' ).val( 'yes' );
         $( document ).trigger( 'yith-toggle-element-item-before-add', [ add_box, toggle_el, form_is_valid ] );
 
+        var delayInMilliseconds =1000; //1 second
+        setTimeout(function() {
+            if ( form_is_valid.val() === 'yes' ) {
+                $( toggle_element ).find( '.yith-toggle-elements' ).append( toggle_el );
+                $( add_box ).find( '.yith-plugin-fw-datepicker' ).datepicker( 'destroy' );
+                $( add_box ).html( '' );
+                $( add_box ).prev('.yith-add-box-button').trigger('click');
+                toggle_element.saveToggleElement();
 
-        if ( form_is_valid.val() === 'yes' ) {
-            $( toggle_element ).find( '.yith-toggle-elements' ).append( toggle_el );
-            $( add_box ).find( '.yith-plugin-fw-datepicker' ).datepicker( 'destroy' );
-            $( add_box ).html( '' ).toggle();
-            toggle_element.saveToggleElement();
-            yith_fields_init();
-        }
+                var delayInMilliseconds =2000; //1 second
+                setTimeout(function() {
+                    $( toggle_element ).find('.highlight').removeClass('highlight');
+                }, delayInMilliseconds);
+
+
+                yith_fields_init();
+            }
+        }, delayInMilliseconds );
+
+
+
     } );
 
     $( document ).on( 'click', '.yith-toggle-row .yith-save-button', function ( event ) {
@@ -635,7 +653,7 @@ jQuery( function ( $ ) {
         var toggle     = $( this ).closest( '.toggle-element' ),
             toggle_row = $( this ).closest( '.yith-toggle-row' ),
             spinner    = toggle_row.find( '.spinner' );
-        toggle_row.formatToggleTitle();
+            toggle_row.formatToggleTitle();
 
         var form_is_valid = $( '<input type="hidden">' ).val( 'yes' );
         $( document ).trigger( 'yith-toggle-element-item-before-update', [ toggle, toggle_row, form_is_valid ] );
@@ -665,6 +683,18 @@ jQuery( function ( $ ) {
     $( document ).on( 'click', '.yith-plugin-fw-radio input[type=radio]', function () {
         $( this ).closest( '.yith-plugin-fw-radio' ).val( $( this ).val() ).trigger( 'change' );
     } );
+
+    $(document).on('click', '.yith-password-eye', function () {
+        var $this = $(this),
+            inp = $(this).closest('.yith-password-wrapper').find('input');
+        if (inp.attr('type') === "password") {
+            inp.attr('type', 'text');
+            $this.addClass('yith-password-eye-closed');
+        } else {
+            inp.attr('type', 'password');
+            $this.removeClass('yith-password-eye-closed');
+        }
+    });
 
     $( '.yith-plugin-fw-radio' ).each( function () {
         $( this ).val( $( this ).attr( 'value' ) );

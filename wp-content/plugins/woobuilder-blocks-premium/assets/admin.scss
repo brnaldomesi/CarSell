@@ -1,0 +1,81 @@
+/**
+ * Plugin front end styles
+ *
+ * @package WooBuilder_Blocks
+ * @version 1.0.0
+ */
+
+@import "front.css";
+
+#woocommerce-embedded-root {
+	border-bottom: 1px solid #eee;
+	~ #wpbody {
+		.edit-post-header,
+		.edit-post-layout__content,
+		.edit-post-sidebar {
+			margin-top: 81px;
+		}
+	}
+}
+
+.wp-core-ui {
+	.woobuilder-block {
+		input, button {
+			display: inline-block;
+			margin: 0;
+			padding: .3em 1em;
+			border: 1px solid rgba(0,0,0,0.34);
+			font: inherit;
+			border-radius: 0;
+			height: auto;
+			line-height: 1.6;
+			box-shadow: none;
+		}
+		.woocommerce-product-gallery.images {
+			opacity: 1 !important;
+			.woocommerce-product-gallery__image {
+				&:not(:first-child) {
+					display: none;
+				}
+				img.wp-post-image {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.woobuilder-add-to-cart .quantity {
+		float: left;
+		margin-right: 1em;
+	}
+	.woobuilder-product-price .price {
+		font-size: 1.41575em;
+		margin: 1.41575em 0;
+	}
+	.caxton-layout-options {
+		column-count: 2;
+		column-gap: .7em;
+	}
+
+	.caxton-layout-option {
+		padding: .5em;
+		border: 1px solid #ccc;
+		margin-bottom: .7em;
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+		text-align: center;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+		h5 {
+			margin: 2px 2px 7px;
+			line-height: 1;
+		}
+	}
+}
+
+@media (min-width:1024px) {
+	.wp-core-ui {
+		.caxton-layout-options {
+			column-count: 3;
+		}
+	}
+}

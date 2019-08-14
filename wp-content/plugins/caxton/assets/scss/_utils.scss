@@ -1,0 +1,102 @@
+.absolute--fill {
+	position: absolute;
+}
+
+.vw-100, .vw-100-bg {
+	width: 100vw;
+	margin-left: calc( -50vw + 50% ) !important;
+	max-width: none !important;
+}
+
+.vw-100-bg {
+	padding-right: calc( 50vw - 50% );
+	padding-left: calc( 50vw - 50% );
+}
+
+.shadow {
+	box-shadow: 0 0 0.16em #000;
+}
+
+.glow {
+	box-shadow: 0 0 0.16em #fff;
+}
+
+.text-shadow {
+	text-shadow: 0 0 0.16em #000;
+}
+
+.text-glow {
+	text-shadow: 0 0 0.16em #fff;
+}
+
+.center-mid-children {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.min-h4 { min-height: $height-4; }
+.min-h5 { min-height: $height-5; }
+
+.min-h-6{ min-height: 25rem; }
+.min-h-7{ min-height: 32rem; }
+.min-h-8{ min-height: 40rem; }
+.min-h-9{ min-height: 50rem; }
+.min-vh-100 { min-height: 100vh; }
+
+.maa{ margin: auto; }
+.mla{ margin-left: auto; }
+.mra{ margin-right: auto; }
+.mba{ margin-bottom: auto; }
+.mta{ margin-top: auto; }
+.mva{ margin-top: auto; margin-bottom: auto; }
+.mha{ margin-left: auto; margin-right: auto; }
+
+.fas.fab {
+	font-family: Font Awesome\ 5 Brands;
+	font-weight: 400;
+}
+
+.caxton-icon.fas {
+	width: 1.25em;
+	line-height: 1.25;
+	text-align: center;
+	box-sizing: content-box;
+}
+
+.caxton-hide-image img {
+	display: none !important;
+}
+
+.caxton-flex-row-reverse .flex {
+	flex-direction: row-reverse !important;
+}
+
+.blur, .blur-children > * {
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+}
+
+.blur-children .absolute--fill {
+	top: -7px;
+	left: -7px;
+	right: -7px;
+	bottom: -7px;
+}
+
+.blur-children {
+	overflow: hidden;
+}
+
+.flip {
+	transform: scale( -1, -1 );
+}
+
+.flip-h {
+	transform: scale( -1, 1 );
+}
+
+.flip-v {
+	transform: scale( 1, -1 );
+}

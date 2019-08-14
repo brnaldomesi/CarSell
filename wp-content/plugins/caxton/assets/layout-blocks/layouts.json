@@ -1,0 +1,298 @@
+[
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 12"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 6"
+			},
+			{
+				"Grid area": "span 1/span 6"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 8"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 8"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 9"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 9"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 6"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 6"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 6"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 2"
+			},
+			{
+				"Grid area": "span 1/span 2"
+			},
+			{
+				"Grid area": "span 1/span 2"
+			},
+			{
+				"Grid area": "span 1/span 2"
+			},
+			{
+				"Grid area": "span 1/span 2"
+			},
+			{
+				"Grid area": "span 1/span 2"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 12"
+			},
+			{
+				"Grid area": "span 2/span 6"
+			},
+			{
+				"Grid area": "span 2/span 6"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 12"
+			},
+			{
+				"Grid area": "span 2/span 4"
+			},
+			{
+				"Grid area": "span 2/span 4"
+			},
+			{
+				"Grid area": "span 2/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 2/span 8"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 8"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 8"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 2/span 8"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 2/span 4"
+			},
+			{
+				"Grid area": "span 2/span 8"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 2/span 8"
+			},
+			{
+				"Grid area": "span 2/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			},
+			{
+				"Grid area": "span 1/span 4"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 2/span 6"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 2/span 6"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	},
+	{
+		"tpl": [
+			{
+				"Grid area": "span 2/span 6"
+			},
+			{
+				"Grid area": "span 2/span 6"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			},
+			{
+				"Grid area": "span 1/span 3"
+			}
+		]
+	}
+]

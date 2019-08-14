@@ -17,6 +17,7 @@ extract( $field );
 
 $class = isset( $class ) ? $class : '';
 $class = 'yith-plugin-fw-radio ' . $class;
+
 ?>
 <div class="<?php echo $class ?>" id="<?php echo $id ?>"
     <?php echo $custom_attributes ?>

@@ -85,6 +85,7 @@ if ( !class_exists( 'YIT_Assets' ) ) {
                 'ajax_url'           => admin_url( 'admin-ajax.php' ),
                 'search_posts_nonce' => wp_create_nonce( 'search-posts' ),
                 'search_terms_nonce' => wp_create_nonce( 'search-terms' ),
+                'search_customers_nonce' => wp_create_nonce( 'search-customers' ),
             ) );
 
             wp_localize_script( 'yith-plugin-fw-fields', 'yith_framework_fw_fields', array(

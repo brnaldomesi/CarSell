@@ -17,6 +17,10 @@ wp_enqueue_style( 'wp-color-picker' );
 extract( $field );
 
 $class = !empty( $class ) ? $class : 'yith-plugin-fw-colorpicker';
+$default = isset( $default ) ?  $default : '';
+if( isset($std) && !empty( $std) && empty($default) ){
+	$default = $std;
+}
 ?>
 
 <input type="text" name="<?php echo $name ?>"

@@ -73,8 +73,8 @@ do_action( 'yit_before_metaboxes_tab' ) ?>
                 }
                 $value            = yit_get_post_meta( $post->ID, $field_name );
                 $field[ 'value' ] = $value != '' ? $value : ( isset( $field[ 'std' ] ) ? $field[ 'std' ] : '' );
-
-                $container_classes = "the-metabox " . $field[ 'type' ] . " clearfix ";
+	            $field[ 'checkboxgroup' ] = ( $field[ 'type' ] == 'checkbox' && isset( $field[ 'checkboxgroup' ] ) ) ? " " .$field[ 'checkboxgroup' ] : "";
+                $container_classes = "the-metabox " . $field[ 'type' ] .$field[ 'checkboxgroup' ] . " clearfix ";
                 $container_classes .= empty( $field[ 'label' ] ) ? 'no-label' : '';
 
                 ?>

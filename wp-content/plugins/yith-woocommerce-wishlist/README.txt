@@ -4,12 +4,12 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, shop wishlist
 Requires at least: 4.0
 Tested up to: 5.2
-Stable tag: 2.2.12
+Stable tag: 2.2.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Wishlist add all Wishlist features to your website. Needs WooCommerce to work.
-WooCommerce 3.6.x compatible.
+WooCommerce 3.7.x compatible.
 
 
 == Description ==
@@ -108,6 +108,14 @@ you should ask theme developers to update custom templates and replace the old t
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.2.13 - Released: Aug, 12 - 2019 =
+
+* New: WooCommerce 3.7.0 RC2 support
+* New: input to copy wishlist link and share it anywhere
+* Update: internal plugin framework
+* Fix: redirect url if there is more than one parameter on the url
+* Fix: changed escape for share link, to properly escape url special characters
 
 = 2.2.12 - Released: Jul, 18 - 2019 =
 

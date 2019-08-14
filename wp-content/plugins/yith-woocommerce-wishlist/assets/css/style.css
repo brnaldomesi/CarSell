@@ -384,6 +384,10 @@ div.product .woocommerce-price-and-add .single_add_to_wishlist.button {
 .yith-wcwl-share li a.email { background-image: url(../images/email.jpg ); }
 .yith-wcwl-share li a.whatsapp{ background-image: url(../images/whatsapp.png); }
 
+.copy-trigger {
+    cursor: pointer;
+}
+
 /* Ask an estimate button */
 .woocommerce .wishlist_table.cart .ask-an-estimate-button,
 .woocommerce .wishlist_table.cart #custom_add_to_cart{

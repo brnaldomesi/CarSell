@@ -109,8 +109,8 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             add_action( 'init', array( $this, 'populate_products_list' ), 10 );
 
             // Add link or button in the products list or
-            if ( get_option('yith_woocompare_compare_button_in_product_page') == 'yes' )  add_action( 'woocommerce_single_product_summary', array( $this, 'add_compare_link' ), 35 );
-            if ( get_option('yith_woocompare_compare_button_in_products_list') == 'yes' ) add_action( 'woocommerce_after_shop_loop_item', array( $this, 'add_compare_link' ), 20 );
+            if ( get_option( 'yith_woocompare_compare_button_in_product_page', 'yes' ) == 'yes' )  add_action( 'woocommerce_single_product_summary', array( $this, 'add_compare_link' ), 35 );
+            if ( get_option( 'yith_woocompare_compare_button_in_products_list', 'no' ) == 'yes' ) add_action( 'woocommerce_after_shop_loop_item', array( $this, 'add_compare_link' ), 20 );
             add_action( 'init', array( $this, 'add_product_to_compare_action' ), 15 );
             add_action( 'init', array( $this, 'remove_product_from_compare_action' ), 15 );
             add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -224,7 +224,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
                 'table_title' => apply_filters( 'yith_woocompare_compare_table_title',__( 'Product Comparison', 'yith-woocommerce-compare' ) ),
                 'auto_open' => get_option( 'yith_woocompare_auto_open', 'yes' ),
                 'loader'    => YITH_WOOCOMPARE_ASSETS_URL . '/images/loader.gif',
-                'button_text' => get_option('yith_woocompare_button_text'),
+                'button_text' => get_option( 'yith_woocompare_button_text', __( 'Compare', 'yith-woocommerce-compare' ) ),
                 'cookie_name' => $this->cookie_name,
                 'close_label' => _x( 'Close', 'Label for popup close icon', 'yith-woocommerce-compare' )
             ));
@@ -499,7 +499,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             if ( empty( $product_id ) || apply_filters( 'yith_woocompare_remove_compare_link_by_cat', false, $product_id ) )
 	            return;
 
-            $is_button = ! isset( $button_or_link ) || ! $button_or_link ? get_option( 'yith_woocompare_is_button' ) : $button_or_link;
+            $is_button = ! isset( $button_or_link ) || ! $button_or_link ? get_option( 'yith_woocompare_is_button', 'button' ) : $button_or_link;
 
             if ( ! isset( $button_text ) || $button_text == 'default' ) {
                 $button_text = get_option( 'yith_woocompare_button_text', __( 'Compare', 'yith-woocommerce-compare' ) );
@@ -548,8 +548,8 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             $vars = array(
                 'products'           => $this->get_products_list(),
                 'fields'             => $this->fields(),
-				'repeat_price'       => get_option( 'yith_woocompare_price_end' ),
-                'repeat_add_to_cart' => get_option( 'yith_woocompare_add_to_cart_end' ),
+				'repeat_price'       => get_option( 'yith_woocompare_price_end', 'yes' ),
+                'repeat_add_to_cart' => get_option( 'yith_woocompare_add_to_cart_end', 'no' ),
             );
 
             return $vars;

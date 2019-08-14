@@ -612,4 +612,49 @@ jQuery( document ).ready( function( $ ){
 
         return s;
     }
+
+    $('.copy-trigger').on( 'click', function ( event ) {
+
+        var obj_to_copy = $('.copy-target' );
+
+        if ( obj_to_copy.length > 0 ) {
+            if( obj_to_copy.is('input') ) {
+
+                if (isOS()) {
+
+                    obj_to_copy[0].setSelectionRange(0, 9999);
+                } else {
+                    obj_to_copy.select();
+                }
+                document.execCommand("copy");
+            }
+            else{
+
+                var hidden = $('<input/>', {
+                    val : obj_to_copy.text(),
+                    type: 'text'
+                });
+
+                b('body').append( hidden );
+
+                if (isOS()) {
+                    hidden[0].setSelectionRange(0, 9999);
+                }else {
+                    hidden.select();
+                }
+                document.execCommand('copy');
+
+                hidden.remove();
+
+            }
+        }
+    } );
+
+    /**
+     * Check if device is an IOS device
+     * @since 2.2.11
+     */
+    function isOS() {
+        return navigator.userAgent.match(/ipad|iphone/i);
+    }
 });

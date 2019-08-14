@@ -19,7 +19,7 @@ wp_enqueue_script( 'jquery-fixedcolumns', YITH_WOOCOMPARE_ASSETS_URL . '/js/Fixe
 $widths = array();
 foreach( $products as $product ) $widths[] = '{ "sWidth": "205px", resizeable:true }';
 
-$table_text = get_option( 'yith_woocompare_table_text' );
+$table_text = get_option( 'yith_woocompare_table_text', __( 'Compare products', 'yith-woocommerce-compare' ) );
 do_action ( 'wpml_register_single_string', 'Plugins', 'plugin_yit_compare_table_text', $table_text );
 $localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_text, 'Plugins', 'plugin_yit_compare_table_text' );
 

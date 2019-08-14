@@ -1572,7 +1572,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
                 }
             }
 
-            return apply_filters( 'yit_wcwl_add_to_cart_redirect_url', esc_url( $url ) );
+            return apply_filters( 'yit_wcwl_add_to_cart_redirect_url', esc_url_raw( $url ), $url,$product );
         }
 
         /**
