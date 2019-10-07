@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit982a28eab8420855eb099ba24fa8d700
+class ComposerStaticInit2c420f229f0b44a84053c7de0a411c61
 {
     public static $files = array (
         'fca581ae5268210490253d58378748c5' => __DIR__ . '/../..' . '/includes/functions.php',
@@ -76,10 +76,7 @@ class ComposerStaticInit982a28eab8420855eb099ba24fa8d700
         'MC4WP_Integration_Tags' => __DIR__ . '/../..' . '/includes/integrations/class-integration-tags.php',
         'MC4WP_List_Data_Mapper' => __DIR__ . '/../..' . '/includes/class-list-data-mapper.php',
         'MC4WP_MailChimp' => __DIR__ . '/../..' . '/includes/class-mailchimp.php',
-        'MC4WP_MailChimp_Interest_Category' => __DIR__ . '/../..' . '/includes/mailchimp/class-interest-category.php',
-        'MC4WP_MailChimp_List' => __DIR__ . '/../..' . '/includes/mailchimp/class-list.php',
-        'MC4WP_MailChimp_Merge_Field' => __DIR__ . '/../..' . '/includes/mailchimp/class-merge-field.php',
-        'MC4WP_MailChimp_Subscriber' => __DIR__ . '/../..' . '/includes/mailchimp/class-subscriber.php',
+        'MC4WP_MailChimp_Subscriber' => __DIR__ . '/../..' . '/includes/class-mailchimp-subscriber.php',
         'MC4WP_MemberPress_Integration' => __DIR__ . '/../..' . '/integrations/memberpress/class-memberpress.php',
         'MC4WP_Ninja_Forms_Action' => __DIR__ . '/../..' . '/integrations/ninja-forms/class-action.php',
         'MC4WP_Ninja_Forms_Field' => __DIR__ . '/../..' . '/integrations/ninja-forms/class-field.php',
@@ -105,8 +102,8 @@ class ComposerStaticInit982a28eab8420855eb099ba24fa8d700
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit982a28eab8420855eb099ba24fa8d700::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit982a28eab8420855eb099ba24fa8d700::$classMap;
+            $loader->prefixesPsr0 = ComposerStaticInit2c420f229f0b44a84053c7de0a411c61::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2c420f229f0b44a84053c7de0a411c61::$classMap;
 
         }, null, ClassLoader::class);
     }

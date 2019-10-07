@@ -214,7 +214,7 @@ class UpdraftPlus_WPAdmin_Commands extends UpdraftPlus_Commands {
 				$incremental_sets = array_keys($backups[$timestamp]['incremental_sets']);
 				// Check if there are more than one timestamp in the incremental set
 				if (1 < count($incremental_sets)) {
-					$incremental_select_html = '<label>'.__('This backup set contains incremental backups of your files; please select the time you wish to restore your files to', 'updraftplus').': </label>';
+					$incremental_select_html = '<div class="notice updraft-restore-option"><label>'.__('This backup set contains incremental backups of your files; please select the time you wish to restore your files to', 'updraftplus').': </label>';
 					$incremental_select_html .= '<select name="updraft_incremental_restore_point" id="updraft_incremental_restore_point">';
 					$incremental_sets = array_reverse($incremental_sets);
 					$first_timestamp = $incremental_sets[0];
@@ -226,14 +226,15 @@ class UpdraftPlus_WPAdmin_Commands extends UpdraftPlus_Commands {
 					}
 
 					$incremental_select_html .= '</select>';
+					$incremental_select_html .= '</div>';
 					$info['addui'] = empty($info['addui']) ? $incremental_select_html : $info['addui'].'<br>'.$incremental_select_html;
 				}
 			}
 
 			if (0 == count($err) && 0 == count($warn)) {
-				$mess_first = __('The backup archive files have been successfully processed. Now press Restore again to proceed.', 'updraftplus');
+				$mess_first = __('The backup archive files have been successfully processed. Now press Restore to proceed.', 'updraftplus');
 			} elseif (0 == count($err)) {
-				$mess_first = __('The backup archive files have been processed, but with some warnings. If all is well, then now press Restore again to proceed. Otherwise, cancel and correct any problems first.', 'updraftplus');
+				$mess_first = __('The backup archive files have been processed, but with some warnings. If all is well, then press Restore to proceed. Otherwise, cancel and correct any problems first.', 'updraftplus');
 			} else {
 				$mess_first = __('The backup archive files have been processed, but with some errors. You will need to cancel and correct any problems before retrying.', 'updraftplus');
 			}

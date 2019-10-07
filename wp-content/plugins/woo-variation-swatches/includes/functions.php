@@ -210,7 +210,14 @@
 								'squared' => esc_html__( 'Squared Shape', 'woo-variation-swatches' )
 							),
 							'default' => 'squared'
-						)
+						),
+						array(
+							'id'      => 'default_to_button',
+							'type'    => 'checkbox',
+							'title'   => esc_html__( 'Auto Dropdowns to Button', 'woo-variation-swatches' ),
+							'desc'    => esc_html__( 'Convert default dropdowns to button type', 'woo-variation-swatches' ),
+							'default' => true
+						),
 					) )
 				)
 			) ), apply_filters( 'wvs_simple_setting_default_active', true ) );
@@ -554,10 +561,54 @@
 				$fields = wvs_taxonomy_meta_fields( $attribute_taxonomy->attribute_type );
 				
 				if ( ! empty( $fields ) ): ?>
-                    <button class="button fr plus wvs_add_new_attribute" data-dialog_title="<?php printf( esc_html__( 'Add new %s', 'woo-variation-swatches' ), esc_attr( $attribute_taxonomy->attribute_label ) ) ?>"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
+                    <button disabled="disabled" class="button fr plus wvs_add_new_attribute" data-dialog_title="<?php printf( esc_html__( 'Add new %s', 'woo-variation-swatches' ), esc_attr( $attribute_taxonomy->attribute_label ) ) ?>"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
 				<?php else: ?>
                     <button class="button fr plus add_new_attribute"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
 				<?php endif; ?>
+				<?php
+			}
+		}
+	endif;
+	
+	//-------------------------------------------------------------------------------
+	// Dokan Support - OLD WC Style
+	//-------------------------------------------------------------------------------
+	if ( ! function_exists( 'dokan_support_wvs_product_option_terms' ) ) :
+		function dokan_support_wvs_product_option_terms( $attribute_taxonomy, $i ) {
+			// $attribute_taxonomy, $i
+			// $tax, $i
+			global $post, $thepostid, $product_object;
+			if ( in_array( $attribute_taxonomy->attribute_type, array_keys( wvs_available_attributes_types() ) ) ) {
+				
+				$taxonomy = wc_attribute_taxonomy_name( $attribute_taxonomy->attribute_name );
+				
+				$product_id = $thepostid;
+				
+				if ( is_null( $thepostid ) && isset( $_POST[ 'post_id' ] ) ) {
+					$product_id = absint( $_POST[ 'post_id' ] );
+				}
+				
+				$args = array(
+					'orderby'    => 'name',
+					'hide_empty' => 0,
+				);
+				
+				?>
+                <select multiple="multiple" style="width:100%" data-placeholder="<?php esc_attr_e( 'Select terms', 'woo-variation-swatches' ); ?>" class="dokan_attribute_values dokan-select2" name="attribute_values[<?php echo esc_attr( $i ); ?>][]">
+					<?php
+						$all_terms = get_terms( $taxonomy, apply_filters( 'dokan_product_attribute_terms', $args ) );
+						if ( $all_terms ) :
+							foreach ( $all_terms as $term ) :
+								echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( has_term( absint( $term->term_id ), $taxonomy, $product_id ), true, false ) . '>' . esc_attr( apply_filters( 'woocommerce_product_attribute_term_name', $term->name, $term ) ) . '</option>';
+							endforeach;
+						endif;
+					?>
+                </select>
+
+                <div class="dokan-pre-defined-attribute-btn-group">
+                    <button class="dokan-btn dokan-btn-default plus dokan-select-all-attributes"><?php esc_html_e( 'Select all', 'woo-variation-swatches' ); ?></button>
+                    <button class="dokan-btn dokan-btn-default minus dokan-select-no-attributes"><?php esc_html_e( 'Select none', 'woo-variation-swatches' ); ?></button>
+                </div>
 				<?php
 			}
 		}
@@ -595,7 +646,7 @@
 				$fields = wvs_taxonomy_meta_fields( $attribute_taxonomy->attribute_type );
 				
 				if ( ! empty( $fields ) ): ?>
-                    <button class="button fr plus wvs_add_new_attribute" data-dialog_title="<?php printf( esc_html__( 'Add new %s', 'woo-variation-swatches' ), esc_attr( $attribute_taxonomy->attribute_label ) ) ?>"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
+                    <button disabled="disabled" class="button fr plus wvs_add_new_attribute" data-dialog_title="<?php printf( esc_html__( 'Add new %s', 'woo-variation-swatches' ), esc_attr( $attribute_taxonomy->attribute_label ) ) ?>"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
 				<?php else: ?>
                     <button class="button fr plus add_new_attribute"><?php esc_html_e( 'Add new', 'woo-variation-swatches' ); ?></button>
 				<?php endif; ?>
@@ -608,30 +659,20 @@
 	// Get a Attribute taxonomy values
 	//-------------------------------------------------------------------------------
 	
-	// @TODO: See wc_attribute_taxonomy_id_by_name function and wc_get_attribute
+	// @TODO: See wc_attribute_taxonomy_id_by_name function and wc_get_attribute or wc_get_attribute_taxonomies
 	
 	if ( ! function_exists( 'wvs_get_wc_attribute_taxonomy' ) ):
 		function wvs_get_wc_attribute_taxonomy( $attribute_name ) {
 			
-			$transient = sprintf( 'wvs_get_wc_attribute_taxonomy_%s', $attribute_name );
-			
-			if ( ( defined( 'WP_DEBUG' ) && WP_DEBUG ) || isset( $_GET[ 'wvs_clear_transient' ] ) ) {
-				delete_transient( $transient );
-			}
-			
-			if ( false === ( $attribute_taxonomy = get_transient( $transient ) ) ) {
-				global $wpdb;
-				
-				$attribute_name     = str_replace( 'pa_', '', wc_sanitize_taxonomy_name( $attribute_name ) );
-				$attribute_taxonomy = $wpdb->get_row( "SELECT * FROM " . $wpdb->prefix . "woocommerce_attribute_taxonomies WHERE attribute_name='{$attribute_name}'" );
-				set_transient( $transient, $attribute_taxonomy );
-			}
+			global $wpdb;
+			$attribute_name     = str_replace( 'pa_', '', wc_sanitize_taxonomy_name( $attribute_name ) );
+			$attribute_taxonomy = $wpdb->get_row( "SELECT * FROM " . $wpdb->prefix . "woocommerce_attribute_taxonomies WHERE attribute_name='{$attribute_name}'" );
 			
 			return apply_filters( 'wvs_get_wc_attribute_taxonomy', $attribute_taxonomy, $attribute_name );
 		}
 	endif;
 	
-	// Clean transient
+	/*// Clean transient
 	add_action( 'woocommerce_attribute_updated', function ( $attribute_id, $attribute, $old_attribute_name ) {
 		$transient     = sprintf( 'wvs_get_wc_attribute_taxonomy_%s', wc_attribute_taxonomy_name( $attribute[ 'attribute_name' ] ) );
 		$old_transient = sprintf( 'wvs_get_wc_attribute_taxonomy_%s', wc_attribute_taxonomy_name( $old_attribute_name ) );
@@ -645,14 +686,38 @@
 		delete_transient( $transient );
 	}, 20, 3 );
 	
+	// Clean transient
+	add_action( 'woocommerce_attribute_added', function ( $attribute_id, $attribute ) {
+		$transient = sprintf( 'wvs_get_wc_attribute_taxonomy_%s', wc_attribute_taxonomy_name( $attribute[ 'attribute_name' ] ) );
+		delete_transient( $transient );
+	}, 20, 2 );*/
+	
 	//-------------------------------------------------------------------------------
 	// Check has attribute type like color or image etc.
 	//-------------------------------------------------------------------------------
 	if ( ! function_exists( 'wvs_wc_product_has_attribute_type' ) ):
 		function wvs_wc_product_has_attribute_type( $type, $attribute_name ) {
-			$attribute = wvs_get_wc_attribute_taxonomy( $attribute_name );
 			
-			return apply_filters( 'wvs_wc_product_has_attribute_type', ( isset( $attribute->attribute_type ) && ( $attribute->attribute_type == $type ) ), $type, $attribute_name, $attribute );
+			$attributes           = wc_get_attribute_taxonomies();
+			$attribute_name_clean = str_replace( 'pa_', '', wc_sanitize_taxonomy_name( $attribute_name ) );
+			
+			// Created Attribute
+			if ( 'pa_' === substr( $attribute_name, 0, 3 ) ) {
+				
+				$attribute = array_values( array_filter( $attributes, function ( $attribute ) use ( $type, $attribute_name_clean ) {
+					return $attribute_name_clean === $attribute->attribute_name;
+				} ) );
+				
+				if ( ! empty( $attribute ) ) {
+					$attribute = apply_filters( 'wvs_get_wc_attribute_taxonomy', $attribute[ 0 ], $attribute_name );
+				} else {
+					$attribute = wvs_get_wc_attribute_taxonomy( $attribute_name );
+				}
+				
+				return apply_filters( 'wvs_wc_product_has_attribute_type', ( isset( $attribute->attribute_type ) && ( $attribute->attribute_type == $type ) ), $type, $attribute_name, $attribute );
+			} else {
+				return apply_filters( 'wvs_wc_product_has_attribute_type', false, $type, $attribute_name, null );
+			}
 		}
 	endif;
 	
@@ -716,6 +781,7 @@
 									$data          .= sprintf( '<img alt="%s" src="%s" />', esc_attr( $term->name ), esc_url( $image_url ) );
 									break;
 								
+								
 								case 'button':
 									$data .= sprintf( '<span class="variable-item-span variable-item-span-%s">%s</span>', esc_attr( $type ), esc_html( $term->name ) );
 									break;
@@ -736,6 +802,118 @@
 			}
 			
 			return apply_filters( 'wvs_variable_item', $data, $type, $options, $args, $saved_attribute );
+		}
+	endif;
+	
+	if ( ! function_exists( 'wvs_default_variable_item' ) ):
+		function wvs_default_variable_item( $type, $options, $args, $saved_attribute = array() ) {
+			
+			$product   = $args[ 'product' ];
+			$attribute = $args[ 'attribute' ];
+			$assigned  = $args[ 'assigned' ];
+			
+			
+			$data = '';
+			
+			if ( isset( $args[ 'fallback_type' ] ) && $args[ 'fallback_type' ] === 'select' ) {
+				//	return '';
+			}
+			
+			if ( ! empty( $options ) ) {
+				if ( $product && taxonomy_exists( $attribute ) ) {
+					$terms = wc_get_product_terms( $product->get_id(), $attribute, array( 'fields' => 'all' ) );
+					$name  = uniqid( wc_variation_attribute_name( $attribute ) );
+					foreach ( $terms as $term ) {
+						if ( in_array( $term->slug, $options ) ) {
+							$selected_class = ( sanitize_title( $args[ 'selected' ] ) == $term->slug ) ? 'selected' : '';
+							$tooltip        = trim( apply_filters( 'wvs_variable_item_tooltip', $term->name, $term, $args ) );
+							
+							$tooltip_html_attr = ! empty( $tooltip ) ? sprintf( 'data-wvstooltip="%s"', esc_attr( $tooltip ) ) : '';
+							
+							if ( wp_is_mobile() ) {
+								$tooltip_html_attr .= ! empty( $tooltip ) ? ' tabindex="2"' : '';
+							}
+							
+							$type = isset( $assigned[ $term->slug ] ) ? $assigned[ $term->slug ][ 'type' ] : $type;
+							
+							if ( ! isset( $assigned[ $term->slug ] ) || empty( $assigned[ $term->slug ][ 'image_id' ] ) ) {
+								$type = 'button';
+							}
+							
+							$data .= sprintf( '<li %1$s class="variable-item %2$s-variable-item %2$s-variable-item-%3$s %4$s" title="%5$s" data-value="%3$s">', $tooltip_html_attr, esc_attr( $type ), esc_attr( $term->slug ), esc_attr( $selected_class ), esc_html( $term->name ) );
+							
+							switch ( $type ):
+								
+								case 'image':
+									$attachment_id = $assigned[ $term->slug ][ 'image_id' ];
+									$image_size    = woo_variation_swatches()->get_option( 'attribute_image_size' );
+									$image_url     = wp_get_attachment_image_url( $attachment_id, apply_filters( 'wvs_product_attribute_image_size', $image_size ) );
+									$data          .= sprintf( '<img alt="%s" src="%s" />', esc_attr( apply_filters( 'woocommerce_variation_option_name', $term->name, $term, $attribute, $product ) ), esc_url( $image_url ) );
+									break;
+								
+								
+								case 'button':
+									$data .= sprintf( '<span class="variable-item-span variable-item-span-%s">%s</span>', esc_attr( $type ), esc_html( apply_filters( 'woocommerce_variation_option_name', $term->name, $term, $attribute, $product ) ) );
+									break;
+								
+								default:
+									$data .= apply_filters( 'wvs_variable_default_item_content', '', $term, $args, $saved_attribute );
+									break;
+							endswitch;
+							$data .= '</li>';
+						}
+					}
+				} else {
+					
+					foreach ( $options as $option ) {
+						// This handles < 2.4.0 bw compatibility where text attributes were not sanitized.
+						
+						$option = esc_html( apply_filters( 'woocommerce_variation_option_name', $option, null, $attribute, $product ) );
+						
+						$selected_class = ( sanitize_title( $option ) == $args[ 'selected' ] ) ? 'selected' : '';
+						$tooltip        = trim( apply_filters( 'wvs_variable_item_tooltip', esc_attr( $option ), $options, $args ) );
+						
+						
+						$tooltip_html_attr = ! empty( $tooltip ) ? sprintf( 'data-wvstooltip="%s"', esc_attr( $tooltip ) ) : '';
+						
+						if ( wp_is_mobile() ) {
+							$tooltip_html_attr .= ! empty( $tooltip ) ? ' tabindex="2"' : '';
+						}
+						
+						$type = isset( $assigned[ $option ] ) ? $assigned[ $option ][ 'type' ] : $type;
+						
+						if ( ! isset( $assigned[ $option ] ) || empty( $assigned[ $option ][ 'image_id' ] ) ) {
+							$type = 'button';
+						}
+						
+						$data .= sprintf( '<li %1$s class="variable-item %2$s-variable-item %2$s-variable-item-%3$s %4$s" title="%5$s" data-value="%3$s">', $tooltip_html_attr, esc_attr( $type ), esc_attr( $option ), esc_attr( $selected_class ), esc_html( $option ) );
+						
+						switch ( $type ):
+							
+							case 'image':
+								$attachment_id = $assigned[ $option ][ 'image_id' ];
+								$image_size    = woo_variation_swatches()->get_option( 'attribute_image_size' );
+								$image_url     = wp_get_attachment_image_url( $attachment_id, apply_filters( 'wvs_product_attribute_image_size', $image_size ) );
+								$data          .= sprintf( '<img alt="%s" src="%s" />', esc_attr( $option ), esc_url( $image_url ) );
+								break;
+							
+							
+							case 'button':
+								$data .= sprintf( '<span class="variable-item-span variable-item-span-%s">%s</span>', esc_attr( $type ), esc_html( $option ) );
+								break;
+							
+							default:
+								$data .= apply_filters( 'wvs_variable_default_item_content', '', $option, $args, array() );
+								break;
+						endswitch;
+						$data .= '</li>';
+						
+						
+					}
+				}
+			}
+			
+			return apply_filters( 'wvs_default_variable_item', $data, $type, $options, $args, array() );
 		}
 	endif;
 	
@@ -955,6 +1133,155 @@
 		}
 	endif;
 	
+	
+	// Default Button
+	if ( ! function_exists( 'wvs_default_button_variation_attribute_options' ) ) :
+		function wvs_default_button_variation_attribute_options( $args = array() ) {
+			
+			$args = wp_parse_args( $args, array(
+				'options'          => false,
+				'attribute'        => false,
+				'product'          => false,
+				'selected'         => false,
+				'name'             => '',
+				'id'               => '',
+				'class'            => '',
+				'type'             => '',
+				'assigned'         => '',
+				'show_option_none' => esc_html__( 'Choose an option', 'woo-variation-swatches' )
+			) );
+			
+			// $type                  = $args[ 'type' ];
+			$type                  = $args[ 'type' ] ? $args[ 'type' ] : 'button';
+			$options               = $args[ 'options' ];
+			$product               = $args[ 'product' ];
+			$attribute             = $args[ 'attribute' ];
+			$name                  = $args[ 'name' ] ? $args[ 'name' ] : wc_variation_attribute_name( $attribute );
+			$id                    = $args[ 'id' ] ? $args[ 'id' ] : sanitize_title( $attribute );
+			$class                 = $args[ 'class' ];
+			$show_option_none      = $args[ 'show_option_none' ] ? true : false;
+			$show_option_none_text = $args[ 'show_option_none' ] ? $args[ 'show_option_none' ] : esc_html__( 'Choose an option', 'woocommerce' ); // We'll do our best to hide the placeholder, but we'll need to show something when resetting options.
+			
+			if ( empty( $options ) && ! empty( $product ) && ! empty( $attribute ) ) {
+				$attributes = $product->get_variation_attributes();
+				$options    = $attributes[ $attribute ];
+			}
+			
+			if ( $product ) {
+				echo '<select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . ' hide woo-variation-raw-select woo-variation-raw-type-' . $type . '" style="display:none" name="' . esc_attr( $name ) . '" data-attribute_name="' . esc_attr( wc_variation_attribute_name( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
+			}
+			
+			if ( $args[ 'show_option_none' ] ) {
+				echo '<option value="">' . esc_html( $show_option_none_text ) . '</option>';
+			}
+			
+			if ( ! empty( $options ) ) {
+				if ( $product && taxonomy_exists( $attribute ) ) {
+					// Get terms if this is a taxonomy - ordered. We need the names too.
+					$terms = wc_get_product_terms( $product->get_id(), $attribute, array( 'fields' => 'all' ) );
+					
+					foreach ( $terms as $term ) {
+						if ( in_array( $term->slug, $options ) ) {
+							echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( sanitize_title( $args[ 'selected' ] ), $term->slug, false ) . '>' . apply_filters( 'woocommerce_variation_option_name', $term->name ) . '</option>';
+						}
+					}
+				} else {
+					foreach ( $options as $option ) {
+						// This handles < 2.4.0 bw compatibility where text attributes were not sanitized.
+						$selected = sanitize_title( $args[ 'selected' ] ) === $args[ 'selected' ] ? selected( $args[ 'selected' ], sanitize_title( $option ), false ) : selected( $args[ 'selected' ], $option, false );
+						echo '<option value="' . esc_attr( $option ) . '" ' . $selected . '>' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
+					}
+				}
+			}
+			
+			echo '</select>';
+			
+			$content = wvs_default_variable_item( $type, $options, $args );
+			
+			echo wvs_variable_items_wrapper( $content, $type, $args );
+		}
+	endif;
+	
+	// Default Image
+	if ( ! function_exists( 'wvs_default_image_variation_attribute_options' ) ) :
+		function wvs_default_image_variation_attribute_options( $args = array() ) {
+			
+			$args = wp_parse_args( $args, array(
+				'options'          => false,
+				'attribute'        => false,
+				'product'          => false,
+				'selected'         => false,
+				'name'             => '',
+				'id'               => '',
+				'class'            => '',
+				'type'             => '',
+				'assigned'         => '',
+				'show_option_none' => esc_html__( 'Choose an option', 'woo-variation-swatches' )
+			) );
+			
+			$type = $args[ 'type' ];
+			// $fallback_type         = $args[ 'fallback_type' ];
+			$options               = $args[ 'options' ];
+			$product               = $args[ 'product' ];
+			$attribute             = $args[ 'attribute' ];
+			$name                  = $args[ 'name' ] ? $args[ 'name' ] : wc_variation_attribute_name( $attribute );
+			$id                    = $args[ 'id' ] ? $args[ 'id' ] : sanitize_title( $attribute );
+			$class                 = $args[ 'class' ];
+			$show_option_none      = $args[ 'show_option_none' ] ? true : false;
+			$show_option_none_text = $args[ 'show_option_none' ] ? $args[ 'show_option_none' ] : esc_html__( 'Choose an option', 'woocommerce' ); // We'll do our best to hide the placeholder, but we'll need to show something when resetting options.
+			
+			if ( empty( $options ) && ! empty( $product ) && ! empty( $attribute ) ) {
+				$attributes = $product->get_variation_attributes();
+				$options    = $attributes[ $attribute ];
+			}
+			
+			if ( $product ) {
+				
+				if ( $type === 'select' ) {
+					echo '<select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '" name="' . esc_attr( $name ) . '" data-attribute_name="' . esc_attr( wc_variation_attribute_name( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
+					
+				} else {
+					echo '<select id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . ' hide woo-variation-raw-select woo-variation-raw-type-' . $type . '" style="display:none" name="' . esc_attr( $name ) . '" data-attribute_name="' . esc_attr( wc_variation_attribute_name( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
+					
+				}
+				
+			}
+			
+			if ( $args[ 'show_option_none' ] ) {
+				echo '<option value="">' . esc_html( $show_option_none_text ) . '</option>';
+			}
+			
+			if ( ! empty( $options ) ) {
+				if ( $product && taxonomy_exists( $attribute ) ) {
+					// Get terms if this is a taxonomy - ordered. We need the names too.
+					$terms = wc_get_product_terms( $product->get_id(), $attribute, array( 'fields' => 'all' ) );
+					
+					foreach ( $terms as $term ) {
+						if ( in_array( $term->slug, $options ) ) {
+							echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( sanitize_title( $args[ 'selected' ] ), $term->slug, false ) . '>' . apply_filters( 'woocommerce_variation_option_name', $term->name ) . '</option>';
+						}
+					}
+				} else {
+					foreach ( $options as $option ) {
+						// This handles < 2.4.0 bw compatibility where text attributes were not sanitized.
+						$selected = sanitize_title( $args[ 'selected' ] ) === $args[ 'selected' ] ? selected( $args[ 'selected' ], sanitize_title( $option ), false ) : selected( $args[ 'selected' ], $option, false );
+						echo '<option value="' . esc_attr( $option ) . '" ' . $selected . '>' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
+					}
+				}
+			}
+			
+			echo '</select>';
+			
+			if ( $type === 'select' ) {
+				return '';
+			}
+			
+			$content = wvs_default_variable_item( $type, $options, $args );
+			
+			echo wvs_variable_items_wrapper( $content, $type, $args );
+		}
+	endif;
+	
 	//-------------------------------------------------------------------------------
 	// Radio Variation Attribute Options
 	//-------------------------------------------------------------------------------
@@ -1037,6 +1364,9 @@
 				return $html;
 			}
 			
+			$attributes = $args[ 'product' ]->get_variation_attributes();
+			$variations = $args[ 'product' ]->get_available_variations();
+			
 			ob_start();
 			
 			$available_type_keys = array_keys( wvs_available_attributes_types() );
@@ -1045,6 +1375,7 @@
 			
 			foreach ( $available_type_keys as $type ) {
 				if ( wvs_wc_product_has_attribute_type( $type, $args[ 'attribute' ] ) ) {
+					
 					$output_callback = apply_filters( 'wvs_variation_attribute_options_callback', $available_types[ $type ][ 'output' ], $available_types, $type, $args, $html );
 					$output_callback( apply_filters( 'wvs_variation_attribute_options_args', wp_parse_args( $args, array(
 						'options'    => $args[ 'options' ],
@@ -1058,13 +1389,99 @@
 				}
 			}
 			
-			if ( $default ) {
+			$is_default_to_image          = apply_filters( 'wvs_is_default_to_image', ! ! ( woo_variation_swatches()->get_option( 'default_to_image' ) ), $args );
+			$is_default_to_button         = apply_filters( 'wvs_is_default_to_button', ! ! ( woo_variation_swatches()->get_option( 'default_to_button' ) ), $args );
+			$default_image_type_attribute = apply_filters( 'wvs_default_image_type_attribute', woo_variation_swatches()->get_option( 'default_image_type_attribute' ), $args );
+			
+			$is_default_to_image_button = ( $is_default_to_image || $is_default_to_button );
+			
+			if ( $default && $is_default_to_image_button ) {
+				
+				if ( $default_image_type_attribute === '__max' ) {
+					
+					$attribute_counts = array();
+					foreach ( $attributes as $attr_key => $attr_values ) {
+						$attribute_counts[ $attr_key ] = count( $attr_values );
+					}
+					
+					$max_attribute_count = max( $attribute_counts );
+					$attribute_key       = array_search( $max_attribute_count, $attribute_counts );
+					
+				} elseif ( $default_image_type_attribute === '__min' ) {
+					$attribute_counts = array();
+					foreach ( $attributes as $attr_key => $attr_values ) {
+						$attribute_counts[ $attr_key ] = count( $attr_values );
+					}
+					$min_attribute_count = min( $attribute_counts );
+					$attribute_key       = array_search( $min_attribute_count, $attribute_counts );
+					
+				} elseif ( $default_image_type_attribute === '__first' ) {
+					$attribute_keys = array_keys( $attributes );
+					$attribute_key  = current( $attribute_keys );
+				} else {
+					$attribute_key = $default_image_type_attribute;
+				}
+				
+				$selected_attribute_name = wc_variation_attribute_name( $attribute_key );
+				
+				
+				$default_attribute_keys = array_keys( $attributes );
+				$default_attribute_key  = current( $default_attribute_keys );
+				$default_attribute_name = wc_variation_attribute_name( $default_attribute_key );
+				
+				$current_attribute      = $args[ 'attribute' ];
+				$current_attribute_name = wc_variation_attribute_name( $current_attribute );
+				
+				
+				if ( $is_default_to_image ) {
+					
+					$assigned = array();
+					foreach ( $variations as $variation_key => $variation ) {
+						$attribute_name = $variation[ 'attributes' ][ $selected_attribute_name ] ? $selected_attribute_name : $default_attribute_name;
+						
+						$assigned[ $attribute_name ][ $variation[ 'attributes' ][ $attribute_name ] ] = array(
+							'image_id'     => $variation[ 'image_id' ],
+							'variation_id' => $variation[ 'variation_id' ],
+							'type'         => ( empty( $variation[ 'image_id' ] ) ? 'button' : 'image' ),
+						);
+					}
+					
+					$type     = ( empty( $assigned[ $current_attribute_name ] ) ? 'button' : 'image' );
+					$assigned = ( isset( $assigned[ $current_attribute_name ] ) ? $assigned[ $current_attribute_name ] : array() );
+					
+					if ( $type === 'button' && ! $is_default_to_button ) {
+						$type = 'select';
+					}
+					
+					wvs_default_image_variation_attribute_options( apply_filters( 'wvs_variation_attribute_options_args', wp_parse_args( $args, array(
+						'options'    => $args[ 'options' ],
+						'attribute'  => $args[ 'attribute' ],
+						'product'    => $args[ 'product' ],
+						'selected'   => $args[ 'selected' ],
+						'assigned'   => $assigned,
+						'type'       => $type,
+						'is_archive' => ( isset( $args[ 'is_archive' ] ) && $args[ 'is_archive' ] )
+					) ) ) );
+					
+				} elseif ( $is_default_to_button ) {
+					
+					wvs_default_button_variation_attribute_options( apply_filters( 'wvs_variation_attribute_options_args', wp_parse_args( $args, array(
+						'options'    => $args[ 'options' ],
+						'attribute'  => $args[ 'attribute' ],
+						'product'    => $args[ 'product' ],
+						'selected'   => $args[ 'selected' ],
+						'is_archive' => ( isset( $args[ 'is_archive' ] ) && $args[ 'is_archive' ] )
+					) ) ) );
+				} else {
+					echo $html;
+				}
+			} elseif ( $default && ! $is_default_to_image_button ) {
 				echo $html;
 			}
 			
 			$data = ob_get_clean();
 			
-			return apply_filters( 'wvs_variation_attribute_options_html', $data, $args );
+			return apply_filters( 'wvs_variation_attribute_options_html', $data, $args, $is_default_to_image, $is_default_to_button );
 		}
 	endif;
 	
@@ -1129,7 +1546,7 @@
 
                 </style>
                 <div class="gwp-pro-features-wrapper">
-                    <h3>Upgrade to WooCommerce Variation Swatches - Pro</h3>
+                    <h3>Upgrade to Variation Swatches for WooCommerce - Pro</h3>
                     <ul>
                         <li>
                             <div class="gwp-pro-video-features-wrapper">
@@ -1137,7 +1554,7 @@
                             </div>
                         </li>
                     </ul>
-                    <h4>With the premium version of WooCommerce Variation Swatches, you can do:</h4>
+                    <h4>With the premium version of Variation Swatches for WooCommerce, you can do:</h4>
                     <ul>
                         <li><span class="dashicons dashicons-yes"></span> Convert attribute variations into radio button.
                             <div class="gwp-pro-features-links"><a target="_blank" href="http://bit.ly/radio-product-settings-demo">Live Demo</a> | <a target="_blank" href="http://bit.ly/customattribute-productpage-settings">Video Tutorial</a></div>

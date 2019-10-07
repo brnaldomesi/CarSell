@@ -96,8 +96,10 @@ class MonsterInsights_Report {
 			}
 		}
 
-		if ( ! MonsterInsights()->license->license_can( $this->level ) ) {
-			return $this->get_upsell_notice();
+		if ( monsterinsights_is_pro_version() ) {
+			if ( ! MonsterInsights()->license->license_can( $this->level ) ) {
+				return $this->get_upsell_notice();
+			}
 		}
 
 		$error = $this->requirements( false, array(), $this->name );
@@ -121,7 +123,7 @@ class MonsterInsights_Report {
 				}
 
 				if ( ! empty( $args['error'] ) ) {
-					return monsterinsights_get_message( 'error', $data['error'] );
+					return monsterinsights_get_message( 'error', $args['error'] );
 				}
 			}
 		}
@@ -152,7 +154,7 @@ class MonsterInsights_Report {
 		$start = ! empty( $args['start'] ) && $this->is_valid_date( $args['start'] ) ? $args['start'] : '';
 		$end   = ! empty( $args['end'] ) && $this->is_valid_date( $args['end'] ) ? $args['end'] : '';
 
-		if ( ! MonsterInsights()->license->license_can( $this->level ) ) {
+		if ( monsterinsights_is_pro_version() && ! MonsterInsights()->license->license_can( $this->level ) ) {
 			return array(
 				'success' => true,
 				'upgrade' => true,
@@ -311,7 +313,7 @@ class MonsterInsights_Report {
 	}
 
 	public function get_upsell_notice() {
-		$has_level = MonsterInsights()->license->get_license_type();
+		$has_level = monsterinsights_is_pro_version() ? MonsterInsights()->license->get_license_type() : false;
 		$has_level = $has_level ? $has_level : 'lite';
 		$message   = sprintf( __( 'You currently have a %s level license, but this report requires at least a %s level license to view the %s. Please upgrade to view this report.', 'google-analytics-for-wordpress' ), $has_level, $this->level, $this->title );
 		ob_start(); ?>
@@ -387,8 +389,7 @@ class MonsterInsights_Report {
 	 */
 	public function get_addons_page_link() {
 		if ( current_user_can( 'install_plugins' ) ) {
-			$addons_url  = is_multisite() ? network_admin_url( 'admin.php?page=monsterinsights_network#/addons' ) : admin_url( 'admin.php?page=monsterinsights_settings#/addons' );
-			$addons_link = sprintf( '<a href="%1$s">%2$s</a>', $addons_url, esc_html__( 'Visit addons page', 'google-analytics-for-wordpress' ) );
+			$addons_link = 'install_addon';
 		} else {
 			$addons_link = esc_html__( 'Please ask your webmaster to enable this addon.', 'google-analytics-for-wordpress' );
 		}

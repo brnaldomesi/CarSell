@@ -594,7 +594,7 @@ class UpdraftPlus_Admin {
 		<script>
 			jQuery(document).ready(function($) {
 				if ($('#dashboard-widgets #dashboard_php_nag').length < 1) return;
-				$('#dashboard-widgets #dashboard_php_nag .button-container').before('<div class="updraft-ad-container"><a href="<?php echo UpdraftPlus_Options::admin_page_url(); ?>?page=updraftplus&amp;tab=migrate#updraft-navtab-migrate-content"><?php echo esc_js(__('You can test running your site on a different PHP (or WordPress) version using UpdraftClone credits.', 'updraftplus')); ?></a> (<a href="#" onclick="jQuery(\'.updraft-ad-container\').slideUp(); jQuery.post(ajaxurl, {action: \'updraft_ajax\', subaction: \'dismiss_clone_php_notice\', nonce: \'<?php echo wp_create_nonce('updraftplus-credentialtest-nonce'); ?>\' });return false;"><?php _e('Dismiss notice', 'updraftplus'); ?></a>)</div>');
+				$('#dashboard-widgets #dashboard_php_nag .button-container').before('<div class="updraft-ad-container"><a href="<?php echo UpdraftPlus_Options::admin_page_url(); ?>?page=updraftplus&amp;tab=migrate#updraft-navtab-migrate-content"><?php echo esc_js(__('You can test running your site on a different PHP (or WordPress) version using UpdraftClone credits.', 'updraftplus')); ?></a> (<a href="#" onclick="jQuery(\'.updraft-ad-container\').slideUp(); jQuery.post(ajaxurl, {action: \'updraft_ajax\', subaction: \'dismiss_clone_php_notice\', nonce: \'<?php echo wp_create_nonce('updraftplus-credentialtest-nonce'); ?>\' });return false;"><?php echo esc_js(__('Dismiss notice', 'updraftplus')); ?></a>)</div>');
 			});
 		</script>
 		<?php
@@ -775,7 +775,7 @@ class UpdraftPlus_Admin {
 		wp_enqueue_style('jquery-labelauty', UPDRAFTPLUS_URL.'/includes/labelauty/jquery-labelauty'.$min_or_not.'.css', array(), $enqueue_version);
 		$serialize_js_enqueue_version = $updraftplus->use_unminified_scripts() ? '2.8.1'.'.'.time() : '2.8.1';
 		wp_enqueue_script('jquery.serializeJSON', UPDRAFTPLUS_URL.'/includes/jquery.serializeJSON/jquery.serializejson'.$min_or_not.'.js', array('jquery'), $serialize_js_enqueue_version);
-		$handlebars_js_enqueue_version = $updraftplus->use_unminified_scripts() ? '4.0.11'.'.'.time() : '4.0.11';
+		$handlebars_js_enqueue_version = $updraftplus->use_unminified_scripts() ? '4.1.2'.'.'.time() : '4.1.2';
 		wp_enqueue_script('handlebars', UPDRAFTPLUS_URL.'/includes/handlebars/handlebars'.$min_or_not.'.js', array(), $handlebars_js_enqueue_version);
 		$this->enqueue_jstree();
 		
@@ -815,7 +815,7 @@ class UpdraftPlus_Admin {
 			'excludedeverything' => __('If you exclude both the database and the files, then you have excluded everything!', 'updraftplus'),
 			'nofileschosen' => __('You have chosen to backup files, but no file entities have been selected', 'updraftplus'),
 			'notableschosen' => __('You have chosen to backup a database, but no tables have been selected', 'updraftplus'),
-			'restore_proceeding' => __('The restore operation has begun. Do not press stop or close your browser until it reports itself as having finished.', 'updraftplus'),
+			'restore_proceeding' => __('The restore operation has begun. Do not close your browser until it reports itself as having finished.', 'updraftplus'),
 			'unexpectedresponse' => __('Unexpected response:', 'updraftplus'),
 			'servererrorcode' => __('The web server returned an error code (try again, or check your web server logs)', 'updraftplus'),
 			'newuserpass' => __("The new user's RackSpace console password is (this will not be shown again):", 'updraftplus'),
@@ -973,7 +973,7 @@ class UpdraftPlus_Admin {
 			'clone_key_required' => __('UpdraftClone key is required.', 'updraftplus'),
 			'files_new_backup' => __('Include your files in the backup', 'updraftplus'),
 			'files_incremental_backup' => __('File backup options', 'updraftplus'),
-			'ajax_restore_invalid_response' => __('Restore error: HTML was detected in the response. You may have a security module on your webserver blocking the restoration operation.', 'updraftplus'),
+			'ajax_restore_invalid_response' => __('HTML was detected in the response. You may have a security module on your webserver blocking the restoration operation.', 'updraftplus'),
 			'updraftvault_info' => '<h3>'.__('Try UpdraftVault!', 'updraftplus').'</h3>'
 				.'<p>'.__('UpdraftVault is our remote storage which works seamlessly with UpdraftPlus.', 'updraftplus')
 				.'	<a href="'.apply_filters('updraftplus_com_link', 'https://updraftplus.com/updraftvault/').'" target="_blank">'.__('Find out more here.', 'updraftplus').'</a>'
@@ -983,7 +983,16 @@ class UpdraftPlus_Admin {
 			'credentials' => __('credentials', 'updraftplus'),
 			'username' => __('Username', 'updraftplus'),
 			'password' => __('Password', 'updraftplus'),
-
+			'last_activity' => __('last activity: %d seconds ago', 'updraftplus'),
+			'no_recent_activity' => __('no recent activity; will offer resumption after: %d seconds', 'updraftplus'),
+			'restore_files_progress' => __('Restoring %s1 files out of %s2', 'updraftplus'),
+			'restore_db_table_progress' => __('Restoring table: %s', 'updraftplus'),
+			'finished' => __('Finished', 'updraftplus'),
+			'begun' => __('Begun', 'updraftplus'),
+			'maybe_downloading_entities' => __('Downloading backup files if needed', 'updraftplus'),
+			'preparing_backup_files' => __('Preparing backup files', 'updraftplus'),
+			'ajax_restore_contact_failed' => __('Attempts by the browser to contact the website failed.', 'updraftplus'),
+			'ajax_restore_error' => __('Restore error:', 'updraftplus'),
 		));
 	}
 	
@@ -2837,9 +2846,40 @@ class UpdraftPlus_Admin {
 	}
 
 	/**
-	 * If added, then runs upon the WP action all_admin_notices
+	 * This function is called via the command class, it will get the resume restore notice to be shown when a restore is taking place over AJAX
+	 *
+	 * @param string $job_id - the id of the job
+	 *
+	 * @return WP_Error|string - can return a string containing html or a WP_Error
 	 */
-	public function show_admin_restore_in_progress_notice() {
+	public function get_restore_resume_notice($job_id) {
+		global $updraftplus;
+
+		if (empty($job_id)) return new WP_Error('missing_parameter', 'Missing parameters.');
+		
+		$restore_jobdata = $updraftplus->jobdata_getarray($job_id);
+
+		if (!is_array($restore_jobdata) && empty($restore_jobdata)) return new WP_Error('missing_jobdata', 'Job data not found.');
+
+		$restore_jobdata['jobid'] = $job_id;
+		$this->restore_in_progress_jobdata = $restore_jobdata;
+
+		$html = $this->show_admin_restore_in_progress_notice(true, true);
+
+		if (empty($html)) return new WP_Error('job_aborted', 'Job aborted.');
+
+		return $html;
+	}
+
+	/**
+	 * If added, then runs upon the WP action all_admin_notices, or can be called via get_restore_resume_notice() for when a restore is running over AJAX
+	 *
+	 * @param Boolean $return_instead_of_echo - indicates if we want to add the tfa UI
+	 * @param Boolean $exclude_js             - indicates if we want to exclude the js in the returned html
+	 *
+	 * @return void|string - can return a string containing html or echo the html to page
+	 */
+	public function show_admin_restore_in_progress_notice($return_instead_of_echo = false, $exclude_js = false) {
 	
 		if (isset($_REQUEST['action']) && 'updraft_restore_abort' === $_REQUEST['action'] && !empty($_REQUEST['job_id'])) {
 			delete_site_option('updraft_restore_in_progress');
@@ -2851,19 +2891,28 @@ class UpdraftPlus_Admin {
 		$minutes_ago = floor($seconds_ago/60);
 		$seconds_ago = $seconds_ago - $minutes_ago*60;
 		$time_ago = sprintf(__("%s minutes, %s seconds", 'updraftplus'), $minutes_ago, $seconds_ago);
-		?><div class="updated show_admin_restore_in_progress_notice">
-			<span class="unfinished-restoration"><strong><?php echo 'UpdraftPlus: '.__('Unfinished restoration', 'updraftplus'); ?> </strong></span><br>
-			<p><?php printf(__('You have an unfinished restoration operation, begun %s ago.', 'updraftplus'), $time_ago);?></p>
-		<form method="post" action="<?php echo UpdraftPlus_Options::admin_page_url().'?page=updraftplus'; ?>">
-			<?php wp_nonce_field('updraftplus-credentialtest-nonce'); ?>
-			<input id="updraft_restore_continue_action" type="hidden" name="action" value="updraft_restore_continue">
-			<input type="hidden" name="updraftplus_ajax_restore" value="continue_ajax_restore">
-			<input type="hidden" name="job_id" value="<?php echo $restore_jobdata['jobid'];?>" value="<?php echo esc_attr($restore_jobdata['jobid']);?>">
-			<button onclick="jQuery('#updraft_restore_continue_action').val('updraft_restore_continue'); jQuery(this).parent('form').submit();" type="submit" class="button-primary"><?php _e('Continue restoration', 'updraftplus'); ?></button>
-			<button onclick="jQuery('#updraft_restore_continue_action').val('updraft_restore_abort'); jQuery(this).parent('form').submit();" class="button-secondary"><?php _e('Dismiss', 'updraftplus');?></button>
-		</form><?php
-		echo "</div>";
 
+		$html = '<div class="updated show_admin_restore_in_progress_notice">';
+		$html .= '<span class="unfinished-restoration"><strong>UpdraftPlus: '.__('Unfinished restoration', 'updraftplus').'</strong></span><br>';
+		$html .= '<p>'.sprintf(__('You have an unfinished restoration operation, begun %s ago.', 'updraftplus'), $time_ago).'</p>';
+		$html .= '<form method="post" action="'.UpdraftPlus_Options::admin_page_url().'?page=updraftplus">';
+		$html .= wp_nonce_field('updraftplus-credentialtest-nonce');
+		$html .= '<input id="updraft_restore_continue_action" type="hidden" name="action" value="updraft_restore_continue">';
+		$html .= '<input type="hidden" name="updraftplus_ajax_restore" value="continue_ajax_restore">';
+		$html .= '<input type="hidden" name="job_id" value="'.$restore_jobdata['jobid'].'" value="'.esc_attr($restore_jobdata['jobid']).'">';
+
+		if ($exclude_js) {
+			$html .= '<button id="updraft_restore_resume" type="submit" class="button-primary">'.__('Continue restoration', 'updraftplus').'</button>';
+		} else {
+			$html .= '<button id="updraft_restore_resume" onclick="jQuery(\'#updraft_restore_continue_action\').val(\'updraft_restore_continue\'); jQuery(this).parent(\'form\').submit();" type="submit" class="button-primary">'.__('Continue restoration', 'updraftplus').'</button>';
+		}
+		$html .= '<button id="updraft_restore_abort" onclick="jQuery(\'#updraft_restore_continue_action\').val(\'updraft_restore_abort\'); jQuery(this).parent(\'form\').submit();" class="button-secondary">'.__('Dismiss', 'updraftplus').'</button>';
+
+		$html .= '</form></div>';
+
+		if ($return_instead_of_echo) return $html;
+
+		echo $html;
 	}
 
 	/**
@@ -3460,11 +3509,13 @@ class UpdraftPlus_Admin {
 	private function delete_old_dirs() {
 		global $wp_filesystem, $updraftplus;
 		$credentials = request_filesystem_credentials(wp_nonce_url(UpdraftPlus_Options::admin_page_url()."?page=updraftplus&action=updraft_delete_old_dirs", 'updraftplus-credentialtest-nonce', 'updraft_delete_old_dirs_nonce'));
-		WP_Filesystem($credentials);
-		if ($wp_filesystem->errors->get_error_code()) {
+		$wpfs = WP_Filesystem($credentials);
+		if (!empty($wp_filesystem->errors) && $wp_filesystem->errors->get_error_code()) {
 			foreach ($wp_filesystem->errors->get_error_messages() as $message) show_message($message);
 			exit;
 		}
+		if (!$wpfs) exit;
+		
 		// From WP_CONTENT_DIR - which contains 'themes'
 		$ret = $this->delete_old_dirs_dir($wp_filesystem->wp_content_dir());
 
@@ -4517,6 +4568,7 @@ ENDHERE;
 				if (is_array($restore_jobdata) && isset($restore_jobdata['job_type']) && 'restore' == $restore_jobdata['job_type'] && isset($restore_jobdata['second_loop_entities']) && !empty($restore_jobdata['second_loop_entities']) && isset($restore_jobdata['job_time_ms']) && isset($restore_jobdata['backup_timestamp'])) {
 					$backup_timestamp = $restore_jobdata['backup_timestamp'];
 					$continuation_data = $restore_jobdata;
+					$continuation_data['updraftplus_ajax_restore'] = 'continue_ajax_restore';
 				} else {
 					$abort_restore_already = true;
 					$updraftplus->log(__('Sufficient information about the in-progress restoration operation could not be found.', 'updraftplus') . ' (job_id_nojobdata)', 'error', 'job_id_nojobdata');
@@ -4524,19 +4576,20 @@ ENDHERE;
 			}
 		} elseif (isset($_REQUEST['updraftplus_ajax_restore']) && 'do_ajax_restore' == $_REQUEST['updraftplus_ajax_restore']) {
 			$backup_timestamp = $updraftplus->jobdata_get('backup_timestamp');
-			$filesystem_credentials = $updraftplus->jobdata_get('filesystem_credentials', array());
-			$continuation_data = array('updraftplus_ajax_restore' => 'continue_ajax_restore');
-			
-			if (!empty($filesystem_credentials)) {
-				// If the filesystem credentials are not empty then we now need to load these back into $_POST so that WP_Filesystem can access them
-				foreach ($filesystem_credentials as $key => $value) {
-					$_POST[$key] = $value;
-				}
-			}
-			
+			$continuation_data = array('updraftplus_ajax_restore' => 'do_ajax_restore');
 		} else {
 			$backup_timestamp = $_REQUEST['backup_timestamp'];
 			$continuation_data = null;
+		}
+
+		$filesystem_credentials = $updraftplus->jobdata_get('filesystem_credentials', array());
+
+		if (!empty($filesystem_credentials)) {
+			$continuation_data['updraftplus_ajax_restore'] = 'continue_ajax_restore';
+			// If the filesystem credentials are not empty then we now need to load these back into $_POST so that WP_Filesystem can access them
+			foreach ($filesystem_credentials as $key => $value) {
+				$_POST[$key] = $value;
+			}
 		}
 
 		if (empty($abort_restore_already)) {
@@ -4547,7 +4600,7 @@ ENDHERE;
 
 		if (empty($updraftplus->errors) && true === $backup_success) {
 			// TODO: Deal with the case of some of the work having been deferred
-			echo '<p><strong>';
+			echo '<p class="updraft_restore_successful"><strong>';
 			$updraftplus->log_e('Restore successful!');
 			echo '</strong></p>';
 			$updraftplus->log('Restore successful');
@@ -4563,21 +4616,25 @@ ENDHERE;
 			return;
 
 		} elseif (is_wp_error($backup_success)) {
-			echo '<p>';
+			echo '<p class="updraft_restore_error">';
 			$updraftplus->log_e('Restore failed...');
 			echo '</p>';
 			$updraftplus->log_wp_error($backup_success);
 			$updraftplus->log('Restore failed');
+			echo '<div class="updraft_restore_errors">';
 			$updraftplus->list_errors();
+			echo '</div>';
 			echo '<strong>' . __('Actions', 'updraftplus') . ':</strong> <a href="' . UpdraftPlus_Options::admin_page_url() . '?page=updraftplus">' . __('Return to UpdraftPlus configuration', 'updraftplus') . '</a>';
 			return;
 		} elseif (false === $backup_success) {
 			// This means, "not yet - but stay on the page because we may be able to do it later, e.g. if the user types in the requested information"
-			echo '<p>';
+			echo '<p class="updraft_restore_error">';
 			$updraftplus->log_e('Restore failed...');
 			echo '</p>';
 			$updraftplus->log("Restore failed");
+			echo '<div class="updraft_restore_errors">';
 			$updraftplus->list_errors();
+			echo '</div>';
 			echo '<strong>' . __('Actions', 'updraftplus') . ':</strong> <a href="' . UpdraftPlus_Options::admin_page_url() . '?page=updraftplus">' . __('Return to UpdraftPlus configuration', 'updraftplus') . '</a>';
 			return;
 		}
@@ -4594,20 +4651,58 @@ ENDHERE;
 		$debug = $updraftplus->use_unminified_scripts();
 		$enqueue_version = $debug ? $updraftplus->version . '.' . time() : $updraftplus->version;
 		$min_or_not = $debug ? '' : '.min';
-		$ajax_action = isset($_REQUEST['updraftplus_ajax_restore']) && 'continue_ajax_restore' == $_REQUEST['updraftplus_ajax_restore'] ? 'updraft_ajaxrestore_continue' : 'updraft_ajaxrestore';
+		$ajax_action = isset($_REQUEST['updraftplus_ajax_restore']) && 'continue_ajax_restore' == $_REQUEST['updraftplus_ajax_restore'] && 'updraft_restore' != $_REQUEST['action'] ? 'updraft_ajaxrestore_continue' : 'updraft_ajaxrestore';
+
+		// get the entities info
+		$jobdata = $updraftplus->jobdata_getarray($updraftplus->nonce);
+		$restore_components = $jobdata['updraft_restore'];
+		usort($restore_components, array('UpdraftPlus_Manipulation_Functions', 'sort_restoration_entities'));
+
+		$backupable_entities = $updraftplus->get_backupable_file_entities(true, true);
+		$pretty_date = get_date_from_gmt(gmdate('Y-m-d H:i:s', (int) $jobdata['backup_timestamp']), 'M d, Y G:i');
 
 		wp_enqueue_script('updraft-admin-restore', UPDRAFTPLUS_URL . '/js/updraft-admin-restore' . $min_or_not . '.js', array(), $enqueue_version);
 
-		$this->show_admin_warning('<p>'.sprintf(__('The restore operation has begun (%s). Do not press stop or close your browser until it reports itself as having finished.', 'updraftplus'), $updraftplus->nonce).'</p>');
-		
-		// Provide download link for the log file
-		$this->show_admin_warning('<a target="_blank" href="?action=downloadlog&page=updraftplus&updraftplus_backup_nonce='.htmlspecialchars($updraftplus->nonce).'">'.__('Follow this link to download the log file for this restoration (needed for any support requests).', 'updraftplus').'</a>');
+		echo '<div class="updraft_restore_container">';
+		echo '<div class="updraft_restore_main--header">'.__('UpdraftPlus Restoration', 'updraftplus').' - '.__('Backup', 'updraftplus').' '.$pretty_date.'</div>';
+		echo '<div class="updraft_restore_main">';
 		
 		if ($debug) echo '<input type="hidden" id="updraftplus_ajax_restore_debug" name="updraftplus_ajax_restore_debug" value="1">';
 		echo '<input type="hidden" id="updraftplus_ajax_restore_job_id" name="updraftplus_restore_job_id" value="' . $updraftplus->nonce . '">';
 		echo '<input type="hidden" id="updraftplus_ajax_restore_action" name="updraftplus_restore_action" value="' . $ajax_action . '">';
 		echo '<div id="updraftplus_ajax_restore_progress" style="display: none;"></div>';
-		echo '<div id="updraftplus_ajax_restore_output"></div>';
+
+		echo '<div class="updraft_restore_main--components">';
+		echo '	<p>'.sprintf(__('The restore operation has begun (%s). Do not close this page until it reports itself as having finished.', 'updraftplus'), $updraftplus->nonce).'</p>';
+		echo '	<h2>'.__('Restoration progress:', 'updraftplus').'</h2>';
+		echo '	<div class="updraft_restore_result"><span class="dashicons"></span><pan class="updraft_restore_result--text"></span></div>';
+		echo '	<ul class="updraft_restore_components_list">';
+		echo '		<li data-component="verifying" class="active"><span class="updraft_component--description">'.__('Verifying', 'updraftplus').'</span><span class="updraft_component--progress"></span></li>';
+		foreach ($restore_components as $restore_component) {
+			// Set Database description
+			if ('db' == $restore_component && !isset($backupable_entities[$restore_component]['description'])) $backupable_entities[$restore_component]['description'] = __('Database', 'updraftplus');
+			echo '		<li data-component="'.esc_attr($restore_component).'"><span class="updraft_component--description">'.(isset($backupable_entities[$restore_component]['description']) ? $backupable_entities[$restore_component]['description'] : $restore_component).'</span><span class="updraft_component--progress"></span></li>';
+		}
+		echo '		<li data-component="cleaning"><span class="updraft_component--description">'.__('Cleaning', 'updraftplus').'</span><span class="updraft_component--progress"></span></li>';
+		echo '		<li data-component="finished"><span class="updraft_component--description">'.__('Finished', 'updraftplus').'</span><span class="updraft_component--progress"></span></li>';
+		echo '	</ul>'; // end ul.updraft_restore_components_list
+		// Provide download link for the log file
+		echo '	<p><a target="_blank" href="?action=downloadlog&page=updraftplus&updraftplus_backup_nonce='.htmlspecialchars($updraftplus->nonce).'">'.__('Follow this link to download the log file for this restoration (needed for any support requests).', 'updraftplus').'</a></p>';
+		echo '</div>'; // end .updraft_restore_main--components
+		echo '<div class="updraft_restore_main--activity">';
+		echo '	<h2 class="updraft_restore_main--activity-title">'.__('Activity log', 'updraftplus').' <span id="updraftplus_ajax_restore_last_activity"></span></h2>';
+		echo '	<div id="updraftplus_ajax_restore_output"></div>';
+		echo '</div>'; // end .updraft_restore_main--activity
+		echo '
+			<div class="updraft-restore--footer">
+				<ul class="updraft-restore--stages">
+					<li><span>'.__('1. Component selection', 'updraftplus').'</span></li>
+					<li><span>'.__('2. Verifications', 'updraftplus').'</span></li>
+					<li class="active"><span>'.__('3. Restoration', 'updraftplus').'</span></li>
+				</ul>
+			</div>';
+		echo '</div>'; // end .updraft_restore_main
+		echo '</div>'; // end .updraft_restore_container
 	}
 
 	/**
@@ -4691,8 +4786,14 @@ ENDHERE;
 		);
 
 		if (!empty($continuation_data['updraftplus_ajax_restore'])) {
-			$url_parameters['updraftplus_ajax_restore'] = $continuation_data['updraftplus_ajax_restore'];
+			$url_parameters['updraftplus_ajax_restore'] = 'continue_ajax_restore';
+			$updraftplus->output_to_browser(''); // Start timer
 			// Force output buffering off so that we get log lines sent to the browser as they come not all at once at the end of the ajax restore
+			// zlib creates an output buffer, and waits for the entire page to be generated before it can send it to the client try to turn it off
+			@ini_set("zlib.output_compression", 0);
+			// Turn off PHP output buffering for NGINX
+			header('X-Accel-Buffering: no');
+			header('Content-Encoding: none');
 			while (ob_get_level()) {
 				ob_end_flush();
 			}
@@ -4705,11 +4806,6 @@ ENDHERE;
 		UpdraftPlus_Filesystem_Functions::ensure_wp_filesystem_set_up_for_restore($url_parameters);
 
 		$updraftplus->log("WP_Filesystem is setup and ready for a restore");
-
-		if (!empty($continuation_data['updraftplus_ajax_restore'])) $continuation_data['updraftplus_ajax_restore'] = 'do_ajax_restore';
-		
-		// The <div> is closed by Updraft_Restorer::post_restore_clean_up()
-		echo '<h1>'.__('UpdraftPlus Restoration: Progress', 'updraftplus').'</h1><div id="updraft-restore-progress">';
 
 		$entities_to_restore = $this->get_entities_to_restore_from_jobdata($backup_set);
 
@@ -4735,6 +4831,8 @@ ENDHERE;
 		}
 			
 		add_action('updraftplus_restoration_title', array($this, 'restoration_title'));
+
+		$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'started', 'data' => array()));
 		
 		// We use a single object for each entity, because we want to store information about the backup set
 		$updraftplus_restorer = new Updraft_Restorer(new Updraft_Restorer_Skin, $backup_set, false, $restore_options, $continuation_data);
@@ -4742,9 +4840,22 @@ ENDHERE;
 		$restore_result = $updraftplus_restorer->perform_restore($entities_to_restore, $restore_options);
 		
 		$updraftplus_restorer->post_restore_clean_up($restore_result);
-
-		$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'finished', 'data' => array()));
 		
+		$pval = $updraftplus->have_addons ? 1 : 0;
+		$sval = (true === $restore_result) ? 1 : 0;
+
+		$updraftplus->log_restore_update(
+			array(
+				'type' => 'state',
+				'stage' => 'finished',
+				'data' => array(
+					'actions' => array(
+						__('Return to UpdraftPlus configuration', 'updraftplus') => UpdraftPlus_Options::admin_page_url() . '?page=updraftplus&updraft_restore_success=' . $sval . '&pval=' . $pval
+					)
+				)
+			)
+		);
+
 		return $restore_result;
 	}
 	
@@ -4771,10 +4882,12 @@ ENDHERE;
 	 * @return String|Boolean - the filtered value. If set to false, then UpdraftPlus::log() will stop processing the log line.
 	 */
 	public function updraftplus_logline($line, $nonce, $level, $uniq_id, $destination) {// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.Found
-		
+	
 		if ('progress' != $destination || (defined('WP_CLI') && WP_CLI) || false === $line || false === strpos($line, 'RINFO:')) return $line;
 
-		echo $line;
+		global $updraftplus;
+
+		$updraftplus->output_to_browser($line);
 
 		// Indicate that we have completely handled all logging needed
 		return false;
@@ -5666,6 +5779,12 @@ ENDHERE;
 				'fatal_error' => true,
 				'fatal_error_message' => $log_message
 			);
+		}
+
+		if (UpdraftPlus_Options::user_can_manage() && isset($data['updraftplus']['updraft_credentialtest_nonce'])) {
+			if (!wp_verify_nonce($data['updraftplus']['updraft_credentialtest_nonce'], 'updraftplus-credentialtest-nonce')) {
+				$response['updraftplus']['updraft_credentialtest_nonce'] = wp_create_nonce('updraftplus-credentialtest-nonce');
+			}
 		}
 		return $response;
 	}

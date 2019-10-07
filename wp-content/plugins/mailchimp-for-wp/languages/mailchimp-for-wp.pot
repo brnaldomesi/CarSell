@@ -13,6 +13,10 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: includes/class-mailchimp.php:177, includes/forms/class-admin.php:87
+msgid "Email address"
+msgstr ""
+
 #: includes/admin/class-admin-texts.php:66, includes/forms/views/edit-form.php:6
 msgid "Settings"
 msgstr ""
@@ -21,39 +25,35 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: includes/admin/class-admin.php:216
+#: includes/admin/class-admin.php:218
 msgid "Success! The cached configuration for your Mailchimp lists has been renewed."
 msgstr ""
 
-#: includes/admin/class-admin.php:320
+#: includes/admin/class-admin.php:321
 msgid "The given value does not look like a valid Mailchimp API key."
 msgstr ""
 
-#: includes/admin/class-admin.php:321
+#: includes/admin/class-admin.php:322
 msgid "This is a premium feature. Please upgrade to Mailchimp for WordPress Premium to be able to use it."
 msgstr ""
 
-#: includes/admin/class-admin.php:322, includes/views/parts/lists-overview.php:10, includes/forms/views/parts/add-fields-help.php:45
+#: includes/admin/class-admin.php:323, includes/views/parts/lists-overview.php:10, includes/forms/views/parts/add-fields-help.php:45
 msgid "Renew Mailchimp lists"
 msgstr ""
 
-#: includes/admin/class-admin.php:323
+#: includes/admin/class-admin.php:324
 msgid "Fetching Mailchimp lists"
 msgstr ""
 
-#: includes/admin/class-admin.php:324
-msgid "Done! Mailchimp lists renewed."
-msgstr ""
-
 #: includes/admin/class-admin.php:325
-msgid "This can take a while if you have many Mailchimp lists."
+msgid "Done! Mailchimp lists renewed."
 msgstr ""
 
 #: includes/admin/class-admin.php:326
 msgid "Failed to renew your lists. An error occured."
 msgstr ""
 
-#: includes/admin/class-admin.php:355, includes/views/general-settings.php:31
+#: includes/admin/class-admin.php:355
 msgid "Mailchimp API Settings"
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: includes/admin/class-ads.php:147, includes/forms/class-admin.php:110
+#: includes/admin/class-ads.php:147, includes/forms/class-admin.php:111
 msgid "Subscribe"
 msgstr ""
 
@@ -217,139 +217,139 @@ msgstr ""
 msgid "Dropdown"
 msgstr ""
 
-#: includes/forms/class-admin.php:87
+#: includes/forms/class-admin.php:88
 msgid "Field type"
 msgstr ""
 
-#: includes/forms/class-admin.php:88
+#: includes/forms/class-admin.php:89
 msgid "Field label"
 msgstr ""
 
-#: includes/forms/class-admin.php:89
+#: includes/forms/class-admin.php:90
 msgid "Form action"
 msgstr ""
 
-#: includes/forms/class-admin.php:90
+#: includes/forms/class-admin.php:91
 msgid "This field will allow your visitors to choose whether they would like to subscribe or unsubscribe"
 msgstr ""
 
-#: includes/forms/class-admin.php:91
+#: includes/forms/class-admin.php:92
 msgid "Form fields"
 msgstr ""
 
-#: includes/forms/class-admin.php:92
+#: includes/forms/class-admin.php:93
 msgid "This field is marked as required in Mailchimp."
 msgstr ""
 
-#: includes/forms/class-admin.php:93
+#: includes/forms/class-admin.php:94
 msgid "Initial value"
 msgstr ""
 
-#: includes/forms/class-admin.php:94
+#: includes/forms/class-admin.php:95
 msgid "Interest categories"
 msgstr ""
 
-#: includes/forms/class-admin.php:95
+#: includes/forms/class-admin.php:96
 msgid "Is this field required?"
 msgstr ""
 
-#: includes/forms/class-admin.php:96
+#: includes/forms/class-admin.php:97
 msgid "List choice"
 msgstr ""
 
-#: includes/forms/class-admin.php:97
+#: includes/forms/class-admin.php:98
 msgid "This field will allow your visitors to choose a list to subscribe to."
 msgstr ""
 
-#: includes/forms/class-admin.php:98
+#: includes/forms/class-admin.php:99
 msgid "List fields"
 msgstr ""
 
-#: includes/forms/class-admin.php:99
+#: includes/forms/class-admin.php:100
 msgid "Min"
 msgstr ""
 
-#: includes/forms/class-admin.php:100
+#: includes/forms/class-admin.php:101
 msgid "Max"
 msgstr ""
 
-#: includes/forms/class-admin.php:101
+#: includes/forms/class-admin.php:102
 msgid "No available fields. Did you select a Mailchimp list in the form settings?"
 msgstr ""
 
-#: includes/forms/class-admin.php:102
+#: includes/forms/class-admin.php:103
 msgid "Optional"
 msgstr ""
 
-#: includes/forms/class-admin.php:103
+#: includes/forms/class-admin.php:104
 msgid "Placeholder"
 msgstr ""
 
-#: includes/forms/class-admin.php:104
+#: includes/forms/class-admin.php:105
 msgid "Text to show when field has no value."
 msgstr ""
 
-#: includes/forms/class-admin.php:105
+#: includes/forms/class-admin.php:106
 msgid "Preselect"
 msgstr ""
 
-#: includes/forms/class-admin.php:106
+#: includes/forms/class-admin.php:107
 msgid "Remove"
 msgstr ""
 
-#: includes/forms/class-admin.php:107
+#: includes/forms/class-admin.php:108
 msgid "Radio buttons"
 msgstr ""
 
-#: includes/forms/class-admin.php:108
+#: includes/forms/class-admin.php:109
 msgid "Street Address"
 msgstr ""
 
-#: includes/forms/class-admin.php:109
+#: includes/forms/class-admin.php:110
 msgid "State"
 msgstr ""
 
-#: includes/forms/class-admin.php:111
+#: includes/forms/class-admin.php:112
 msgid "Submit button"
 msgstr ""
 
-#: includes/forms/class-admin.php:112
+#: includes/forms/class-admin.php:113
 msgid "Wrap in paragraph tags?"
 msgstr ""
 
-#: includes/forms/class-admin.php:113
+#: includes/forms/class-admin.php:114
 msgid "Value"
 msgstr ""
 
-#: includes/forms/class-admin.php:114
+#: includes/forms/class-admin.php:115
 msgid "Text to prefill this field with."
 msgstr ""
 
-#: includes/forms/class-admin.php:115
+#: includes/forms/class-admin.php:116
 msgid "ZIP"
 msgstr ""
 
-#: includes/forms/class-admin.php:127, includes/forms/views/edit-form.php:24
+#: includes/forms/class-admin.php:128, includes/forms/views/edit-form.php:24
 msgid "Forms"
 msgstr ""
 
-#: includes/forms/class-admin.php:128, includes/forms/views/edit-form.php:26
+#: includes/forms/class-admin.php:129, includes/forms/views/edit-form.php:26
 msgid "Form"
 msgstr ""
 
-#: includes/forms/class-admin.php:168, includes/forms/class-admin.php:301
+#: includes/forms/class-admin.php:169, includes/forms/class-admin.php:302
 msgid "<strong>Success!</strong> Form successfully saved."
 msgstr ""
 
-#: includes/forms/class-admin.php:408
+#: includes/forms/class-admin.php:409
 msgid "Form not found."
 msgstr ""
 
-#: includes/forms/class-admin.php:473, includes/forms/class-widget.php:32
+#: includes/forms/class-admin.php:474, includes/forms/class-widget.php:32
 msgid "Mailchimp Sign-Up Form"
 msgstr ""
 
-#: includes/forms/class-admin.php:477
+#: includes/forms/class-admin.php:478
 msgid "Select the form to show"
 msgstr ""
 
@@ -413,27 +413,27 @@ msgstr ""
 msgid "There is no form with ID %d, perhaps it was deleted?"
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:154
+#: includes/forms/class-google-recaptcha.php:158
 msgid "Enable Google reCaptcha"
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:160
+#: includes/forms/class-google-recaptcha.php:164
 msgid "Select \"yes\" to enable Google reCAPTCHA spam protection for this form."
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:166
+#: includes/forms/class-google-recaptcha.php:170
 msgid "Google reCAPTCHA Site Key"
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:170
+#: includes/forms/class-google-recaptcha.php:174
 msgid "Enter your Google reCAPTCHA keys here. You can <a href=\"%s\">retrieve your keys in the Google reCAPTCHA admin console</a> or read our help article on <a href=\"%s\">how to configure Google reCAPTCHA</a>."
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:176
+#: includes/forms/class-google-recaptcha.php:180
 msgid "Google reCAPTCHA Secret Key"
 msgstr ""
 
-#: includes/forms/class-google-recaptcha.php:180
+#: includes/forms/class-google-recaptcha.php:184
 msgstr ""
 
 #: includes/forms/class-widget.php:28
@@ -465,38 +465,38 @@ msgid "You are here: "
 msgstr ""
 
 #: includes/views/general-settings.php:18
-msgid "General Settings"
+msgid "API Settings"
 msgstr ""
 
-#: includes/views/general-settings.php:38, includes/integrations/views/integrations.php:57
+#: includes/views/general-settings.php:34, includes/integrations/views/integrations.php:57
 msgid "Status"
 msgstr ""
 
-#: includes/views/general-settings.php:43
+#: includes/views/general-settings.php:39
 msgid "CONNECTED"
 msgstr ""
 
-#: includes/views/general-settings.php:47
+#: includes/views/general-settings.php:43
 msgid "NOT CONNECTED"
 msgstr ""
 
-#: includes/views/general-settings.php:55
+#: includes/views/general-settings.php:51
 msgid "API Key"
 msgstr ""
 
-#: includes/views/general-settings.php:57
+#: includes/views/general-settings.php:53
 msgid "Your Mailchimp API key"
 msgstr ""
 
-#: includes/views/general-settings.php:59
+#: includes/views/general-settings.php:55
 msgid "The API key for connecting with your Mailchimp account."
 msgstr ""
 
-#: includes/views/general-settings.php:60
+#: includes/views/general-settings.php:56
 msgid "Get your API key here."
 msgstr ""
 
-#: includes/views/general-settings.php:64
+#: includes/views/general-settings.php:60
 msgid "You defined your Mailchimp API key using the <code>MC4WP_API_KEY</code> constant."
 msgstr ""
 
@@ -728,7 +728,7 @@ msgstr ""
 msgid "Not installed"
 msgstr ""
 
-#: includes/integrations/views/integrations.php:55, includes/views/parts/lists-overview.php:59, includes/views/parts/lists-overview.php:96
+#: includes/integrations/views/integrations.php:55
 msgid "Name"
 msgstr ""
 
@@ -812,32 +812,12 @@ msgstr ""
 msgid "Subscribers"
 msgstr ""
 
-#: includes/views/parts/lists-overview.php:50
+#: includes/views/parts/lists-overview.php:49
 msgid "Edit this list in Mailchimp"
 msgstr ""
 
-#: includes/views/parts/lists-overview.php:55
-msgid "Merge Fields"
-msgstr ""
-
-#: includes/views/parts/lists-overview.php:60
-msgid "Tag"
-msgstr ""
-
-#: includes/views/parts/lists-overview.php:61, includes/views/parts/lists-overview.php:97
-msgid "Type"
-msgstr ""
-
-#: includes/views/parts/lists-overview.php:66
-msgid "%s (%s) with field type %s."
-msgstr ""
-
-#: includes/views/parts/lists-overview.php:92
-msgid "Interest Categories"
-msgstr ""
-
-#: includes/views/parts/lists-overview.php:98
-msgid "Interests"
+#: includes/views/parts/lists-overview.php:50
+msgid "Loading... Please wait."
 msgstr ""
 
 #: includes/forms/views/parts/add-fields-help.php:4, includes/forms/views/tabs/form-fields.php:10

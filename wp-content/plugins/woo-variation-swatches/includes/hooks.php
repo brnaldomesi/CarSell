@@ -19,8 +19,8 @@
 		add_action( 'woocommerce_product_option_terms', 'wvs_product_option_terms_old', 20, 2 );
 	}
 	
-	// Support Dokan Multi Vendor
-	add_action( 'dokan_product_option_terms', 'wvs_product_option_terms', 20, 2 );
+	// Dokan Support
+	add_action( 'dokan_product_option_terms', 'dokan_support_wvs_product_option_terms', 20, 2 );
 	
 	add_filter( 'woocommerce_ajax_variation_threshold', 'wvs_ajax_variation_threshold', 8 );
 	

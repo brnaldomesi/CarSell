@@ -101,6 +101,48 @@ class UpdraftPlus_PclZip {
 	}
 
 	/**
+	 * Compatibility function for WP < 3.7; taken from WP 5.2.2
+	 *
+	 * @staticvar array $encodings
+	 * @staticvar bool  $overloaded
+	 *
+	 * @param bool $reset - Whether to reset the encoding back to a previously-set encoding.
+	 */
+	private function mbstring_binary_safe_encoding($reset = false) {
+	
+		if (function_exists('mbstring_binary_safe_encoding')) return mbstring_binary_safe_encoding($reset);
+	
+		static $encodings  = array();
+		static $overloaded = null;
+
+		if (is_null($overloaded)) {
+			$overloaded = function_exists('mb_internal_encoding') && (ini_get('mbstring.func_overload') & 2); // phpcs:ignore  PHPCompatibility.IniDirectives.RemovedIniDirectives.mbstring_func_overloadDeprecated
+		}
+
+		if (false === $overloaded) {
+			return;
+		}
+
+		if (!$reset) {
+			$encoding = mb_internal_encoding();
+			array_push($encodings, $encoding);
+			mb_internal_encoding('ISO-8859-1');
+		}
+
+		if ($reset && $encodings) {
+			$encoding = array_pop($encodings);
+			mb_internal_encoding($encoding);
+		}
+	}
+
+	/**
+	 * Compatibility function for WP < 3.7
+	 */
+	private function reset_mbstring_encoding() {
+		return function_exists('reset_mbstring_encoding') ? reset_mbstring_encoding() : $this->mbstring_binary_safe_encoding(true);
+	}
+	
+	/**
 	 * Returns the entry contents using its index. This is used only in PclZip, to get better performance (i.e. no such method exists on other zip objects, so don't call it on them). The caller must be careful not to request more than will fit into available memory.
 	 *
 	 * @see https://php.net/manual/en/ziparchive.getfromindex.php
@@ -114,11 +156,11 @@ class UpdraftPlus_PclZip {
 		$results = array();
 	
 		// This is just for crazy people with mbstring.func_overload enabled (deprecated from PHP 7.2)
-		mbstring_binary_safe_encoding();
+		$this->mbstring_binary_safe_encoding();
 		
 		$contents = $this->pclzip->extract(PCLZIP_OPT_BY_INDEX, $indexes, PCLZIP_OPT_EXTRACT_AS_STRING);
 
-		reset_mbstring_encoding();
+		$this->reset_mbstring_encoding();
 		
 		if (0 === $contents) {
 			$this->last_error = $this->pclzip->errorInfo(true);

@@ -998,4 +998,32 @@ class UpdraftPlus_Commands {
 
 		return $response;
 	}
+
+	/**
+	 * This function will get the restore resume notice
+	 *
+	 * @param array $params - the parameters for the call
+	 *
+	 * @return array|WP_Error - the response array that includes the restore resume notice
+	 */
+	public function get_restore_resume_notice($params) {
+		if (false === ($updraftplus_admin = $this->_load_ud_admin()) || false === ($updraftplus = $this->_load_ud())) return new WP_Error('no_updraftplus');
+		if (!UpdraftPlus_Options::user_can_manage()) return new WP_Error('updraftplus_permission_denied');
+
+		$job_id = empty($params['job_id']) ? '' : $params['job_id'];
+
+		$response = array(
+			'status' => 'success',
+		);
+
+		if (empty($job_id)) return new WP_Error('missing_parameter', 'Missing parameters.');
+
+		$html = $updraftplus_admin->get_restore_resume_notice($job_id);
+
+		if (is_wp_error($html)) return $html;
+
+		$response['html'] = $html;
+
+		return $response;
+	}
 }

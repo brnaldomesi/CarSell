@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../includes/class-wvs-customizer.php:34, ../woo-variation-swatches.php:571
+#: ../includes/class-wvs-customizer.php:34
 msgid "WooCommerce Variation Swatches"
 msgstr ""
 
@@ -24,7 +24,7 @@ msgstr ""
 msgid "WooCommerce Variation Swatches Settings"
 msgstr ""
 
-#: ../includes/class-wvs-settings-api.php:91, ../includes/class-wvs-settings-api.php:104, ../includes/functions.php:1078
+#: ../includes/class-wvs-settings-api.php:91, ../includes/class-wvs-settings-api.php:104, ../includes/functions.php:1495
 msgid "Swatches Settings"
 msgstr ""
 
@@ -60,11 +60,11 @@ msgstr ""
 msgid "Skip &amp; Deactivate"
 msgstr ""
 
-#: ../includes/functions.php:48, ../includes/functions.php:362
+#: ../includes/functions.php:48, ../includes/functions.php:369
 msgid "Color"
 msgstr ""
 
-#: ../includes/functions.php:54, ../includes/functions.php:371
+#: ../includes/functions.php:54, ../includes/functions.php:378
 msgid "Image"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Simple"
 msgstr ""
 
-#: ../includes/functions.php:186, ../includes/functions.php:220, ../includes/functions.php:315
+#: ../includes/functions.php:186, ../includes/functions.php:227, ../includes/functions.php:322
 msgid "Visual Section"
 msgstr ""
 
@@ -128,277 +128,289 @@ msgstr ""
 msgid "Squared Shape"
 msgstr ""
 
+#: ../includes/functions.php:217
+msgid "Auto Dropdowns to Button"
+msgstr ""
+
 #: ../includes/functions.php:218
+msgid "Convert default dropdowns to button type"
+msgstr ""
+
+#: ../includes/functions.php:225
 msgid "Advanced"
 msgstr ""
 
-#: ../includes/functions.php:221
+#: ../includes/functions.php:228
 msgid "Advanced change some visual styles"
 msgstr ""
 
-#: ../includes/functions.php:226
+#: ../includes/functions.php:233
 msgid "Clear on Reselect"
 msgstr ""
 
-#: ../includes/functions.php:227
+#: ../includes/functions.php:234
 msgid "Clear selected attribute on select again"
 msgstr ""
 
-#: ../includes/functions.php:233
+#: ../includes/functions.php:240
 msgid "Ajax variation threshold"
 msgstr ""
 
-#: ../includes/functions.php:234
+#: ../includes/functions.php:241
 msgid "Control the number of enable ajax variation threshold, If you set <code>1</code> all product variation will be load via ajax. Default value is <code>30</code>, <br><span style=\"color: red\">Note: Product variation loaded via ajax doesn't follow attribute behaviour. It's recommended to keep this number between 30 - 40.</span>"
 msgstr ""
 
-#: ../includes/functions.php:242
+#: ../includes/functions.php:249
 msgid "Attribute behavior"
 msgstr ""
 
-#: ../includes/functions.php:243
+#: ../includes/functions.php:250
 msgid "Disabled attribute will be hide / blur. <br><span style=\"color: red\">Note: Product variation loaded via ajax doesn't apply this feature.</span>"
 msgstr ""
 
-#: ../includes/functions.php:245
+#: ../includes/functions.php:252
 msgid "Blur with cross"
 msgstr ""
 
-#: ../includes/functions.php:246
+#: ../includes/functions.php:253
 msgid "Blur without cross"
 msgstr ""
 
-#: ../includes/functions.php:247
+#: ../includes/functions.php:254
 msgid "Hide"
 msgstr ""
 
-#: ../includes/functions.php:254
+#: ../includes/functions.php:261
 msgid "Attribute image size"
 msgstr ""
 
-#: ../includes/functions.php:255
+#: ../includes/functions.php:262
 msgid "<span style=\"color: red\">Attribute image size changed by <code>wvs_product_attribute_image_size</code> hook. So this option will not apply any effect.</span>"
 msgstr ""
 
-#: ../includes/functions.php:255
+#: ../includes/functions.php:262
 msgstr ""
 
-#: ../includes/functions.php:262
+#: ../includes/functions.php:269
 msgid "Width"
 msgstr ""
 
-#: ../includes/functions.php:263
+#: ../includes/functions.php:270
 msgid "Variation item width"
 msgstr ""
 
-#: ../includes/functions.php:272
+#: ../includes/functions.php:279
 msgid "Height"
 msgstr ""
 
-#: ../includes/functions.php:273
+#: ../includes/functions.php:280
 msgid "Variation item height"
 msgstr ""
 
-#: ../includes/functions.php:282
+#: ../includes/functions.php:289
 msgid "Font Size"
 msgstr ""
 
-#: ../includes/functions.php:283
+#: ../includes/functions.php:290
 msgid "Single product variation item font size"
 msgstr ""
 
-#: ../includes/functions.php:294
+#: ../includes/functions.php:301
 msgid "Style"
 msgstr ""
 
-#: ../includes/functions.php:297
+#: ../includes/functions.php:304
 msgid "Visual Styling"
 msgstr ""
 
-#: ../includes/functions.php:298
+#: ../includes/functions.php:305
 msgid "Change some visual styles"
 msgstr ""
 
-#: ../includes/functions.php:312
+#: ../includes/functions.php:319
 msgid "Archive / Shop"
 msgstr ""
 
-#: ../includes/functions.php:316
+#: ../includes/functions.php:323
 msgid "Advanced change some visual styles on shop / archive page"
 msgstr ""
 
-#: ../includes/functions.php:330
+#: ../includes/functions.php:337
 msgid "Special Attribute"
 msgstr ""
 
-#: ../includes/functions.php:333
+#: ../includes/functions.php:340
 msgid "Catalog mode"
 msgstr ""
 
-#: ../includes/functions.php:334
+#: ../includes/functions.php:341
 msgid "Show single attribute as catalog mode on shop / archive pages"
 msgstr ""
 
-#: ../includes/functions.php:363
+#: ../includes/functions.php:370
 msgid "Choose a color"
 msgstr ""
 
-#: ../includes/functions.php:372, ../woo-variation-swatches.php:374
+#: ../includes/functions.php:379, ../woo-variation-swatches.php:375
 msgid "Choose an Image"
 msgstr ""
 
-#: ../includes/functions.php:540, ../includes/functions.php:575
+#: ../includes/functions.php:547, ../includes/functions.php:597, ../includes/functions.php:626
 msgid "Select terms"
 msgstr ""
 
-#: ../includes/functions.php:550, ../includes/functions.php:591
+#: ../includes/functions.php:557, ../includes/functions.php:609, ../includes/functions.php:642
 msgid "Select all"
 msgstr ""
 
-#: ../includes/functions.php:551, ../includes/functions.php:592
+#: ../includes/functions.php:558, ../includes/functions.php:610, ../includes/functions.php:643
 msgid "Select none"
 msgstr ""
 
-#: ../includes/functions.php:557, ../includes/functions.php:598
+#: ../includes/functions.php:564, ../includes/functions.php:649
 msgid "Add new %s"
 msgstr ""
 
-#: ../includes/functions.php:557, ../includes/functions.php:559, ../includes/functions.php:598, ../includes/functions.php:600
+#: ../includes/functions.php:564, ../includes/functions.php:566, ../includes/functions.php:649, ../includes/functions.php:651
 msgid "Add new"
 msgstr ""
 
-#: ../includes/functions.php:758, ../includes/functions.php:830, ../includes/functions.php:903, ../includes/functions.php:974
+#: ../includes/functions.php:936, ../includes/functions.php:1008, ../includes/functions.php:1081, ../includes/functions.php:1151, ../includes/functions.php:1219, ../includes/functions.php:1301
 msgid "Choose an option"
 msgstr ""
 
-#: ../woo-variation-swatches.php:136
+#: ../woo-variation-swatches.php:137
 msgid "It's a temporary deactivation."
 msgstr ""
 
-#: ../woo-variation-swatches.php:141
+#: ../woo-variation-swatches.php:142
 msgid "I couldn't understand how to make it work."
 msgstr ""
 
-#: ../woo-variation-swatches.php:143
+#: ../woo-variation-swatches.php:144
 msgid "It converts variation select box to beautiful swatches. <br> <a target=\"_blank\" href=\"https://bit.ly/deactivate-dialogue\">Please check live demo</a>."
 msgstr ""
 
-#: ../woo-variation-swatches.php:147
+#: ../woo-variation-swatches.php:148
 msgid "I no longer need the plugin"
 msgstr ""
 
-#: ../woo-variation-swatches.php:152
+#: ../woo-variation-swatches.php:153
 msgid "I found a better plugin"
 msgstr ""
 
-#: ../woo-variation-swatches.php:153
+#: ../woo-variation-swatches.php:154
 msgid "Please share which plugin"
 msgstr ""
 
-#: ../woo-variation-swatches.php:157
+#: ../woo-variation-swatches.php:158
 msgid "The plugin <strong>broke my layout</strong> or some functionality."
 msgstr ""
 
-#: ../woo-variation-swatches.php:159
+#: ../woo-variation-swatches.php:160
 msgid "<a target=\"_blank\" href=\"https://getwooplugins.com/tickets/\">Please open a support ticket</a>, we will fix it immediately."
 msgstr ""
 
-#: ../woo-variation-swatches.php:163
+#: ../woo-variation-swatches.php:164
 msgid "I need someone to <strong>setup this plugin.</strong>"
 msgstr ""
 
-#: ../woo-variation-swatches.php:164
+#: ../woo-variation-swatches.php:165
 msgid "Your email address."
 msgstr ""
 
-#: ../woo-variation-swatches.php:166
+#: ../woo-variation-swatches.php:167
 msgid "Please provide your email address to contact with you <br>and help you to setup and configure this plugin."
 msgstr ""
 
-#: ../woo-variation-swatches.php:170
+#: ../woo-variation-swatches.php:171
 msgid "The plugin is <strong>too complicated to configure.</strong>"
 msgstr ""
 
-#: ../woo-variation-swatches.php:172
+#: ../woo-variation-swatches.php:173
 msgid "<a target=\"_blank\" href=\"https://getwooplugins.com/documentation/woocommerce-variation-swatches/\">Have you checked our documentation?</a>."
 msgstr ""
 
-#: ../woo-variation-swatches.php:176
+#: ../woo-variation-swatches.php:177
 msgid "I need <strong>specific feature</strong> that you don't support."
 msgstr ""
 
-#: ../woo-variation-swatches.php:177
+#: ../woo-variation-swatches.php:178
 msgid "Please share with us."
 msgstr ""
 
-#: ../woo-variation-swatches.php:182
+#: ../woo-variation-swatches.php:183
 msgid "Other"
 msgstr ""
 
-#: ../woo-variation-swatches.php:183
+#: ../woo-variation-swatches.php:184
 msgid "Please share the reason"
 msgstr ""
 
-#: ../woo-variation-swatches.php:375
+#: ../woo-variation-swatches.php:376
 msgid "Add Attribute"
 msgstr ""
 
-#: ../woo-variation-swatches.php:376
+#: ../woo-variation-swatches.php:377
 msgid "Add"
 msgstr ""
 
-#: ../woo-variation-swatches.php:377
+#: ../woo-variation-swatches.php:378
 msgid "Cancel"
 msgstr ""
 
-#: ../woo-variation-swatches.php:378
+#: ../woo-variation-swatches.php:379
 msgid "Use Image"
 msgstr ""
 
-#: ../woo-variation-swatches.php:379
+#: ../woo-variation-swatches.php:380
 msgid "Add Media"
 msgstr ""
 
-#: ../woo-variation-swatches.php:387
+#: ../woo-variation-swatches.php:388
 msgid "Quick Feedback"
 msgstr ""
 
-#: ../woo-variation-swatches.php:466, ../woo-variation-swatches.php:466
+#: ../woo-variation-swatches.php:467, ../woo-variation-swatches.php:467
 msgid "Read Documentation"
 msgstr ""
 
-#: ../woo-variation-swatches.php:468
+#: ../woo-variation-swatches.php:469
 msgid "Facing issue?"
 msgstr ""
 
-#: ../woo-variation-swatches.php:468
+#: ../woo-variation-swatches.php:469
 msgid "Please open a ticket."
 msgstr ""
 
-#: ../woo-variation-swatches.php:483
+#: ../woo-variation-swatches.php:484
 msgid "Go Pro"
 msgstr ""
 
-#: ../woo-variation-swatches.php:536
+#: ../woo-variation-swatches.php:537
 msgid "Please check PHP version requirement."
 msgstr ""
 
-#: ../woo-variation-swatches.php:538
-msgid "It's required to use latest version of PHP to use <strong>WooCommerce Variation Swatches</strong>."
+#: ../woo-variation-swatches.php:539
+msgid "It's required to use latest version of PHP to use <strong>Variation Swatches for WooCommerce</strong>."
 msgstr ""
 
-#: ../woo-variation-swatches.php:550
+#: ../woo-variation-swatches.php:551
 msgid "WooCommerce"
 msgstr ""
 
-#: ../woo-variation-swatches.php:558
-msgid "<strong>WooCommerce Variation Swatches</strong> is an add-on of "
+#: ../woo-variation-swatches.php:559
+msgid "<strong>Variation Swatches for WooCommerce</strong> is an add-on of "
 msgstr ""
 
-#: ../woo-variation-swatches.php:571
+#: ../woo-variation-swatches.php:572
 msgid "Currently, you are using older version of WooCommerce. It's recommended to use latest version of WooCommerce to work with %s."
 msgstr ""
 
-#: ../woo-variation-swatches.php:666
-msgid "WooCommerce Variation Swatches Plugin try to load \"%s\" but template \"%s\" was not found."
+#: ../woo-variation-swatches.php:572
+msgid "Variation Swatches for WooCommerce"
+msgstr ""
+
+#: ../woo-variation-swatches.php:667
+msgid "Variation Swatches for WooCommerce Plugin try to load \"%s\" but template \"%s\" was not found."
 msgstr ""

@@ -425,9 +425,14 @@ jQuery( function ( $ ) {
 		apiCallback: woobApiCallbackGenerator( 'Product Images' ),
 		fields     : woobFields( {
 			'woobuilder_style': {
-				label  : 'Hide gallery image',
-				type   : 'checkbox',
-				value  : 'hide-gallery',
+				label  : 'Gallery images',
+				type: 'select',
+				options: [
+					{value: '', label: 'Default',},
+					{value: 'hide-gallery', label: 'Hide',},
+					{value: 'left-gallery', label: 'Left',},
+					{value: 'right-gallery', label: 'Right',},
+				],
 				section: 'Layout',
 			}
 		} ),

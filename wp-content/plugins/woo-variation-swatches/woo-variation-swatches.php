@@ -1,15 +1,15 @@
 <?php
 	/**
-	 * Plugin Name: WooCommerce Variation Swatches
+	 * Plugin Name: Variation Swatches for WooCommerce
 	 * Plugin URI: https://wordpress.org/plugins/woo-variation-swatches/
 	 * Description: Beautiful colors, images and buttons variation swatches for woocommerce product attributes. Requires WooCommerce 3.2+
 	 * Author: Emran Ahmed
-	 * Version: 1.0.57
+	 * Version: 1.0.63
 	 * Domain Path: /languages
 	 * Requires at least: 4.8
 	 * Tested up to: 5.2
 	 * WC requires at least: 3.2
-	 * WC tested up to: 3.6
+	 * WC tested up to: 3.7
 	 * Text Domain: woo-variation-swatches
 	 * Author URI: https://getwooplugins.com/
 	 */
@@ -20,7 +20,7 @@
 		
 		final class Woo_Variation_Swatches {
 			
-			protected $_version = '1.0.57';
+			protected $_version = '1.0.63';
 			
 			protected static $_instance = null;
 			private          $_settings_api;
@@ -89,9 +89,10 @@
 				add_action( 'admin_notices', array( $this, 'wc_version_requirement_notice' ) );
 				add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 				
-				add_action( 'admin_footer', array( $this, 'deactivate_feedback_dialog' ) );
-				
-				if ( $this->is_required_php_version() ) {
+				if ( $this->is_required_php_version() && $this->is_wc_active() ) {
+					
+					add_action( 'admin_footer', array( $this, 'deactivate_feedback_dialog' ) );
+					
 					add_action( 'admin_init', array( $this, 'after_plugin_active' ) );
 					add_action( 'admin_notices', array( $this, 'feed' ) );
 					add_action( 'init', array( $this, 'settings_api' ), 5 );
@@ -206,8 +207,8 @@
 				$plugin         = sanitize_title( $_POST[ 'plugin' ] );
 				$reason_id      = sanitize_title( $_POST[ 'reason_type' ] );
 				$reason_title   = $deactivate_reasons[ $reason_id ][ 'title' ];
-				$reason_text    = esc_html( $_POST[ 'reason_text' ] );
-				$plugin_version = esc_html( $_POST[ 'version' ] );
+				$reason_text    = sanitize_text_field( $_POST[ 'reason_text' ] );
+				$plugin_version = sanitize_text_field( $_POST[ 'version' ] );
 				
 				if ( 'temporary_deactivation' === $reason_id ) {
 					wp_send_json_success( true );
@@ -535,7 +536,7 @@
 					$class   = 'notice notice-error';
 					$text    = esc_html__( 'Please check PHP version requirement.', 'woo-variation-swatches' );
 					$link    = esc_url( 'https://docs.woocommerce.com/document/server-requirements/' );
-					$message = wp_kses( __( "It's required to use latest version of PHP to use <strong>WooCommerce Variation Swatches</strong>.", 'woo-variation-swatches' ), array( 'strong' => array() ) );
+					$message = wp_kses( __( "It's required to use latest version of PHP to use <strong>Variation Swatches for WooCommerce</strong>.", 'woo-variation-swatches' ), array( 'strong' => array() ) );
 					
 					printf( '<div class="%1$s"><p>%2$s <a target="_blank" href="%3$s">%4$s</a></p></div>', $class, $message, $link, $text );
 				}
@@ -555,7 +556,7 @@
 						                                   'width'     => '640',
 						                                   'height'    => '500',
 					                                   ), admin_url( 'plugin-install.php' ) ) );
-					$message = wp_kses( __( "<strong>WooCommerce Variation Swatches</strong> is an add-on of ", 'woo-variation-swatches' ), array( 'strong' => array() ) );
+					$message = wp_kses( __( "<strong>Variation Swatches for WooCommerce</strong> is an add-on of ", 'woo-variation-swatches' ), array( 'strong' => array() ) );
 					
 					printf( '<div class="%1$s"><p>%2$s <a class="thickbox open-plugin-details-modal" href="%3$s"><strong>%4$s</strong></a></p></div>', $class, $message, $link, $text );
 				}
@@ -568,7 +569,7 @@
 			public function wc_version_requirement_notice() {
 				if ( $this->is_wc_active() && ! $this->is_required_wc_version() ) {
 					$class   = 'notice notice-error';
-					$message = sprintf( esc_html__( "Currently, you are using older version of WooCommerce. It's recommended to use latest version of WooCommerce to work with %s.", 'woo-variation-swatches' ), esc_html__( 'WooCommerce Variation Swatches', 'woo-variation-swatches' ) );
+					$message = sprintf( esc_html__( "Currently, you are using older version of WooCommerce. It's recommended to use latest version of WooCommerce to work with %s.", 'woo-variation-swatches' ), esc_html__( 'Variation Swatches for WooCommerce', 'woo-variation-swatches' ) );
 					printf( '<div class="%1$s"><p><strong>%2$s</strong></p></div>', $class, $message );
 				}
 			}
@@ -663,7 +664,7 @@
 				if ( file_exists( $located ) ) {
 					include $located;
 				} else {
-					trigger_error( sprintf( esc_html__( 'WooCommerce Variation Swatches Plugin try to load "%s" but template "%s" was not found.', 'woo-variation-swatches' ), $located, $template_name ), E_USER_WARNING );
+					trigger_error( sprintf( esc_html__( 'Variation Swatches for WooCommerce Plugin try to load "%s" but template "%s" was not found.', 'woo-variation-swatches' ), $located, $template_name ), E_USER_WARNING );
 				}
 				
 				do_action( 'wvs_after_get_template', $template_name, $template_args );
@@ -843,7 +844,7 @@
 					
 					$message = str_ireplace( $search, $replace, $body[ 'message' ] );
 					
-					echo $message;
+					echo wp_kses_post( $message );
 				}
 			}
 			

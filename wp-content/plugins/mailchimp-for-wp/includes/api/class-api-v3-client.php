@@ -113,19 +113,20 @@ class MC4WP_API_v3_Client
             throw new MC4WP_API_Exception("Missing API key", 001);
         }
 
+        $method = strtoupper(trim($method));
         $url = $this->api_url . ltrim($resource, '/');
         $args = array(
-          'url' => $url,
           'method' => $method,
           'headers' => $this->get_headers(),
-          'timeout' => 10,
+          'timeout' => 15,
           'sslverify' => apply_filters('mc4wp_use_sslverify', true),
         );
 
         if (! empty($data)) {
-            if (in_array($method, array( 'GET', 'DELETE' ))) {
+            if (in_array($method, array('GET', 'DELETE'))) {
                 $url = add_query_arg($data, $url);
             } else {
+                $args['headers']['Content-Type'] = 'application/json';
                 $args['body'] = json_encode($data);
             }
         }
@@ -141,6 +142,7 @@ class MC4WP_API_v3_Client
         $response = wp_remote_request($url, $args);
 
         // store request & response
+        $args['url'] = $url;
         $this->last_request = $args;
         $this->last_response = $response;
 
@@ -159,9 +161,7 @@ class MC4WP_API_v3_Client
 
         $headers = array();
         $headers['Authorization'] = 'Basic ' . base64_encode('mc4wp:' . $this->api_key);
-        $headers['Accept'] = 'application/json';
-        $headers['Content-Type'] = 'application/json';
-        $headers['User-Agent'] = 'mc4wp/' . MC4WP_VERSION . '; WordPress/' . $wp_version . '; ' . get_bloginfo('url');
+        $headers['User-Agent'] = 'mc4wp/' . MC4WP_VERSION . '; WordPress/' . $wp_version . '; ' . home_url();
 
         // Copy Accept-Language from browser headers
         if (! empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {

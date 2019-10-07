@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Mailchimp for WordPress
+Plugin Name: MC4WP: Mailchimp for WordPress
 Plugin URI: https://mc4wp.com/#utm_source=wp-plugin&utm_medium=mailchimp-for-wp&utm_campaign=plugins-page
 Description: Mailchimp for WordPress by ibericode. Adds various highly effective sign-up methods to your site.
-Version: 4.5.3
+Version: 4.6.0
 Author: ibericode
 Author URI: https://ibericode.com/
 Text Domain: mailchimp-for-wp
@@ -30,13 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Prevent direct file access
 defined('ABSPATH') or exit;
 
-/**
- * Bootstrap the Mailchimp for WordPress plugin
- *
- * @ignore
- * @access private
- * @return bool
- */
+/** @ignore */
 function _mc4wp_load_plugin()
 {
     global $mc4wp;
@@ -47,7 +41,7 @@ function _mc4wp_load_plugin()
     }
 
     // bootstrap the core plugin
-    define('MC4WP_VERSION' ,'4.5.3');
+    define('MC4WP_VERSION', '4.6.0');
     define('MC4WP_PLUGIN_DIR', dirname(__FILE__) . '/');
     define('MC4WP_PLUGIN_URL', plugins_url('/', __FILE__));
     define('MC4WP_PLUGIN_FILE', __FILE__);
@@ -114,32 +108,3 @@ function _mc4wp_bootstrap_integrations()
 
 add_action('plugins_loaded', '_mc4wp_load_plugin', 8);
 add_action('plugins_loaded', '_mc4wp_bootstrap_integrations', 90);
-
-/**
- * Flushes transient cache & schedules refresh hook.
- *
- * @ignore
- * @since 3.0
- */
-function _mc4wp_on_plugin_activation()
-{
-    $time_string = sprintf("tomorrow 0%d:%d%d", rand(0, 8), rand(0, 5), rand(0, 9));
-    wp_schedule_event(strtotime($time_string), 'daily', 'mc4wp_refresh_mailchimp_lists');
-}
-
-/**
- * Clears scheduled hook for refreshing Mailchimp lists.
- *
- * @ignore
- * @since 4.0.3
- */
-function _mc4wp_on_plugin_deactivation()
-{
-    global $wpdb;
-    wp_clear_scheduled_hook('mc4wp_refresh_mailchimp_lists');
-
-    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE 'mc4wp_mailchimp_list_%'");
-}
-
-register_activation_hook(__FILE__, '_mc4wp_on_plugin_activation');
-register_deactivation_hook(__FILE__, '_mc4wp_on_plugin_deactivation');

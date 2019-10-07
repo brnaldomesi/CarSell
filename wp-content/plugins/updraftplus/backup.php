@@ -505,6 +505,8 @@ class UpdraftPlus_Backup {
 			$updraftplus->log("Beginning dispatch of backup to remote ($service) (instance identifier $instance_id)");
 		}
 
+		$errors_before_uploads = $updraftplus->error_count();
+
 		$sarray = array();
 		foreach ($backup_array as $bind => $file) {
 			if ($updraftplus->is_uploaded($file, $service, $instance_id)) {
@@ -524,6 +526,16 @@ class UpdraftPlus_Backup {
 				$do_prune[$service][$instance_id] = array($remote_obj, $pass_to_prune);
 			} else {
 				$do_prune[$service]['default'] = array($remote_obj, $pass_to_prune);
+			}
+
+			// Check there are no errors in the uploads, if none then call upload_completed() if it exists otherwise mark as complete
+			if ($errors_before_uploads == $updraftplus->error_count()) {
+				if (is_callable(array($remote_obj, 'upload_completed'))) {
+					$result = $remote_obj->upload_completed();
+					if ($result) $updraftplus->mark_upload_complete($service);
+				} else {
+					$updraftplus->mark_upload_complete($service);
+				}
 			}
 		} else {
 			// We still need to make sure that prune is run on this remote storage method, even if all entities were previously uploaded
@@ -1695,8 +1707,9 @@ class UpdraftPlus_Backup {
 
 		// DB triggers
 		if ($this->wpdb_obj->get_results("SHOW TRIGGERS")) {
-			// $this->stow("DELIMITER \$\$\n\n");
-error_log("ST:$table:".serialize($this->skipped_tables));
+			// N.B. DELIMITER is not a valid SQL command; you cannot pass it to the server. It has to be interpreted by the interpreter - e.g. /usr/bin/mysql, or UpdraftPlus, and used to interpret what follows. The effect of this is that using it means that some SQL clients will stumble; but, on the other hand, failure to use it means that others that don't have special support for CREATE TRIGGER may stumble, because they may feed incomplete statements to the SQL server. Since /usr/bin/mysql uses it, we choose to support it too (both reading and writing).
+			// Whatever the delimiter is set to needs to be used in the DROP TRIGGER and CREATE TRIGGER commands in this section further down.
+			$this->stow("DELIMITER ;;\n\n");
 			foreach ($all_tables as $ti) {
 				$table = $ti['name'];
 				if (!empty($this->skipped_tables)) {
@@ -1714,12 +1727,13 @@ error_log("ST:$table:".serialize($this->skipped_tables));
 						$trigger_time = $trigger['Timing'];
 						$trigger_event = $trigger['Event'];
 						$trigger_statement = $trigger['Statement'];
-						$trigger_query = "CREATE TRIGGER $trigger_name $trigger_time $trigger_event ON ".UpdraftPlus_Manipulation_Functions::backquote($table)." FOR EACH ROW $trigger_statement";
+						$this->stow("DROP TRIGGER IF EXISTS $trigger_name;;\n");
+						$trigger_query = "CREATE TRIGGER $trigger_name $trigger_time $trigger_event ON ".UpdraftPlus_Manipulation_Functions::backquote($table)." FOR EACH ROW $trigger_statement;;";
 						$this->stow("$trigger_query\n\n");
 					}
 				}
 			}
-			// $this->stow("DELIMITER ;\n\n");
+			$this->stow("DELIMITER ;\n\n");
 		}
 
 		$this->stow("/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;\n/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;\n/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;\n");

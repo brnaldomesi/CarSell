@@ -349,15 +349,15 @@ class WooBuilder_Blocks_Public {
 		array_splice( $slide_attachments, 0, 0, + $product->get_image_id() );
 		?>
 		<ul class="slides">
-		<?php
-		if ( $slide_attachments ) {
-			foreach ( $slide_attachments as $attachment ) {
-				echo '<li>';
-				echo wp_get_attachment_image( $attachment, 'large' );
-				echo '</li>';
+			<?php
+			if ( $slide_attachments ) {
+				foreach ( $slide_attachments as $attachment ) {
+					echo '<li>';
+					echo wp_get_attachment_image( $attachment, 'large' );
+					echo '</li>';
+				}
 			}
-		}
-		?>
+			?>
 		</ul>
 		<div class="woobuilder-images_carousel-navigation">
 			<a href="#" class="flex-prev"></a>

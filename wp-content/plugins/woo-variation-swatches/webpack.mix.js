@@ -61,17 +61,17 @@ if (Mix.inProduction()) {
 }
 
 mix.banner({
-    banner : "WooCommerce Variation Swatches v1.0.57 \n\nAuthor: Emran Ahmed ( emran.bd.08@gmail.com ) \nDate: " + new Date().toLocaleString() + "\nReleased under the GPLv3 license."
+    banner : "Variation Swatches for WooCommerce v1.0.63 \n\nAuthor: Emran Ahmed ( emran.bd.08@gmail.com ) \nDate: " + new Date().toLocaleString() + "\nReleased under the GPLv3 license."
 });
 
 mix.notification({
-    title : 'Variation Swatches',
+    title : 'Swatches',
     // contentImage : Mix.paths.root('images/logo.png')
 });
 
-if (!Mix.inProduction()) {
+/*if (!Mix.inProduction()) {
     mix.sourceMaps();
-}
+}*/
 
 mix.js(`src/js/backend.js`, `assets/js/admin${min}.js`);
 mix.js(`src/js/frontend.js`, `assets/js/frontend${min}.js`);

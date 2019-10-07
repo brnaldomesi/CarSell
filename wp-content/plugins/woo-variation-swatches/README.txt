@@ -1,16 +1,16 @@
 === Variation Swatches for WooCommerce ===
-Contributors: EmranAhmed, wpeshaan, getwooplugins
+Contributors: EmranAhmed, getwooplugins
 Tags: woocommerce variation swatches, woocommerce variation, woocommerce, variation swatches, woocommerce attributes, product attributes, product color, product size, variable product attributes, variation product swatches, color variation swatch, image variation swatch, printful color swatches
 Requires at least: 4.8
 Tested up to: 5.2
 Requires PHP: 5.6
 Stable tag: trunk
 WC requires at least: 3.2
-WC tested up to: 3.6
+WC tested up to: 3.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Beautiful Color, Image and Buttons Variation Swatches For WooCommerce Product Attributes
+Beautiful Color, Image and Buttons Variation Swatches For WooCommerce Product Attributes 
 
 == Description ==
 
@@ -28,130 +28,179 @@ Variation Swatches for WooCommerce not only offers the color, image and label at
 
 In the free WooCommerce attribute variation plugin, besides creating size, brand, image, color, and label variation swatches, you can handle the swatches shape style <strong>Rounded and Circle</strong>. On top of that, it allows you beautiful tooltips on variation swatch hover.  Based on your requirement you enable and disable hover from the settings. To maximize and personalize your development process,  the product attributes swatches comes an option to disable default plugin stylesheet so that you can personally write your own CSS. 
 
-= Key Feature Comes with this Plugin =
+## Key Feature Comes with Variation Swatches For WooCommerce Plugin ##
 
-* Enable Color Swatches For Variable Product Attribute Variations 
+👉 Auto Convert All Variation Dropdowns to Button Swatch by Default
+  [Live Demo & Documentation](http://j.mp/automatic-button-swatches-readme)
+<hr />
+
+👉 Enable Color Swatches For Variable Product Attribute Variations 
   [Live Demo & Documentation](http://bit.ly/3rd-demo-color-swatches-readme)
 <hr />
-* Enable Image Swatches For Variable Product Attribute Variations
+👉 Enable Image Swatches For Variable Product Attribute Variations
  [Live Demo & Documentation](http://bit.ly/3rd-image-demo-swatches-readme)
  <hr />
-* Enable Label/Text/Button Swatches For Variable Product Attribute Variations 
+👉 Enable Label/Text/Button Swatches For Variable Product Attribute Variations 
   [Live Demo & Documentation](http://bit.ly/3rd-label-demo-readme)
 <hr />
-* Convert Globally Created Attibute Variations Into Color, Image, and Label Swatches
+👉 Enable Label/Text/Button Swatches For Variable Product Attribute Variations 
+  [Live Demo & Documentation](http://bit.ly/3rd-label-demo-readme)
+<hr />
+
+👉 Convert Globally Created Attribute Variations Into Color, Image, and Label Swatches
   [Video Tutorial & Preview](http://bit.ly/label-swatch-free-read-youtube)
 <hr />
-* Option to Globally Select ROUNDED Attribute Variation Swatches Shape.
+👉 Option to Globally Select ROUNDED Attribute Variation Swatches Shape.
   [Live Demo & Documentation](http://bit.ly/3rd-round-shape-readme) 
 <hr />
-* Option to Globally Select SQUARED Attribute Variation Swatches Shape.
+👉 Option to Globally Select SQUARED Attribute Variation Swatches Shape.
   [Live Demo & Documentation](http://bit.ly/3rd-demo-square-readme) 
 <hr />
-* Show Cross Sign For Out of Stock Variation Swatches (Up To 30 Variations)
+👉 Show Cross Sign For Out of Stock Variation Swatches (Up To 30 Variations)
   [Live Demo & Documentation](http://bit.ly/3rd-demo-cross-out-of-stock-readme)
 <hr />
-* Blur For Out of Stock Variation Swatches (Up To 30 Variations)
+👉 Blur For Out of Stock Variation Swatches (Up To 30 Variations)
   [Live Demo & Documentation](http://bit.ly/3rd-demo-blur-readme)
 <hr />
-* Hide For Out of Stock Variation Swatches (Up To 30 Variations)
+👉 Hide For Out of Stock Variation Swatches (Up To 30 Variations)
   [Live Demo & Documentation](http://bit.ly/3rd-demo-hide-out-stock-readme) 
 <hr />
-* Product Page Swatches Size Control
+👉 Product Page Swatches Size Control
  [Live Demo & Documentation](http://bit.ly/3rd-demo-size-control-readme) 
 <hr />
-* Flexible Swatches Tooltip Insert and Display settings 
+👉 Flexible Swatches Tooltip Insert and Display settings 
  [Live Demo & Documentation](http://bit.ly/3rd-demo-size-control-readme)  
 <hr />
 
-* Reorder Product Attribute Variation Swatches
-* Flexible Swatches Tooltip Insert and Display settings   
-* Work on Variable Product Quick View Popup   
-* Compatible with popular WooCommerce themes and plugins 
-* Frequently Updated And Secured Codebase 
-* Option to disable default plugin stylesheet for theme developer
-* Enable Color Swatches like Printful Technology
-* Compatible With Popular WooCommerce Plugins Including <a href="http://bit.ly/woovs-org-item-page">WooCommerce Variation Image Gallery</a>  
+👉 Convert Buttons Swatches to Dropdown (If It's needed)
+  [Live Demo & Documentation](http://j.mp/button-to-dropdown-readme)
+<hr />
 
-= PREMIUM FEATURES OF VARIATION SWATCHES FOR WOOCOMMERCE =
+👉 Reorder Product Attribute Variation Swatches
+👉 Flexible Swatches Tooltip Insert and Display settings   
+👉 Work on Variable Product Quick View Popup   
+👉 Compatible with popular WooCommerce themes and plugins 
+👉 Frequently Updated And Secured Codebase 
+👉 Option to disable default plugin stylesheet for theme developer
+👉 Compatible With Popular WooCommerce Plugins Including <a href="http://bit.ly/woovs-org-item-page">WooCommerce Variation Image Gallery</a>  
+
+## 🏆 Users' Feedback For Variation Swatches For WooCommerce ##
+
+[Tim Cumming, Founder at DevisionUK](https://wordpress.org/support/topic/outstanding-support-118): 
+> 'Really can’t rate this developer high enough!
+
+Not only is the plugin super cool but their support, is utterly mind-blowing! I had reason to ask a question and, without hesitation, Ahmed logged into our site, had a look around and responded with a solution, all within the space of 5 minutes!!
+
+It you’re looking for a great product with superlative support then look no further!'
+
+[Ruben Zuidervaart](https://wordpress.org/support/topic/does-what-it-should-with-no-issues/): 
+> 'It just works, and the support is also pretty damn good for something that they offer for free.
+
+Leaving a 5/5 is the least I could do 🙂'
+
+[cl4udio](https://wordpress.org/support/topic/good-support-278/): 
+> 'I like this plugin! Works great and the customer support is the best. Love it!'
+
+
+##  PREMIUM FEATURES OF VARIATION SWATCHES FOR WOOCOMMERCE ##
 
 [Live Demo](http://bit.ly/3rd-main-demo-readme) | [Upgrade to PRO](http://bit.ly/upgrade-to-pro-readme) | [Documentation](https://getwooplugins.com/documentation/woocommerce-variation-swatches/?utm_source=wordpress.org&utm_medium=README&utm_campaign=woo-variation-swatches) | [Support](https://getwooplugins.com/tickets/?utm_source=wordpress.org&utm_medium=README&utm_campaign=woo-variation-swatches)
 
-* Show Entire Color, Image, Label And Radio Attributes Swatches In Catelog/ Category / Archive / Store/  Shop Pages
+👉 Auto Convert All Dropdowns to Image Swatch If Variation Has a Featured Image Set
+   [Live Demo & Documentation](http://j.mp/auto-image-swatches-insideplugin)
+<hr />
+👉 Multi Color Variation Swatches
+  [Live Demo & Documentation](http://j.mp/dual-color-doc-inside-plugin)
+<hr />
+👉 Show Entire Color, Image, Label And Radio Attributes Swatches In Catelog/ Category / Archive / Store/  Shop Pages
   [Live Demo & Documentation](http://bit.ly/3rd-demo-acrhive-page-readme)
 <hr />
-* Show Selected Single Color or Image Or Label Attribute Swatches In Catelog/ Category / Archive / Store / Shop Pages
+👉 Show Selected Single Color or Image Or Label Attribute Swatches In Catelog/ Category / Archive / Store / Shop Pages
   [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-catalog-mode)
 <hr />
-* Convert attribute variations into radio button
+👉 Convert attribute variations into radio button
 [Live Demo & Documentation](http://bit.ly/3rd-demo-radio-readme)
 <hr />
-* Product Basis Attribute Swatches Type Change
+👉 Product Basis Attribute Swatches Type Change
 [Live Demo & Documentation](http://bit.ly/3rd-demo-product-basis-product-type-change-readme)
 <hr />
-* Show All Color, Image & Button Swatches Type In the Same Attribute
+👉 Show All Color, Image & Button Swatches Type In the Same Attribute
 [Live Demo & Documentation](http://bit.ly/3rd-readme-demo-show-all-variation-type-in-the-same-variation)
 <hr />
-* Insert New Image Replacing Globally Added Image For Image Variation Swatches In Each Product
+👉 Insert New Image Replacing Globally Added Image For Image Variation Swatches In Each Product
 [Live Demo & Documentation](http://bit.ly/3rd-demo-product-basis-image-change-readme)
 <hr />
-* Insert New Color Replacing Globally Added Color In Color Variation Swatches For Each Product
+👉 Insert New Color Replacing Globally Added Color In Color Variation Swatches For Each Product
 [Live Demo & Documentation](http://bit.ly/3rd-demo-product-basis-color-change-readme)
 <hr />
-* Convert Manually Created Attibute Variations Into Color, Image, and Label Swatches
+👉 Convert Manually Created Attribute Variations Into Color, Image, and Label Swatches
   [Live Demo & Documentation](http://bit.ly/manual-attribute-readme-video)
 <hr />
-* Change Variation Product Gallery After Selecting Single Attribute Like Amazon Or AliExpress
+👉 Change Variation Product Gallery After Selecting Single Attribute Like Amazon Or AliExpress
   [Live Demo & Documentation](http://bit.ly/3rd-readme-demo-amazon)
 <hr />
-* Generate Selected Attribute Variation Link 
+👉 Generate Selected Attribute Variation Link 
   [Live Demo & Documentation](http://bit.ly/3rd-demo-generate-link-readme)
 <hr />
-* Option to Select ROUNDED and SQUARED Attribute Variation Swatches Shape In the Same Product.
+👉 Option to Select ROUNDED and SQUARED Attribute Variation Swatches Shape In the Same Product.
   [Live Demo & Documentation](http://bit.ly/3rd-readme-demo-round-square)
 <hr />
-* Show Cross Sign For Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
+👉 Show Cross Sign For Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
   [Live Demo & Documentation](http://bit.ly/3rd-readme-demo-cross-out-of-stock-variations-more-than-30-variations)
 <hr />
-* Blur Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
+👉 Blur Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
   [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-blur-out-of-stock-variations-more-than-30-variations)
 <hr />
-* Hide Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
+👉 Hide Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
   [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-hide-out-of-stock-variations-more-than-30-variations)
 <hr />
-* Shop Page Swatches Size Control
+👉 Shop Page Swatches Size Control
  [Live Demo & Documentation](http://bit.ly/3rd-readme-demo-shop-swatches-size) 
 <hr />
-* Make Selected Attribute Variation Swatches Size Larger Than Other Default Attribute Variations
+👉 Make Selected Attribute Variation Swatches Size Larger Than Other Default Attribute Variations
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-swatches-size-special-attribute)
 <hr />
-* Show Custom Text in Variation Tooltip
+👉 Show Custom Text in Variation Tooltip
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-how-to-enable-text-tooltip)
 <hr />
-* Show Custom Image in Variation Tooltip
+👉 Show Custom Image in Variation Tooltip
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-image-tooltip)
 <hr />
-* Swatches Border Styling
+👉 Swatches Border Styling
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-swatches-border-styling)
 <hr />
-* Hover Swatches Border Styling
+👉 Hover Swatches Border Styling
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-hover-swatches-border-styling)
 <hr />
-* Active Swatches Border Styling
+👉 Active Swatches Border Styling
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-hover-swatches-border-styling)
 <hr />
-* Archive Page Swatches Alignment
+👉 Archive Page Swatches Alignment
  [Live Demo & Documentation](http://bit.ly/3rd-demo-readme-shop-alignment)
 <hr />
-* Customize Tooltip Text and Background Color
-* Enable / Disable Ajax Variation
-* Archive page swatches positioning
-* Archive page swatches alignment
-* Tooltip display setting on archive/shop page
-* Variation clear button display setting.
-* Customize Tooltip Text and Background Color
-* Customize swatches colors, background and border sizes
-* Automatic updates and exclusive technical support
+👉 Compatible with Printful, Alidrop, and Multivendor Plugins
+👉 Customize Tooltip Text and Background Color
+👉 Enable / Disable Ajax Variation
+👉 Archive page swatches positioning
+👉 Archive page swatches alignment
+👉 Tooltip display setting on archive/shop page
+👉 Variation clear button display setting.
+👉 Customize Tooltip Text and Background Color
+👉 Customize swatches colors, background and border sizes
+👉 Automatic updates and exclusive technical support
+
+## 🏆 Customers' Feedback For Variation Swatches For WooCommerce ##
+
+[tysonfrantz](https://wordpress.org/support/topic/great-plugin-awesome-support-127): 
+> 'This is one of the best swatches plugin available. The thing that separates it from the rest is the amazing customer support. I had an issue with my website, and the friendly GetWooPlugins team was able to get it resolved quickly!'
+
+[nevadauser1](https://wordpress.org/support/topic/the-best-support-ever-thank-you-guys/): 
+> 'These guys went above and beyond trying to help me out, I had an issue with my theme and one of the plugins after a woocommerce update and they really did the best they could to help me solve the problem! Thank you so much guys specially Shamser!'
+
+[jeromepernin](https://wordpress.org/support/topic/top-587/): 
+> 'Super plugin! He literally saved 🙂 a huge thank you to Ahmed who provides extraordinary support. Congratulations to the whole team!'
+
+Will be buying from you again!'
 
 = Sites Built With Variation Swatches for WooCommerce Plugin =
 
@@ -316,6 +365,32 @@ And your are ready to go.
 12. Global Variation Color Swatches Attribute List Preview
 
 == Changelog ==
+
+= 1.0.63 =
+
+* Add: Select attribute set type button by default.
+* Fix: Transients issue.
+
+= 1.0.62 =
+
+* Add: WC 3.7 update
+
+= 1.0.61 =
+
+* Fix: CSS source map issue.
+
+= 1.0.60 =
+
+* Fix: Clear selection js error fix.
+
+= 1.0.59 =
+
+* Add: Dokan Multivendor Support added
+
+= 1.0.58 =
+
+* Fix: Inactive WooCommerce notice
+* Fix: Known Issues
 
 = 1.0.57 =
 

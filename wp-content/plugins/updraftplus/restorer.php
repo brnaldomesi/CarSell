@@ -400,6 +400,7 @@ class Updraft_Restorer {
 				if (isset($this->continuation_data['second_loop_entities'][$type])) {
 					$second_loop[$type] = $this->continuation_data['second_loop_entities'][$type];
 				} else {
+					$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'files', 'data' => array('entity' => $type, 'index' => 0, 'file' => '', 'fileindex' => 0, 'size_written' => 0, 'total_files' => 0)));
 					unset($second_loop[$type]);
 				}
 			}
@@ -421,7 +422,6 @@ class Updraft_Restorer {
 	 * @return Boolean
 	 */
 	public function perform_restore($entities_to_restore, $restore_options) {
-		
 		global $updraftplus;
 		
 		$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'verifying', 'data' => implode(', ', array_flip($entities_to_restore))));
@@ -433,7 +433,6 @@ class Updraft_Restorer {
 		
 		do_action('updraftplus_restoration_title', __('Final checks', 'updraftplus'));
 		add_action('updraftplus_unzip_progress_restore_info', array($this, 'unzip_progress_restore_info'), 10, 4);
-		
 		$backup_set = $this->ud_backup_set;
 		
 		$services = isset($backup_set['service']) ? $updraftplus->get_canonical_service_list($backup_set['service']) : array();
@@ -479,7 +478,10 @@ class Updraft_Restorer {
 			$info = isset($backupable_entities[$type]) ? $backupable_entities[$type] : array();
 
 			$restoration_title = ('db' == $type) ? __('Database', 'updraftplus') : $info['description'];
-			
+
+			// Indicate the type changed
+			$updraftplus->log_restore_update(array('type' => 'state_change', 'stage' => $type, 'data' => array()));
+
 			do_action('updraftplus_restoration_title', $restoration_title);
 			
 			$updraftplus->log('Entity: '.$type);
@@ -635,7 +637,7 @@ class Updraft_Restorer {
 				$line = htmlspecialchars($line);
 			}
 	
-			echo $line.'<br>';
+			$updraftplus->output_to_browser($line.'<br>');
 		}
 		return false;
 	}
@@ -1347,11 +1349,6 @@ class Updraft_Restorer {
 		return untrailingslashit($wp_filesystem_dir);
 	}
 
-	private function can_version_ajax_restore($version) {
-		if (!defined('UPDRAFTPLUS_EXPERIMENTAL_AJAX_RESTORE') || !UPDRAFTPLUS_EXPERIMENTAL_AJAX_RESTORE) return false;
-		return ((version_compare($version, '2.0', '<') && version_compare($version, '1.11.10', '>=')) || (version_compare($version, '2.0', '>=') && version_compare($version, '2.11.10', '>='))) ? true : false;
-	}
-
 	/**
 	 * $backup_file is just the basename, and must be a string; we expect the caller to deal with looping over an array (multi-archive sets). We do, however, record whether we have already unpacked an entity of the same type - so that we know to add (not replace).
 	 *
@@ -1381,49 +1378,6 @@ class Updraft_Restorer {
 
 		@set_time_limit(1800);
 
-		/*
-		TODO:
-		- The backup set may no longer be in the DB - a restore may have over-written it.
-		- UD might be installed, but not active. Test that too. (All combinations need testing - new/old UD vers, logged-in/not, etc.).
-		- logging
-		- authorisation on the AJAX call, given that our login may not even be valid any more.
-		- pass on the WP filesystem credentials somehow - they have been POSTed, and should be included in what's POSTed back.
-		- the restore function wants to know the UD version the backup set came from
-		- the restore function wants to know whether we're restoring an individual blog into a multisite
-		- the restore function has some things only done the first time, which isn't directly tracked (uses internal state instead, which won't work over AJAX)
-		- how to handle/set this->delete
-		- how to show the final result
-		- how to do the clear-up of restored stuff in the restore function
-		- remember, we need to do unauthenticated AJAX, as the authentication is happening via a different means. Use a separate procedure from the usual one (and no nonce, as login status may have changed).
-		*/
-		if (defined('UPDRAFTPLUS_EXPERIMENTAL_AJAX_RESTORE') && UPDRAFTPLUS_EXPERIMENTAL_AJAX_RESTORE && 'uploads' == $type) {
-			// Read this each time, as we don't know what might have been done in the mean-time (specifically with UD being replaced by a different UD from a backup). Of course, we know what the currently running process is capable of.
-			if (file_exists(UPDRAFTPLUS_DIR.'/updraftplus.php') && $fp = fopen(UPDRAFTPLUS_DIR.'/updraftplus.php', 'r')) {
-				$file_data = fread($fp, 1024);
-				if (preg_match("/Version: ([\d\.]+)(\r|\n)/", $file_data, $matches)) {
-					$ud_version = $matches[1];
-				}
-				fclose($fp);
-			}
-			if (!empty($ud_version) && $this->can_version_ajax_restore($ud_version) && !empty($this->ud_backup_set['timestamp'])) {
-				$nonce = $updraftplus->nonce;
-				if (!function_exists('crypt_random_string')) $updraftplus->ensure_phpseclib('Crypt_Random');
-				$this->ajax_restore_auth_code = bin2hex(crypt_random_string(32));
-// TODO: Delete this when done, to prevent abuse
-				update_site_option('updraft_ajax_restore_'.$nonce, $this->ajax_restore_auth_code.':'.time());
-				$this->add_ajax_restore_admin_footer();
-				$print_last_one = ($last_one) ? "1" : "0";
-// TODO: Also want the timestamp
-				// We don't bother to include info, as that is backup-independent information that can be re-created when needed
-				// TODO: Change to new log style, if ever using
-				echo '<p style="margin: 0px 0px;" class="updraft-ajaxrestore" data-type="'.$type.'" data-lastone="'.$print_last_one.'" data-backupfile="'.esc_attr($backup_file).'">'."\n";
-				$updraftplus->log("Deferring handling of uploads ($backup_file)");
-				echo "$backup_file: ".'<span class="deferprogress">'.__('Deferring...', 'updraftplus').'</span>';
-				echo '</p>';
-				return true;
-			}
-		}
-
 		// This returns the wp_filesystem path
 		$working_dir = $this->unpack_package($backup_file, $this->delete, $type);
 		if (is_wp_error($working_dir)) return $working_dir;
@@ -1450,10 +1404,10 @@ class Updraft_Restorer {
 		if (!$now_done) {
 		
 			if ('db' == $type) {
-				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'database', 'data' => array('stage' => 'begun', 'table' => '')));
+				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'db', 'data' => array('stage' => 'begun', 'table' => '')));
 				$rdb = $this->restore_backup_db($working_dir, $working_dir_localpath, $import_table_prefix);
 				if (false === $rdb || is_wp_error($rdb)) return $rdb;
-				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'database', 'data' => array('stage' => 'finished', 'table' => '')));
+				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'db', 'data' => array('stage' => 'finished', 'table' => '')));
 			} elseif ('others' == $type) {
 
 				$dirname = basename($info['path']);
@@ -1823,128 +1777,6 @@ class Updraft_Restorer {
 
 	}
 	
-	private function add_ajax_restore_admin_footer() {
-		static $already = false;
-		if (!$already) {
-			$already = true;
-			add_action('admin_footer', array($this, 'admin_footer_ajax_restore'));
-		}
-	}
-
-	/**
-	 * Unused
-	 */
-	public function admin_footer_ajax_restore() {
-// TODO: The timestamp parameter is mandatory - we should abort (earlier) if there isn't one.
-
-		global $updraftplus;
-		$nonce = $updraftplus->nonce;
-// TODO: Apparently empty
-		$auth_code = esc_js($this->ajax_restore_auth_code);
-
-		echo <<<ENDHERE
-		<script>
-			jQuery(document).ready(function() {
-
-			backupinfo = {
-				action: 'updraft_ajaxrestore',
-				subaction: 'restore',
-				restorenonce: '$nonce',
-				ajaxauth: '$auth_code'
-			};
-
-ENDHERE;
-		$multisite = 0;
-		$timestamp = $this->ud_backup_set['timestamp'];
-		if (!empty($_REQUEST['updraft_restorer_backup_info'])) {
-		
-			$backup_info = UpdraftPlus_Manipulation_Functions::wp_unslash($_REQUEST['updraft_restorer_backup_info']);
-
-			if (false != ($backup_info = json_decode($backup_info, true))) {
-				if (!empty($backup_info['timestamp'])) echo "\t\tbackupinfo.timestamp = '".esc_js($backup_info['timestamp'])."';\n";
-				if (!empty($backup_info['created_by_version'])) echo "\t\tbackupinfo.created_by_version = '".esc_js($backup_info['created_by_version'])."';\n";
-				echo "\t\tbackupinfo.multisite = ".(empty($backup_info['multisite']) ? '0' : '1').";\n";
-			}
-			
-		}
-
-		echo <<<ENDHERE
-
-				// This is not just a list, but a queue
-				var restore_these = [];
-
-				function do_ajax_restore(restore_this) {
-
-					var output = jQuery(restore_this.jqobject).find('.deferprogress');
-					jQuery(output).html(updraftlion.processing);
-
-					alert("AJAX RESTORE: "+timestamp+" "+restore_this.type+" "+restore_this.backupfile);
-
-					backupinfo.type = restore_this.type;
-					backupinfo.backupfile = restore_this.backupfile;
-					backupinfo.lastone = restore_this.lastone
-
-					jQuery.post(ajaxurl, backupinfo, function(response) {
-						console.log(response);
-						try {
-							var resp = JSON.parse(response);
-							console.log(resp);
-							// TODO: Do something
-						} catch (err) {
-							console.log(err);
-							// TODO: Report error to user
-						}
-						// This recurses, but won't exhaust memory as there can only be a small number
-						do_ajax_restore_queue();
-					});
-
-
-				}
-
-				function do_ajax_restore_queue() {
-					if (restore_these.length < 1) { return; }
- 					// Shift gets the *first* element of the array
-					restore_this = restore_these.shift();
-					// This call is asychronous - i.e. the fact it returns doesn't indicate what has or hasn't now been done
-					do_ajax_restore(restore_this);
-				}
-
-				var multisite = $multisite;
-				var timestamp = $timestamp;
-
-				// What follows is a slightly crude way of ensuring that the one marked 'lastone' actually does go last
-				jQuery('.updraft-ajaxrestore').each(function(ind){
-					var lastone = jQuery(this).data('lastone');
-					if (!lastone) {
-						var thing_to_restore = {};
-						thing_to_restore.type = jQuery(this).data('type');
-						thing_to_restore.backupfile = jQuery(this).data('backupfile');
-						thing_to_restore.jqobject = this;
-						thing_to_restore.lastone = 0;
-						restore_these.push(thing_to_restore);
-					}
-				});
-				jQuery('.updraft-ajaxrestore').each(function(ind){
-					var lastone = jQuery(this).data('lastone');
-					if (lastone) {
-						var thing_to_restore = {};
-						thing_to_restore.type = jQuery(this).data('type');
-						thing_to_restore.backupfile = jQuery(this).data('backupfile');
-						thing_to_restore.jqobject = this;
-						restore_these.push(thing_to_restore);
-						thing_to_restore.lastone = 1;
-					}
-				});
-				
-				if (restore_these.length > 0) {
-					do_ajax_restore_queue();
-				}
-
-			});
-		</script>
-ENDHERE;
-	}
-
 	/**
 	 * First added in UD 1.9.47.
 	 */
@@ -2289,6 +2121,8 @@ ENDHERE;
 		$supported_collations = (null !== $db_supported_collations_res) ? $db_supported_collations_res : array();
 		$updraft_restorer_collate = isset($this->restore_options['updraft_restorer_collate']) ? $this->restore_options['updraft_restorer_collate'] : '';
 
+		$engine = '';
+		
 		$this->errors = 0;
 		$this->statements_run = 0;
 		$this->insert_statements_run = 0;
@@ -2515,8 +2349,8 @@ ENDHERE;
 				}
 				continue;
 			}
-			
-			// Detect INSERT commands early, so that we can split them if necessary
+
+			// Detect INSERT and various other commands early, so that we can split or combine them if necessary
 			if (preg_match('/^\s*(insert into \`?([^\`]*)\`?\s+(values|\())/i', $sql_line.$buffer, $matches)) {
 				$this->table_name = $matches[2];
 				$sql_type = 3;
@@ -2527,7 +2361,7 @@ ENDHERE;
 				$delimiter = $matches[1];
 				// Obviously, what is supported here is quite limited
 				$delimiter_regex = str_replace(array('$', '#', '/'), array('\$', '\#', '\/'), $delimiter);
-			} elseif (preg_match('/^\s*create trigger /i', $sql_line)) {
+			} elseif (preg_match('/^\s*create trigger /i', $sql_line.$buffer)) {
 				$sql_type = 9;
 			}
 
@@ -2551,6 +2385,10 @@ ENDHERE;
 			
 			// Do we have a complete line yet? We used to just test the final character for ';' here (up to 1.8.12), but that was too unsophisticated
 			// From 1.16.16, we don't hard-code the delimiter here, and we also add the knowledge that CREATE TRIGGER statements finish with END
+			// The aim, in order to get something valid to execute, is to get something like this, with the entire trigger on a single line:
+			//
+			// $wpdb->query("CREATE TRIGGER `civicrm_acl_after_insert` AFTER INSERT ON `civicrm_acl` FOR EACH ROW BEGIN IF (@civicrm_disable_logging IS NULL OR @civicrm_disable_logging = 0 ) THEN INSERT INTO log_civicrm_acl (`id`, `name`, `deny`, `entity_table`, `entity_id`, `operation`, `object_table`, `object_id`, `acl_table`, `acl_id`, `is_active`, log_conn_id, log_user_id, log_action) VALUES ( NEW.`id`, NEW.`name`, NEW.`deny`, NEW.`entity_table`, NEW.`entity_id`, NEW.`operation`, NEW.`object_table`, NEW.`object_id`, NEW.`acl_table`, NEW.`acl_id`, NEW.`is_active`, COALESCE(@uniqueID, LEFT(CONCAT('c_', unix_timestamp()/3600, CONNECTION_ID()), 17)), @civicrm_user_id, 'insert'); END IF; END"));
+
 			if ((3 == $sql_type && !preg_match('/\)\s*'.$delimiter_regex.'$/', substr($sql_line, -5, 5))) || (3 != $sql_type && 9 != $sql_type && 10 != $sql_type && substr($sql_line, -strlen($delimiter), strlen($delimiter)) != $delimiter) || (9 == $sql_type && !preg_match('/END\s*('.$delimiter_regex.')?\s*$/', $sql_line))) continue;
 
 			$this->line++;
@@ -2609,7 +2447,7 @@ ENDHERE;
 				$this->insert_statements_run = 0;
 				$this->table_name = $matches[1];
 
-				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'database', 'data' => array('stage' => 'table', 'table' => $this->table_name)));
+				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'db', 'data' => array('stage' => 'table', 'table' => $this->table_name)));
 
 				// Legacy, less reliable - in case it was not caught before. We added it in here (CREATE) as well as in DROP because of SQL dumps which lack DROP statements.
 				if ('' == $this->old_table_prefix && preg_match('/^([a-z0-9]+)_.*$/i', $this->table_name, $tmatches)) {
@@ -2657,7 +2495,7 @@ ENDHERE;
 						}
 					}
 					
-					if ($restoring_table != $this->new_table_name) $this->restored_table($restoring_table, $import_table_prefix, $this->old_table_prefix);
+					if ($restoring_table != $this->new_table_name) $this->restored_table($restoring_table, $import_table_prefix, $this->old_table_prefix, $engine);
 
 				}
 				$engine = "(?)";
@@ -2671,6 +2509,7 @@ ENDHERE;
 					} else {
 						$engine_change_message = sprintf(__('Requested table engine (%s) is not present - changing to MyISAM.', 'updraftplus'), $engine)."<br>";
 						$sql_line = UpdraftPlus_Manipulation_Functions::str_lreplace("ENGINE=$engine", "ENGINE=MyISAM", $sql_line);
+						$engine = "MyISAM";
 						// Remove (M)aria options
 						if ('maria' == strtolower($engine) || 'aria' == strtolower($engine)) {
 							$sql_line = preg_replace('/PAGE_CHECKSUM=\d\s?/', '', $sql_line, 1);
@@ -2767,7 +2606,7 @@ ENDHERE;
 			} elseif (preg_match('/^\s*(insert into \`?([^\`]*)\`?\s+(values|\())/i', $sql_line, $matches)) {
 				$sql_type = 3;
 				$this->table_name = $matches[2];
-				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'database', 'data' => array('stage' => 'table', 'table' => $this->table_name)));
+				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'db', 'data' => array('stage' => 'table', 'table' => $this->table_name)));
 				if ('' != $this->old_table_prefix && $import_table_prefix != $this->old_table_prefix) $sql_line = UpdraftPlus_Manipulation_Functions::str_replace_once($this->old_table_prefix, $import_table_prefix, $sql_line);
 			} elseif (preg_match('/^\s*(\/\*\!40000 )?(alter|lock) tables? \`?([^\`\(]*)\`?\s+(write|disable|enable)/i', $sql_line, $matches)) {
 				// Only binary mysqldump produces this pattern (LOCK TABLES `table` WRITE, ALTER TABLE `table` (DISABLE|ENABLE) KEYS)
@@ -2800,10 +2639,13 @@ ENDHERE;
 				$sql_type = 9;
 				// If the statement is not yet complete, then continue (to get the next line)
 				if (!preg_match('/END\s*('.$delimiter_regex.')?\s*$/', $sql_line)) continue;
-				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'database', 'data' => array('stage' => 'trigger', 'table' => '')));
+				$updraftplus->log_restore_update(array('type' => 'state', 'stage' => 'db', 'data' => array('stage' => 'trigger', 'table' => '')));
 				if ('' != $this->old_table_prefix && $import_table_prefix != $this->old_table_prefix) $sql_line = UpdraftPlus_Manipulation_Functions::str_replace_once($this->old_table_prefix, $import_table_prefix, $sql_line);
 				if (';' !== $delimiter) $sql_line = preg_replace('/END\s*'.$delimiter_regex.'\s*$/', 'END', $sql_line);
 				if ($this->triggers_forbidden) $updraftplus->log("Database user lacks permission to create triggers; statement will not be executed ($sql_line)");
+			} elseif (preg_match('/^\s*drop trigger /i', $sql_line)) {
+				// Avoid sending unrecognised delimiters to the SQL server (this only affects backups created outside UD; we use ";;" which is cunningly compatible)
+				if (';' !== $delimiter) $sql_line = preg_replace('/'.$delimiter_regex.'\s*$/', '', $sql_line);
 			} elseif (preg_match('/^\s*delimiter (\S+)\s*$/i', $sql_line, $matches)) {
 				// Nothing to do here - deliberate no-op (is processed earlier)
 				$sql_type = 10;
@@ -2811,7 +2653,7 @@ ENDHERE;
 				// Prevent the previous value of $sql_type being retained for an unknown type
 				$sql_type = 0;
 			}
-			
+
 			// Do not execute "USE" or "CREATE|DROP DATABASE" commands
 			if (6 != $sql_type && 7 != $sql_type && (9 != $sql_type || false == $this->triggers_forbidden) && 10 != $sql_type) {
 				$do_exec = $this->sql_exec($sql_line, $sql_type);
@@ -2842,7 +2684,7 @@ ENDHERE;
 		}
 		$this->maintenance_mode(false);
 
-		if ($restoring_table) $this->restored_table($restoring_table, $import_table_prefix, $this->old_table_prefix);
+		if ($restoring_table) $this->restored_table($restoring_table, $import_table_prefix, $this->old_table_prefix, $engine);
 
 		// drop the dummy restored tables
 		if ($this->is_dummy_db_restore) $this->drop_tables($this->restored_table_names);
@@ -3024,7 +2866,6 @@ ENDHERE;
 	 * @return Boolean|WP_Error|Void
 	 */
 	public function sql_exec($sql_line, $sql_type, $import_table_prefix = '', $check_skipping = true) {
-
 		global $wpdb, $updraftplus;
 
 		if ($check_skipping && !empty($this->table_name) && !$this->restore_this_table($this->table_name)) return;
@@ -3113,6 +2954,10 @@ ENDHERE;
 			} elseif (2 == $sql_type && 0 == $this->tables_created && $this->drop_forbidden) {
 				// Decrease error counter again; otherwise, we'll cease if there are >=50 tables
 				if (!$ignore_errors) $this->errors--;
+			} elseif (3 == $sql_type && false !== strpos($this->last_error, 'Duplicate entry') && false !== strpos($sql_line, 'INSERT')) {
+				$sql_line = UpdraftPlus_Manipulation_Functions::str_replace_once('INSERT', 'INSERT IGNORE', $sql_line);
+				$updraftplus->log('Retrying SQL query with INSERT IGNORE', 'notice-restore');
+				$this->sql_exec($sql_line, $sql_type, $import_table_prefix, $check_skipping);
 			} elseif (8 == $sql_type && 1 == $this->errors) {
 				$updraftplus->log("Aborted: SET NAMES ".$this->set_names." failed: leaving maintenance mode");
 				$this->maintenance_mode(false);
@@ -3124,7 +2969,7 @@ ENDHERE;
 				return new WP_Error('initial_db_error', sprintf(__('An error occurred on the first %s command - aborting run', 'updraftplus'), 'SET NAMES').'. '.sprintf(__('To use this backup, your database server needs to support the %s character set.', 'updraftplus'), $this->set_names).$extra_msg);
 			}
 			
-			if ($this->errors > 49) {
+			if ($this->errors >= (defined('UPDRAFTPLUS_SQLEXEC_MAXIMUM_ERRORS') ? UPDRAFTPLUS_SQLEXEC_MAXIMUM_ERRORS : 50)) {
 				$this->maintenance_mode(false);
 				return new WP_Error('too_many_db_errors', __('Too many database errors have occurred - aborting', 'updraftplus'));
 			}
@@ -3227,8 +3072,9 @@ ENDHERE;
 	 * @param String $table				  - The full table name that has been restored
 	 * @param String $import_table_prefix - The table prefix being used to import
 	 * @param String $old_table_prefix	  - The table prefix in the backup file
+	 * @param String $engine			  - The database engine, if known
 	 */
-	private function restored_table($table, $import_table_prefix, $old_table_prefix) {
+	private function restored_table($table, $import_table_prefix, $old_table_prefix, $engine = '') {
 
 		$table_without_prefix = substr($table, strlen($import_table_prefix));
 	
@@ -3372,7 +3218,7 @@ ENDHERE;
 
 		}
 
-		do_action('updraftplus_restored_db_table', $table, $import_table_prefix);
+		do_action('updraftplus_restored_db_table', $table, $import_table_prefix, $engine);
 
 		// Re-generate permalinks. Do this last - i.e. make sure everything else is fixed up first.
 		if ($table == $import_table_prefix.'options') $this->flush_rewrite_rules();

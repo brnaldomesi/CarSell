@@ -3,7 +3,7 @@ Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne, aporter, snigh
 Tags: backup, restore, database backup, wordpress backup, cloud backup, s3, dropbox, google drive, onedrive, ftp, backups
 Requires at least: 3.2
 Tested up to: 5.2
-Stable tag: 1.16.16
+Stable tag: 1.16.17
 Author URI: https://updraftplus.com
 Donate link: https://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -166,10 +166,40 @@ Unfortunately not; since this is free software, there’s no warranty and no gua
 
 The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the best place to learn in more detail about any important changes.
 
-N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.16.16.x of the free version correspond to changes made in 2.16.16.x of the paid version.
+N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.16.17.x of the free version correspond to changes made in 2.16.17.x of the paid version.
+
+= 1.16.17 - 12/Sep/2019 =
+
+* FEATURE: Added the ability to use UpdraftClone with sub-folder based multisites
+* FEATURE: Catch duplicate entries in a corrupt DB upon restoration and handle/fix them automatically
+* FIX: Some more complicated triggers (see in CiviCRM) that were not previously handled correctly are; and SQL backup format for triggers is now mutually compatible with mysqldump/mysql binaries
+* FIX: Reset internal state upon beginning backup_resume(), in case WP cron called us multiple times in the same process
+* FIX: Provide compatibility functions on WP < 3.7 for mbstring_binary_safe_encoding() and reset_mbstring_encoding()
+* FIX: Correct the Azure China storage endpoint in options
+* TWEAK: Re-designed restore process
+* TWEAK: Prevent cosmetic error if WP_Filesystem call fails when deleting old folders
+* TWEAK: Fix escaping that caused a problem in some translations with a dismissal notice
+* TWEAK: Update bundled cacert.pem file
+* TWEAK: Include a DROP command for any triggers about to be created in the backup
+* TWEAK: The BackBlaze module (Premium feature) can now cope with BackBlaze losing uploaded chunks
+* TWEAK: Cast file IDs in Backblaze to strings to prevent possible API error
+* TWEAK: Do not attempt to perform search/replaces in tables of ARCHIVE type
+* TWEAK: Introduce the constant UPDRAFTPLUS_SQLEXEC_MAXIMUM_ERRORS to aid debugging
+* TWEAK: log message when checking which files need uploading on a incremental backup job
+* TWEAK: Don't send external DB backups to UpdraftClone
+* TWEAK: Reset the UpdraftClone UI if the clone is not created before it expires
+* TWEAK: Automatically detect a stalled restore and offer a resumption on the restore page
+* TWEAK: Remove some unused restore code
+* TWEAK: Prevent a PHP deprecation log notice with WebDAV on PHP 7.3
+* TWEAK: Catch exceptions and errors during recursive search/replace and recover from them
+* TWEAK: CSS tweak to prevent other plugins from breaking the style of pop-up close buttons
+* TWEAK: Ensure the error is logged on the final remote send complete call if it fails
+* TWEAK: BackBlaze terminology updated to match their changes
+* TWEAK: Update seasonal notices for next year
 
 = 1.16.16 - 23/Jul/2019 =
 
+* TWEAK: Adding support for installing plugin and theme through zip files in UpdraftCentral
 * FEATURE: Added the ability to launch a blank WordPress clone
 * FEATURE: Add --collate= parameter to WP-CLI (Premium) to allow substitution of locally unknown collations when restoring
 * FIX: Switched to wp_insert_site() from insert_blog() and install_blog() method when importing single-site into a multisite network on WP 5.1+. Fixes 'Already Installed' error when importing on newer WP versions
@@ -891,4 +921,4 @@ Furthermore, reliance upon any non-English translation is at your own risk. Updr
 We recognise and thank the following for code and/or libraries used and/or modified under the terms of their open source licences; see: https://updraftplus.com/acknowledgements/
 
 == Upgrade Notice ==
-* 1.16.16: Added the ability to launch a blank WordPress clone. Add --collate= parameter to WP-CLI (Premium) to allow substitution of locally unknown collations when restoring. A recommended update for all.
+* 1.16.17: Re-designed restore process. Ability to use UpdraftClone with sub-folder multisites. Automatic fixing of some database corruption issues. Various tweaks and fixes; a recommended updated for all.

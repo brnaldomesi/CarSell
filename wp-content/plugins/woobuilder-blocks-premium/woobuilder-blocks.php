@@ -5,7 +5,7 @@
  * Plugin URI: http://pootlepress.com/
  * Description: Bring the power of WordPress' blocks builder to products for fully customizable product layouts.
  * Author: PootlePress
- * Version: 2.7.0
+ * Version: 2.8.0
  * Author URI: http://pootlepress.com/
  * @developer shramee <shramee.srivastav@gmail.com>
  */
@@ -126,7 +126,7 @@ class WooBuilder_Blocks
         self::$file = $file;
         self::$url = plugin_dir_url( $file );
         self::$path = plugin_dir_path( $file );
-        self::$version = '2.7.0';
+        self::$version = '2.8.0';
         add_action( 'plugins_loaded', [ $this, 'init' ] );
         
         if ( function_exists( 'caxton_fs' ) ) {

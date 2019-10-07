@@ -79,8 +79,12 @@ class UpdraftPlus_Filesystem_Functions {
 			request_filesystem_credentials($build_url, '', true, false);
 			
 			if ($wp_filesystem->errors->get_error_code()) {
-				echo '<p><em><a href="' . apply_filters('updraftplus_com_link', "https://updraftplus.com/faqs/asked-ftp-details-upon-restorationmigration-updates/") . '" target="_blank">' . __('Why am I seeing this?', 'updraftplus') . '</a></em></p>';
+				echo '<div class="restore-credential-errors">';
+				echo '<p class="restore-credential-errors--link"><em><a href="' . apply_filters('updraftplus_com_link', "https://updraftplus.com/faqs/asked-ftp-details-upon-restorationmigration-updates/") . '" target="_blank">' . __('Why am I seeing this?', 'updraftplus') . '</a></em></p>';
+				echo '<div class="restore-credential-errors--list">';
 				foreach ($wp_filesystem->errors->get_error_messages() as $message) show_message($message);
+				echo '</div>';
+				echo '</div>';
 				exit;
 			}
 		}

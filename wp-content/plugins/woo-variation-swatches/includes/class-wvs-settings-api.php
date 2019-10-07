@@ -543,7 +543,7 @@
 					}
 				}
 				
-				return ! empty( $last_tab ) ? $last_tab : $default_tab;
+				return ! empty( $last_tab ) ? esc_html( $last_tab ) : esc_html( $default_tab );
 				
 			}
 			
