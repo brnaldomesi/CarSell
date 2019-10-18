@@ -33,24 +33,6 @@ class ListTableController extends Controller
     }
 
     /**
-     * @param array $messages
-     * @return array
-     * @filter bulk_post_updated_messages
-     */
-    public function filterBulkUpdateMessages($messages, array $counts)
-    {
-        $messages = Arr::consolidateArray($messages);
-        $messages[Application::POST_TYPE] = [
-            'updated' => _n('%s review updated.', '%s reviews updated.', $counts['updated'], 'site-reviews'),
-            'locked' => _n('%s review not updated, somebody is editing it.', '%s reviews not updated, somebody is editing them.', $counts['locked'], 'site-reviews'),
-            'deleted' => _n('%s review permanently deleted.', '%s reviews permanently deleted.', $counts['deleted'], 'site-reviews'),
-            'trashed' => _n('%s review moved to the Trash.', '%s reviews moved to the Trash.', $counts['trashed'], 'site-reviews'),
-            'untrashed' => _n('%s review restored from the Trash.', '%s reviews restored from the Trash.', $counts['untrashed'], 'site-reviews'),
-        ];
-        return $messages;
-    }
-
-    /**
      * @param array $columns
      * @return array
      * @filter manage_.Application::POST_TYPE._posts_columns
@@ -95,24 +77,11 @@ class ListTableController extends Controller
     {
         if (Arr::get($screen, 'id') == 'edit-'.Application::POST_TYPE) {
             $hidden = Arr::consolidateArray($hidden);
-            $hidden = ['reviewer'];
+            $hidden = array_unique(array_merge($hidden, [
+                'email', 'ip_address', 'response', 'reviewer',
+            ]));
         }
         return $hidden;
-    }
-
-    /**
-     * @param array $postStates
-     * @param WP_Post $post
-     * @return array
-     * @filter display_post_states
-     */
-    public function filterPostStates($postStates, $post)
-    {
-        $postStates = Arr::consolidateArray($postStates);
-        if (Application::POST_TYPE == Arr::get($post, 'post_type') && array_key_exists('pending', $postStates)) {
-            $postStates['pending'] = __('Unapproved', 'site-reviews');
-        }
-        return $postStates;
     }
 
     /**
@@ -162,37 +131,6 @@ class ListTableController extends Controller
             $columns[$key] = $key;
         }
         return $columns;
-    }
-
-    /**
-     * Customize the post_type status text.
-     * @param string $translation
-     * @param string $single
-     * @param string $plural
-     * @param int $number
-     * @param string $domain
-     * @return string
-     * @filter ngettext
-     */
-    public function filterStatusText($translation, $single, $plural, $number, $domain)
-    {
-        if ($this->canModifyTranslation($domain)) {
-            $strings = [
-                'Published' => __('Approved', 'site-reviews'),
-                'Pending' => __('Unapproved', 'site-reviews'),
-            ];
-            foreach ($strings as $search => $replace) {
-                if (false === strpos($single, $search)) {
-                    continue;
-                }
-                $translation = $this->getTranslation([
-                    'number' => $number,
-                    'plural' => str_replace($search, $replace, $plural),
-                    'single' => str_replace($search, $replace, $single),
-                ]);
-            }
-        }
-        return $translation;
     }
 
     /**
@@ -292,25 +230,6 @@ class ListTableController extends Controller
     }
 
     /**
-     * Get the modified translation string.
-     * @return string
-     */
-    protected function getTranslation(array $args)
-    {
-        $defaults = [
-            'number' => 0,
-            'plural' => '',
-            'single' => '',
-            'text' => '',
-        ];
-        $args = (object) wp_parse_args($args, $defaults);
-        $translations = get_translations_for_domain(Application::ID);
-        return $args->text
-            ? $translations->translate($args->text)
-            : $translations->translate_plural($args->single, $args->plural, $args->number);
-    }
-
-    /**
      * @return bool
      */
     protected function hasPermission(WP_Query $query)
@@ -333,7 +252,7 @@ class ListTableController extends Controller
             }
             $metaQuery = (array) $query->get('meta_query');
             $metaQuery[] = [
-                'key' => Str::prefix('_', $key),
+                'key' => Str::prefix('_', $key, '_'),
                 'value' => $value,
             ];
             $query->set('meta_query', $metaQuery);
@@ -350,9 +269,9 @@ class ListTableController extends Controller
         unset($columns['cb'], $columns['title'], $columns['date']);
         if (in_array($orderby, array_keys($columns))) {
             if ('reviewer' == $orderby) {
-                $orderby = '_author';
+                $orderby = 'author';
             }
-            $query->set('meta_key', $orderby);
+            $query->set('meta_key', Str::prefix('_', $orderby, '_'));
             $query->set('orderby', 'meta_value');
         }
     }

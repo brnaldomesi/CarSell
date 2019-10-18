@@ -11,6 +11,7 @@ use GeminiLabs\SiteReviews\Database;
 use GeminiLabs\SiteReviews\Database\ReviewManager;
 use GeminiLabs\SiteReviews\Defaults\CreateReviewDefaults;
 use GeminiLabs\SiteReviews\Helpers\Arr;
+use GeminiLabs\SiteReviews\Helpers\Str;
 use GeminiLabs\SiteReviews\Modules\Html\Builder;
 use GeminiLabs\SiteReviews\Modules\Html\Template;
 use GeminiLabs\SiteReviews\Modules\Notice;
@@ -19,17 +20,6 @@ use WP_Post;
 
 class EditorController extends Controller
 {
-    /**
-     * @return void
-     * @action admin_enqueue_scripts
-     */
-    public function customizePostStatusLabels()
-    {
-        if ($this->canModifyTranslation()) {
-            glsr(Labels::class)->customizePostStatusLabels();
-        }
-    }
-
     /**
      * @param array $settings
      * @return array
@@ -70,34 +60,6 @@ class EditorController extends Controller
             }
         }
         return $protected;
-    }
-
-    /**
-     * @param string $translation
-     * @param string $test
-     * @param string $domain
-     * @return string
-     * @filter gettext
-     */
-    public function filterPostStatusLabels($translation, $text, $domain)
-    {
-        return $this->canModifyTranslation($domain)
-            ? glsr(Labels::class)->filterPostStatusLabels($translation, $text)
-            : $translation;
-    }
-
-    /**
-     * @param string $translation
-     * @param string $test
-     * @param string $domain
-     * @return string
-     * @filter gettext_with_context
-     */
-    public function filterPostStatusLabelsWithContext($translation, $text, $context, $domain)
-    {
-        return $this->canModifyTranslation($domain)
-            ? glsr(Labels::class)->filterPostStatusLabels($translation, $text)
-            : $translation;
     }
 
     /**
@@ -371,19 +333,6 @@ class EditorController extends Controller
     }
 
     /**
-     * @param string $domain
-     * @return bool
-     */
-    protected function canModifyTranslation($domain = 'default')
-    {
-        if ('default' != $domain || empty(glsr_current_screen()->base)) {
-            return false;
-        }
-        return Application::POST_TYPE == glsr_current_screen()->post_type
-            && in_array(glsr_current_screen()->base, ['edit', 'post']);
-    }
-
-    /**
      * @param object $review
      * @return string|void
      */
@@ -460,8 +409,8 @@ class EditorController extends Controller
     {
         $referer = wp_get_referer();
         $hasReferer = !$referer
-            || false !== strpos($referer, 'post.php')
-            || false !== strpos($referer, 'post-new.php');
+            || Str::contains($referer, 'post.php')
+            || Str::contains($referer, 'post-new.php');
         $redirectUri = $hasReferer
             ? remove_query_arg(['deleted', 'ids', 'trashed', 'untrashed'], $referer)
             : get_edit_post_link($postId);
